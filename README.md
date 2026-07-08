@@ -1,149 +1,102 @@
-# Aplicaciones de IA en Estructuras
-## Trabajo N.° 1 - Definición del Problema, Datos y Repositorio
-
-### Universidad Peruana de Ciencias Aplicadas (UPC)
-
-**Curso:** Aplicaciones de IA en Estructuras
-
-### Integrantes
-
-- Susana Abigail Campos Rodríguez
-- Carlos Teodoro Barreda Guzmán
-- Jaime Jesús Ramírez Elera
-- Renzo Salleres Untiveros
+# 🏛️ Universidad Peruana de Ciencias Aplicadas
+## **Curso:** Aplicaciones de IA en Estructuras
 
 ---
 
-# Descripción del Proyecto
+# 📑 INFORME DE TRABAJO N° 1
+### **Tema:** Definición del Problema, Datos y Repositorio
 
-La infraestructura de concreto, presente en puentes, pavimentos, muros y edificaciones, está expuesta continuamente a cargas mecánicas, variaciones climáticas y procesos naturales de deterioro. Estas condiciones pueden originar fisuras superficiales que, de no detectarse oportunamente, evolucionan hasta comprometer la seguridad y el desempeño estructural.
-
-Actualmente, la inspección de estas fisuras depende principalmente de evaluaciones visuales realizadas por especialistas, lo que implica elevados costos, mayor tiempo de inspección y una importante dependencia del criterio humano.
-
-Como alternativa, este proyecto propone el uso de técnicas de Inteligencia Artificial, Visión Artificial y Machine Learning Supervisado para automatizar la detección de fisuras en superficies de concreto mediante el análisis de imágenes pertenecientes al dataset SDNET2018.
-
-El objetivo es desarrollar una herramienta de apoyo para la preinspección estructural, permitiendo optimizar los procesos de mantenimiento preventivo y mejorar la toma de decisiones durante las inspecciones.
-
----
-
-# Objetivo General
-
-Desarrollar un modelo basado en Visión Artificial capaz de detectar automáticamente fisuras visibles en superficies de concreto utilizando el dataset SDNET2018.
-
-Adicionalmente, se propone clasificar las imágenes según el espesor estimado de la fisura y generar un Índice de Prioridad de Inspección Visual (IPIV) que facilite la programación de inspecciones técnicas.
+**Presentado por:**
+* 👤 **Susana Abigail Campos Rodríguez**
+* 👤 **Carlos Teodoro Barreda Guzmán**
+* 👤 **Jaime Jesus Ramírez Elera**
+* 👤 **Renzo Salleres Untiveros**
 
 ---
 
-# Dataset
+## 🔍 1. Definición del Problema
+### **Descripción del problema de ingeniería estructural a resolver**
 
-Se utilizará el dataset **SDNET2018 (Concrete Crack Image Dataset)**.
+La infraestructura de concreto, presente en puentes, pavimentos, muros y edificaciones, está expuesta continuamente a cargas mecánicas, variaciones climáticas y procesos de deterioro que pueden generar fisuras superficiales. La identificación temprana de estas fisuras es fundamental para prevenir daños mayores y planificar intervenciones de mantenimiento oportunas.
 
-Características principales:
+Sin embargo, las inspecciones tradicionales dependen de evaluaciones visuales realizadas por especialistas, lo que puede demandar una gran cantidad de tiempo, recursos y personal técnico, especialmente en infraestructuras de gran extensión.
 
-- Más de 56 000 imágenes.
-- Imágenes con y sin fisuras.
-- Formato JPEG.
-- Resolución de 256 × 256 píxeles.
-- Incluye imágenes de:
-  - Puentes
-  - Muros
-  - Pavimentos
+> 💡 **Propuesta del Proyecto:** > Frente a esta problemática, el presente proyecto propone el uso de técnicas de **Machine Learning Supervisado** y **visión artificial** para automatizar la detección de fisuras en superficies de concreto mediante el análisis de imágenes del dataset **SDNET2018**, contribuyendo a mejorar la eficiencia y objetividad de los procesos de inspección estructural.
 
-El conjunto de datos contiene diferentes condiciones reales como:
+### 🎯 Objetivo del Proyecto
+Desarrollar una propuesta de modelo supervisado de visión artificial para detectar fisuras visibles en concreto usando el dataset SDNET2018, con énfasis en su posible uso como herramienta de preinspección en mantenimiento estructural.
 
-- Sombras
-- Cambios de iluminación
-- Rugosidad superficial
-- Bordes
-- Agujeros
-- Residuos
-
-Estas características permiten entrenar modelos más robustos para escenarios reales de inspección.
+* **Agrupamiento por espesor:** Se propone clasificar las imágenes agrupándolas en función del espesor de la fisura encontrada, usando uno de los algoritmos enseñados en clase (`K-means`, `DBScan` o `Kernel PCA`).
+* **Asignación de severidad:** La asignación del tipo de fisura (**leve, mediana o moderada**) será en función del espesor de las mismas.
 
 ---
 
-# Variables del Proyecto
+## 📊 2. Datos del Proyecto (Dataset)
 
-## Variable dependiente
+El dataset **SDNET2018** es un conjunto de datos anotado para entrenamiento, validación y comparación de algoritmos de inteligencia artificial orientados a la detección de fisuras en concreto. 
 
-- Presencia de fisura
-    - Con fisura (1)
-    - Sin fisura (0)
+Según la página oficial del dataset en *DigitalCommons@USU*, contiene más de **56,000 imágenes** de superficies de concreto con y sin fisuras. Fue publicado por autores asociados a *Utah State University* para el desarrollo de algoritmos mediante redes neuronales convolucionales (CNN). Las imágenes incluyen obstáculos reales como sombras, rugosidad superficial, bordes, agujeros y residuos de fondo.
 
-## Variables independientes
+### 📋 Ficha Técnica del Dataset
 
-- Intensidad RGB
-- Textura superficial
-- Bordes y contornos
-- Forma de la fisura
-- Orientación
-- Contraste
-- Iluminación
-- Ruido visual
+| Elemento | Descripción |
+| :--- | :--- |
+| **Nombre** | SDNET2018: Concrete Crack Image Dataset |
+| **Fuente** | DigitalCommons@USU: [Enlace al Dataset](https://digitalcommons.usu.edu/all_datasets/48/) |
+| **Tipo de datos** | Imágenes JPEG clasificadas en presencia o ausencia de fisura. |
+| **Escenarios** | Tableros de puente, muros y pavimentos de concreto. |
+| **Resolución** | 256 x 256 píxeles, según la descripción del dataset. |
+| **Uso en el proyecto** | Entrenamiento y evaluación de una **CNN** (*Convolutional Neural Network*) para clasificación visual supervisada. |
 
 ---
 
-# Aporte del Proyecto
+## 🔀 3. Variables del Modelo
 
-A diferencia de otros modelos que únicamente clasifican imágenes como "Fisura" o "No Fisura", esta propuesta incorpora un **Índice de Prioridad de Inspección Visual (IPIV)**.
+### 🔴 Variable Dependiente
+* **Presencia de fisura en la superficie de concreto:** Es una variable categórica binaria que indica si una imagen pertenece a la clase `Cracked` (con fisura) o `Uncracked` (sin fisura). Esta es la variable principal que la CNN intentará predecir.
 
-Este índice permitirá ordenar automáticamente las zonas inspeccionadas según el nivel de riesgo asociado a la fisura detectada, facilitando la planificación del mantenimiento estructural.
+| Tipo de Variable | Nombre | Descripción |
+| :--- | :--- | :--- |
+| **Dependiente Principal** | Presencia de fisura | Con fisura (1) / Sin fisura (0) |
+| **Dependiente Secundaria** | IPIV | Índice de Prioridad de Inspección Visual calculado a partir de la salida del modelo. |
 
-### Clasificación propuesta
+### 🟢 Variables Independientes
+Son las características visuales y numéricas que la red neuronal extraerá automáticamente de cada imagen:
 
-| Espesor | Nivel |
-|----------|--------|
-| 0.06 – 1 mm | Baja |
-| >1 – 5 mm | Media |
-| >5 – 15 mm | Alta |
-| >15 – 25 mm | Muy Alta |
-
----
-
-# Marco Metodológico
-
-El desarrollo seguirá el marco **PCS (Predictability, Computability & Stability)** propuesto por Bin Yu y Rebecca Barter.
-
-## Predictability
-
-Evaluar la capacidad del modelo para detectar correctamente la presencia de fisuras.
-
-## Computability
-
-Garantizar que el modelo pueda entrenarse utilizando recursos computacionales moderados.
-
-## Stability
-
-Verificar que el modelo mantenga resultados consistentes sobre diferentes tipos de superficies y distintas particiones del conjunto de datos.
+| Variable Independiente | Descripción |
+| :--- | :--- |
+| **Intensidad de píxeles RGB** | Valores numéricos de color presentes en cada imagen. |
+| **Textura superficial** | Patrones visuales de la superficie de concreto. |
+| **Bordes y contornos** | Discontinuidades detectadas automáticamente por la CNN. |
+| **Forma y orientación** | Características geométricas de posibles grietas. |
+| **Contraste e iluminación** | Variaciones de brillo, sombras y condiciones de captura. |
+| **Ruido visual** | Presencia de suciedad, bordes, agujeros o rugosidad superficial. |
 
 ---
 
-# Tecnologías a utilizar
+## 🚀 4. Enfoque Original: Índice de Prioridad (IPIV)
 
-- Python
-- OpenCV
-- TensorFlow / Keras
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-Learn
+Para diferenciar esta propuesta de otros grupos, el proyecto no se limitará a entregar un clasificador binario estándar. 
 
----
+El aporte particular será el diseño de un **Índice de Prioridad de Inspección Visual (IPIV)** basado en el espesor estimado de la fisura. Este índice ordenará las imágenes según el nivel de urgencia, sirviendo como herramienta de toma de decisiones para los equipos técnicos en campo.
 
-# Estado del Proyecto
+### 📐 Clasificación Propuesta según Espesor
 
-🟡 Planeamiento
-
-- [x] Definición del problema
-- [x] Selección del dataset
-- [ ] Preprocesamiento
-- [ ] Entrenamiento
-- [ ] Evaluación
-- [ ] Implementación del IPIV
-- [ ] Resultados finales
+| Categoría | Espesor Estimado de Fisura | Nivel de Prioridad |
+| :--- | :--- | :--- |
+| 🟢 **Fisura leve** | 0.06 mm – 1 mm | Baja |
+| 🟡 **Fisura moderada** | >1 mm – 5 mm | Media |
+| 🟠 **Fisura severa** | >5 mm – 15 mm | Alta |
+| 🔴 **Fisura crítica** | >15 mm – 25 mm | Muy alta |
 
 ---
 
-# Repositorio
+## ⚖️ 5. Marco VDS (Veridical Data Science) - Principios PCS
 
-Este repositorio documenta el desarrollo completo del proyecto correspondiente al curso **Aplicaciones de IA en Estructuras**, desde la definición del problema hasta la implementación y evaluación del modelo de Inteligencia Artificial.
+El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Computability, Stability*) propuesto por Yu & Barter (2024) para garantizar la confianza de la solución:
+
+| Principio PCS | Aplicación en este Proyecto | Justificación |
+| :--- | :--- | :--- |
+| **Predictability** (Predictibilidad) | Evaluar la capacidad del modelo para identificar correctamente imágenes con fisuras. | En inspección estructural, un falso negativo puede retrasar catastróficamente la revisión de una zona dañada. |
+| **Computability** (Computabilidad) | Usar modelos entrenables y ejecutables en equipos con recursos moderados. | El modelo debe ser viable para estudiantes o instituciones sin infraestructura computacional avanzada (computación en la nube accesible). |
+| **Stability** (Estabilidad) | Comparar resultados por tipo de superficie (puente, muro y pavimento), además de probar distintas semillas y particiones. | Un modelo confiable no debe funcionar solo en un subconjunto "fácil" ni depender de una única división de datos. |
