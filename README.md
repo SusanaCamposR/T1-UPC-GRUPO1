@@ -1,1 +1,1 @@
-# T1-UPC-GRUPO1
+SDNET2018 (Detecci´on Visual de Fisuras en Concreto)
