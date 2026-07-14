@@ -1,0 +1,8 @@
+PREPROCESAMIENTO DE IMAGEN 
+Se utilizan tecnicas de : 
+  Verificacion de archivos.
+  Conversion de imagenes a formato RGB.
+  redimensionamiento de 256 x256 pixeles. 
+  Deteccion de imagenes corrucptas.
+  Organizacion de imagenes por categorias.
+Estas operaciones se realizan con Pillow, mientrsa que pathlib y shutil permiten administrar las rutas , carpetas y archivos.
