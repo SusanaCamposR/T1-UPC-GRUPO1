@@ -220,7 +220,7 @@ Estas técnicas permitirán aumentar la diversidad de los datos de entrenamiento
 
 ---
 
-## 📊 6. Métricas de evaluación del modelo
+## 📊 Métricas que se utilizarán para evaluar el éxito del modelo
 
 Para evaluar el desempeño de la **Red Neuronal Convolucional**, se utilizarán diferentes métricas de clasificación.
 
