@@ -185,5 +185,16 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 <summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
 
 ```python
+# ============================================================
+# TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
+# ============================================================
 
+from pathlib import Path
+from PIL import Image, UnidentifiedImageError
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import shutil
 
+# [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnico.
+# ==============================================================
