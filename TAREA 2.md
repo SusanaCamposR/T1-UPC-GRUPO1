@@ -137,7 +137,7 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 * Variaciones de iluminación.
 ---
 
-## 🔄 2.3 Flujo general propuesto
+### 🔄 2.3 Flujo general propuesto
 
 El proceso secuencial para la detección de patologías estructurales mediante visión artificial sigue el siguiente flujo de datos desde la captura de la imagen hasta su diagnóstico final:
 
@@ -175,7 +175,7 @@ El proceso secuencial para la detección de patologías estructurales mediante v
 ```
 ---
 
-## ⚙️ Preprocesamiento de las imágenes
+### ⚙️ Preprocesamiento de las imágenes
 
 Antes de ingresar las imágenes a la **CNN**, se realizará una etapa de preprocesamiento con la finalidad de preparar y estandarizar los datos.
 
@@ -189,7 +189,7 @@ Estas técnicas permitirán aumentar la diversidad de los datos de entrenamiento
 
 ---
 
-## 📊 Métricas para evaluar el éxito del modelo
+## III. Métricas para evaluar el éxito del modelo
 
 Para evaluar el desempeño de la **Red Neuronal Convolucional (CNN)**, se utilizarán diferentes métricas de clasificación estándar en visión artificial:
 
@@ -246,7 +246,7 @@ La matriz de confusión permitirá visualizar los resultados de clasificación m
 
 ---
 
-## ✅ 7. Criterios de éxito del modelo
+### ✅  Criterios de éxito del modelo
 
 El desempeño del modelo será evaluado mediante las métricas obtenidas sobre un conjunto de imágenes que no hayan sido utilizadas durante el entrenamiento.
 
@@ -264,7 +264,7 @@ Como criterios iniciales de referencia, se propone evaluar:
 
 ---
 
-## 📚 8. Dataset
+### 📚 Dataset
 
 El proyecto utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto utilizadas para el estudio y detección de fisuras.
 
@@ -294,22 +294,7 @@ El conjunto de prueba permitirá realizar la evaluación final del modelo con im
 
 ---
 
-## 🛠️ 9. Tecnologías propuestas
-
-El proyecto contempla el uso de las siguientes tecnologías:
-
-* 🐍 **Python**
-* 🧠 **Redes Neuronales Convolucionales (CNN)**
-* 👁️ **Visión por computadora**
-* 🤖 **Deep Learning**
-* 📊 **Machine Learning**
-* 🖼️ **Procesamiento de imágenes**
-* 📚 **Dataset SDNET2018**
-
----
-
-
-## 📌 Resultado esperado
+### 📌 Resultado esperado
 
 Se espera obtener un modelo de clasificación capaz de recibir una imagen de una superficie de concreto y determinar automáticamente si presenta o no una fisura visible.
 
