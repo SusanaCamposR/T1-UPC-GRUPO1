@@ -12,7 +12,7 @@
 # 📊 TAREA 2: ANÁLISIS EXPLORATORIO Y PLAN ALGORÍTMICO
 
 ## **I. Análisis Exploratorio de Datos (EDA)
-### **Objetivo:** Verificar la calidad de los datos y definir los modelos de ML/IA a implementar.
+### **Objetivo:** Verificar la calidad de los datos.
 
 El desarrollo de esta etapa se centra en el **Análisis Exploratorio de Datos (EDA)**, la limpieza de las imágenes, el manejo de valores nulos y la visualización inicial de la data utilizando librerías fundamentales de Python como `Pandas`, `Matplotlib` y `PIL`.
 
