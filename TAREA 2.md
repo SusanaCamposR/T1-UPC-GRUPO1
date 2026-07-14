@@ -73,6 +73,7 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 <details>
 <summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
+--
 
 # ============================================================
 # TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
