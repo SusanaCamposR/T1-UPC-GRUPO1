@@ -73,7 +73,8 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 | **Revisar el reporte y la documentación del análisis** | [TAREA 2.md](./TAREA%202.md) |
 
 
-## 🏗️ Detección de Fisuras en Superficies de Concreto mediante una CNN
+## 🏗️ PLAN DE ALGORITMO
+## Detección de Fisuras en Superficies de Concreto mediante una CNN
 
 ## 📌 Descripción del proyecto
 
