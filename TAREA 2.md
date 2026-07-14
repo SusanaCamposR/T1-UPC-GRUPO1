@@ -201,7 +201,7 @@ Mide el porcentaje total de imágenes que el modelo logró clasificar de manera 
             Predicciones Correctas (True Positives + True Negatives)
 Accuracy = ──────────────────────────────────────────────────────────
                        Total de Predicciones Evaluadas
-
+```
 ---
 
 ### 🔎 Precision — Precisión
