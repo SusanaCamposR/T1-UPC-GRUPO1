@@ -135,15 +135,10 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 * Agujeros.
 * Residuos de fondo.
 * Variaciones de iluminación.
-
-
 ---
 
 ## 🔄 2.3 Flujo general propuesto
-
 El proceso secuencial para la detección de patologías estructurales mediante visión artificial sigue el siguiente flujo de datos desde la captura de la imagen hasta su diagnóstico final:
-## 🔄 2.3 Flujo general propuesto
-
 ```text
        ┌─────────────────────────────────────────┐
        │           IMAGEN DE CONCRETO            │
@@ -174,6 +169,7 @@ El proceso secuencial para la detección de patologías estructurales mediante v
        │ CON FISURA  │               │ SIN FISURA  │
        │  (Cracked)  │               │ (Uncracked) │
        └─────────────┘               └─────────────┘
+
 ---
 
 ## ⚙️ Preprocesamiento de las imágenes
