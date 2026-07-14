@@ -1,3 +1,93 @@
+# 📑 INFORME DE TRABAJO N° 2
+### **Tema:** Análisis Exploratorio y Plan Algorítmico
+
+**Presentado por:**
+* 👤 **Susana Abigail Campos Rodríguez**
+* 👤 **Carlos Teodoro Barreda Guzmán**
+* 👤 **Jaime Jesus Ramírez Elera**
+* 👤 **Renzo Salleres Untiveros**
+
+---
+---
+
+---
+
+# 📊 TAREA 2: ANÁLISIS EXPLORATORIO Y PLAN ALGORÍTMICO
+### **Objetivo:** Verificar la calidad de los datos y definir los modelos de ML/IA a implementar.
+
+El desarrollo de esta etapa se centra en el **Análisis Exploratorio de Datos (EDA)**, la limpieza de las imágenes, el manejo de valores nulos y la visualización inicial de la data utilizando librerías fundamentales de Python como `Pandas`, `Matplotlib` y `PIL`.
+
+---
+
+## 🛠️ 1. Pipeline de Limpieza y Preprocesamiento
+
+Para automatizar la auditoría de calidad del dataset **SDNET2018**, se implementó un script en Python que realiza las siguientes funciones:
+1. **Verificación de Estructura:** Comprobación de la existencia de las subcarpetas del dataset (`DECK`, `MURO`, `PAVIMENTO`).
+2. **Validación de Integridad:** Apertura de cada imagen mediante `PIL` para detectar y descartar archivos corruptos (`UnidentifiedImageError`).
+3. **Mapeo de Etiquetas:** Clasificación binaria (0: Sin grieta, 1: Con grieta) y segmentación por elemento estructural.
+4. **Normalización Visual:** Conversión forzada a tres canales **RGB** y reescalado uniforme a una resolución de **256 x 256 píxeles**.
+
+> ⚠️ **Nota de Infraestructura:** El script genera un nuevo directorio optimizado llamado `SDNET2018_LIMPIO`, aislando los datos corruptos y guardando un inventario consolidado en un archivo `.csv` para asegurar la **Computabilidad** del modelo.
+
+---
+
+## 📈 2. Resultados del Análisis Exploratorio (EDA)
+
+Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuvieron las siguientes métricas de control de calidad:
+
+### 📋 Cuadro de Control y Valores Nulos
+| Métrica Evaluada | Cantidad Registrada | Observación / Estado |
+| :--- | :---: | :--- |
+| **Imágenes Originales Válidas** | *[Coloca aquí el total]* | Listas para el preprocesamiento |
+| **Imágenes Corruptas Detectadas** | *[Coloca aquí el total]* | Removidas del conjunto activo |
+| **Valores Nulos Detectados (Missing)**| `0` | Base de datos limpia sin vacíos |
+
+### 🗂️ Distribución de Imágenes por Estado (Balance de Clases)
+| Estado de la Superficie | Código de Carpeta | N° de Imágenes | Porcentaje (%) |
+| :--- | :---: | :---: | :---: |
+| 🔴 **Con Grieta (Cracked)** | CD / CW / CP | *[Tus datos]* | *[%]* |
+| 🟢 **Sin Grieta (Uncracked)** | UD / UW / UP | *[Tus datos]* | *[%]* |
+
+### 🏗️ Segmentación por Elemento Estructural
+| Elemento Estructural | Con Grieta (1) | Sin Grieta (0) | Total por Elemento |
+| :--- | :---: | :---: | :---: |
+| 🌉 **Tablero de Puente (Deck)** | *[Dato CD]* | *[Dato UD]* | *[Suma]* |
+| 🧱 **Muro (Wall)** | *[Dato CW]* | *[Dato UW]* | *[Suma]* |
+| 🛣️ **Pavimento (Pavement)** | *[Dato CP]* | *[Dato UP]* | *[Suma]* |
+
+---
+
+## 🖼️ 3. Reportes Gráficos del Dataset
+
+*Los siguientes diagramas estadísticos fueron generados automáticamente mediante `Matplotlib` y reflejan las proporciones estructurales del dataset:*
+
+| Distribución por Carpetas | Balance de Clases (Estado) | Análisis por Elemento |
+| :---: | :---: | :---: |
+| ![Carpetas](./grafico_imagenes_por_carpeta.png) | ![Estado](./grafico_estado_grieta.png) | ![Elementos](./grafico_elemento_estado.png) |
+
+*(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
+
+---
+
+## 🐍 4. Código Fuente de la Implementación (Python)
+
+<details>
+<summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
+
+```python
+# ============================================================
+# TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
+# ============================================================
+
+from pathlib import Path
+from PIL import Image, UnidentifiedImageError
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import shutil
+
+# [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnico.
+# ==============================================================
 # 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
 
 ## 📌 Descripción del proyecto
