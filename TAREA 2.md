@@ -73,32 +73,43 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 | **Revisar el reporte y la documentación del análisis** | [TAREA 2.md](./TAREA%202.md) |
 
 
-  
-## **II. 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
+## 🏗️ Detección de Fisuras en Superficies de Concreto mediante una CNN
 
 ## 📌 Descripción del proyecto
 
-Para el desarrollo del proyecto se propone utilizar una **Red Neuronal Convolucional (CNN)** como algoritmo principal.
-La selección de este método responde a las características del problema planteado y al tipo de datos disponibles en el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
+El presente proyecto propone el desarrollo de un modelo de **visión artificial** basado en una **Red Neuronal Convolucional (CNN)** para detectar automáticamente la presencia o ausencia de fisuras visibles en superficies de concreto.
 
-El objetivo del proyecto es detectar automáticamente la presencia de fisuras, con la finalidad de contribuir a la priorización de la inspección visual de las zonas identificadas.
+Para el entrenamiento y evaluación del modelo se utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
 
----
-
-## 🧠 1. Red Neuronal Convolucional (CNN)
-
-La **Red Neuronal Convolucional (CNN)** será utilizada como modelo principal de **aprendizaje supervisado** para la clasificación binaria de las imágenes en dos categorías:
+El problema será abordado como una tarea de **clasificación binaria**, en la cual cada imagen será clasificada en una de las siguientes categorías:
 
 * 🔴 **Con fisura (`Cracked`)**
 * 🟢 **Sin fisura (`Uncracked`)**
 
-Este algoritmo resulta adecuado debido a su capacidad para procesar imágenes y aprender automáticamente características visuales relevantes, tales como:
+La finalidad del proyecto es contribuir a la automatización de la inspección visual de estructuras de concreto mediante técnicas de **Deep Learning** y **visión por computadora**.
+
+---
+
+## 🎯 1. Objetivo del proyecto
+
+> **Desarrollar un modelo de visión artificial basado en una Red Neuronal Convolucional (CNN) para detectar y clasificar automáticamente la presencia o ausencia de fisuras visibles en superficies de concreto, utilizando imágenes del dataset SDNET2018.**
+
+---
+
+## 🧠 2. Red Neuronal Convolucional (CNN)
+
+La **Red Neuronal Convolucional (CNN)** será utilizada como modelo principal de **aprendizaje supervisado** para realizar la clasificación binaria de las imágenes.
+
+Las CNN son especialmente adecuadas para el procesamiento de imágenes debido a su capacidad para aprender automáticamente características visuales relevantes durante el proceso de entrenamiento.
+
+Entre las características que el modelo puede aprender se encuentran:
 
 * Bordes.
 * Texturas.
 * Contornos.
 * Formas.
-* Patrones asociados con la presencia de fisuras.
+* Patrones espaciales.
+* Características visuales asociadas con la presencia de fisuras.
 
 ### 📥 Variables de entrada
 
@@ -114,19 +125,39 @@ Las variables de entrada estarán constituidas por la información visual conten
 
 ### 📤 Variable de salida
 
-> **Presencia o ausencia de fisura.**
+La variable de salida será de tipo binario:
 
-### 🔍 Justificación del uso de CNN
-
-La elección de una **CNN** se justifica porque las fisuras presentan patrones espaciales y geométricos que pueden variar en forma, orientación y apariencia.
-
-Asimismo, las imágenes del dataset **SDNET2018** contienen condiciones visuales complejas, como sombras, rugosidad superficial, bordes, agujeros y residuos de fondo.
-
-Por ello, se requiere un modelo capaz de aprender características relevantes directamente a partir de las imágenes y generalizar ante diferentes condiciones de inspección.
+|    Clase    | Descripción                                       |
+| :---------: | :------------------------------------------------ |
+|  `Cracked`  | 🔴 Superficie de concreto con presencia de fisura |
+| `Uncracked` | 🟢 Superficie de concreto sin presencia de fisura |
 
 ---
 
-## 🔄 3. Flujo general propuesto
+## 🔍 3. Justificación del uso de una CNN
+
+La elección de una **Red Neuronal Convolucional (CNN)** se justifica porque las fisuras presentan patrones espaciales y geométricos que pueden variar considerablemente en:
+
+* Forma.
+* Orientación.
+* Longitud visible.
+* Contraste.
+* Apariencia superficial.
+
+Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones visuales complejas, como:
+
+* Sombras.
+* Rugosidad superficial.
+* Bordes.
+* Agujeros.
+* Residuos de fondo.
+* Variaciones de iluminación.
+
+Por ello, se requiere un modelo capaz de aprender automáticamente características relevantes directamente a partir de las imágenes y generalizar ante diferentes condiciones visuales.
+
+---
+
+## 🔄 4. Flujo general propuesto
 
 ```text
 ┌─────────────────────────────────────────┐
@@ -136,6 +167,10 @@ Por ello, se requiere un modelo capaz de aprender características relevantes di
                      ▼
 ┌─────────────────────────────────────────┐
 │            PREPROCESAMIENTO             │
+│                                         │
+│  • Redimensionamiento                   │
+│  • Normalización                        │
+│  • Aumento de datos                     │
 └────────────────────┬────────────────────┘
                      │
                      ▼
@@ -145,56 +180,190 @@ Por ello, se requiere un modelo capaz de aprender características relevantes di
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│      EXTRACCIÓN DE CARACTERÍSTICAS      │
-│              DE LA FISURA               │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
-│     AGRUPAMIENTO POR CARACTERÍSTICAS    │
-└────────────────────-────────────────────┘
-
+│          CLASIFICACIÓN BINARIA          │
+└───────────────┬─────────────┬───────────┘
+                │             │
+                ▼             ▼
+        ┌─────────────┐ ┌─────────────┐
+        │ CON FISURA  │ │ SIN FISURA  │
+        │  (Cracked)  │ │ (Uncracked) │
+        └─────────────┘ └─────────────┘
 ```
 
 ---
 
-## 🧩 4. Justificación de la selección
+## ⚙️ 5. Preprocesamiento de las imágenes
 
-Este algoritmo permite abordar todo el problema.
+Antes de ingresar las imágenes a la **CNN**, se realizará una etapa de preprocesamiento con la finalidad de preparar y estandarizar los datos.
 
-### 🔹 Red Neuronal Convolucional (CNN)
+Las principales operaciones consideradas son:
 
-La **CNN** resuelve la tarea principal de detección automática de fisuras mediante técnicas de visión artificial.
+### 🔹 Redimensionamiento
 
-La metodología propuesta busca superar una clasificación limitada a:
+Todas las imágenes serán ajustadas a un tamaño uniforme compatible con la arquitectura de la red neuronal.
 
-> **Fisura / No fisura**
+### 🔹 Normalización
 
+Los valores de los píxeles serán normalizados para facilitar el proceso de entrenamiento del modelo.
 
----
+### 🔹 Aumento de datos (*Data Augmentation*)
 
-## 🎯 5. Objetivo propuesto
+Se podrán aplicar transformaciones controladas a las imágenes de entrenamiento, tales como:
 
-> **Desarrollar una propuesta de modelo de visión artificial para detectar fisuras visibles en superficies de concreto utilizando el dataset SDNET2018, mediante una Red Neuronal Convolucional (CNN).**
+* Rotaciones.
+* Desplazamientos.
+* Volteo horizontal.
+* Variaciones de escala.
 
----
-
-## 🛠️ Tecnologías y algoritmos propuestos
-
-* **Python**
-* **Redes Neuronales Convolucionales (CNN)**
-* **Visión artificial**
-* **Machine Learning**
-* **Dataset SDNET2018**
+Estas técnicas permitirán aumentar la diversidad de los datos de entrenamiento y mejorar la capacidad de generalización del modelo.
 
 ---
 
-## 📚 Dataset
+## 📊 6. Métricas de evaluación del modelo
 
-El proyecto utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto que incluyen muestras con y sin presencia de fisuras.
+Para evaluar el desempeño de la **Red Neuronal Convolucional**, se utilizarán diferentes métricas de clasificación.
+
+### 🎯 Accuracy — Exactitud
+
+Mide el porcentaje total de imágenes clasificadas correctamente.
+
+```text
+Accuracy = Predicciones correctas / Total de predicciones
+```
 
 ---
 
-## 👷 Área de aplicación
+### 🔎 Precision — Precisión
 
-**Ingeniería Civil | Ingeniería Estructural | Inteligencia Artificial | Inspección de estructuras**
+Mide qué proporción de las imágenes clasificadas por el modelo como **“Con fisura”** realmente presentan una fisura.
+
+Una precisión alta indica una menor cantidad de **falsos positivos**.
+
+---
+
+### 🚨 Recall — Sensibilidad
+
+Mide qué proporción de las imágenes que realmente presentan fisuras fueron correctamente identificadas por el modelo.
+
+Esta será una de las métricas de mayor importancia para el proyecto, debido a que permite evaluar la capacidad del modelo para **detectar fisuras existentes**.
+
+Un valor bajo de `Recall` implicaría que algunas imágenes con fisuras podrían ser clasificadas incorrectamente como **“Sin fisura”**.
+
+---
+
+### ⚖️ F1-Score
+
+El **F1-Score** representa un equilibrio entre `Precision` y `Recall`.
+
+Esta métrica será útil para evaluar el rendimiento global del modelo, especialmente cuando se requiera considerar simultáneamente los falsos positivos y los falsos negativos.
+
+---
+
+### 🧩 Matriz de confusión
+
+La matriz de confusión permitirá visualizar los resultados de clasificación mediante:
+
+| Resultado                   | Descripción                                   |
+| :-------------------------- | :-------------------------------------------- |
+| **Verdadero Positivo (TP)** | Imagen con fisura correctamente identificada  |
+| **Verdadero Negativo (TN)** | Imagen sin fisura correctamente identificada  |
+| **Falso Positivo (FP)**     | Imagen sin fisura clasificada como con fisura |
+| **Falso Negativo (FN)**     | Imagen con fisura clasificada como sin fisura |
+
+> [!IMPORTANT]
+> En el contexto de inspección de superficies de concreto, se prestará especial atención a los **falsos negativos**, debido a que representan fisuras existentes que el modelo no logró detectar.
+
+---
+
+## ✅ 7. Criterios de éxito del modelo
+
+El desempeño del modelo será evaluado mediante las métricas obtenidas sobre un conjunto de imágenes que no hayan sido utilizadas durante el entrenamiento.
+
+Como criterios iniciales de referencia, se propone evaluar:
+
+| Métrica       | Criterio de referencia |
+| :------------ | :--------------------: |
+| **Accuracy**  |         ≥ 90 %         |
+| **Precision** |         ≥ 90 %         |
+| **Recall**    |         ≥ 90 %         |
+| **F1-Score**  |         ≥ 0.90         |
+
+> [!NOTE]
+> Estos valores corresponden a **criterios iniciales propuestos para evaluar el desempeño del modelo** y no representan resultados obtenidos. Los valores finales serán determinados después del entrenamiento y evaluación de la CNN.
+
+---
+
+## 📚 8. Dataset
+
+El proyecto utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto utilizadas para el estudio y detección de fisuras.
+
+Para este proyecto, las imágenes serán organizadas en dos categorías principales:
+
+```text
+dataset/
+│
+├── Cracked/
+│   ├── imagen_001.jpg
+│   ├── imagen_002.jpg
+│   └── ...
+│
+└── Uncracked/
+    ├── imagen_001.jpg
+    ├── imagen_002.jpg
+    └── ...
+```
+
+Posteriormente, los datos serán divididos en conjuntos de:
+
+* **Entrenamiento (`Training`)**
+* **Validación (`Validation`)**
+* **Prueba (`Test`)**
+
+El conjunto de prueba permitirá realizar la evaluación final del modelo con imágenes no utilizadas durante el proceso de entrenamiento.
+
+---
+
+## 🛠️ 9. Tecnologías propuestas
+
+El proyecto contempla el uso de las siguientes tecnologías:
+
+* 🐍 **Python**
+* 🧠 **Redes Neuronales Convolucionales (CNN)**
+* 👁️ **Visión por computadora**
+* 🤖 **Deep Learning**
+* 📊 **Machine Learning**
+* 🖼️ **Procesamiento de imágenes**
+* 📚 **Dataset SDNET2018**
+
+---
+
+## 🏗️ 10. Área de aplicación
+
+El proyecto se encuentra relacionado con las siguientes áreas:
+
+**Ingeniería Civil | Ingeniería Estructural | Inteligencia Artificial | Deep Learning | Visión por Computadora | Inspección de Estructuras**
+
+---
+
+## 📌 Resultado esperado
+
+Se espera obtener un modelo de clasificación capaz de recibir una imagen de una superficie de concreto y determinar automáticamente si presenta o no una fisura visible.
+
+```text
+              IMAGEN DE ENTRADA
+                     │
+                     ▼
+              ┌─────────────┐
+              │     CNN     │
+              └──────┬──────┘
+                     │
+             ┌───────┴───────┐
+             ▼               ▼
+        CON FISURA       SIN FISURA
+         (Cracked)       (Uncracked)
+```
+
+El modelo será evaluado mediante **Accuracy, Precision, Recall, F1-Score y Matriz de Confusión**, permitiendo determinar cuantitativamente su capacidad para identificar fisuras visibles en superficies de concreto.
+
+
+  
