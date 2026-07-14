@@ -198,6 +198,24 @@ import shutil
 
 # [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnico.
 
+ 📈 5. Resultados Previstos
 
+Para evaluar si el modelo cumple correctamente con el objetivo del proyecto, se utilizarán diferentes indicadores que permitan medir qué tan bien identifica las imágenes de concreto con fisuras y sin fisuras. El propósito principal es comprobar que la herramienta pueda servir como apoyo en las inspecciones estructurales, reduciendo el tiempo necesario para revisar grandes cantidades de imágenes.
+
+Las métricas que se emplearán son las siguientes:
+
+- **Accuracy (Exactitud):** Indica el porcentaje total de imágenes clasificadas correctamente por el modelo, tanto con fisura como sin fisura.
+- **Precision (Precisión):** Mide qué tan confiables son las detecciones realizadas por el sistema. Es decir, de todas las imágenes identificadas como fisuradas, cuántas realmente presentan una fisura.
+- **Recall (Sensibilidad):** Evalúa la capacidad del modelo para detectar las fisuras existentes. Esta métrica es especialmente importante porque una fisura no detectada podría retrasar una inspección necesaria o generar riesgos en la infraestructura.
+- **F1-Score:** Combina la precisión y la sensibilidad en un único indicador, permitiendo obtener una evaluación más equilibrada del desempeño general del modelo.
+- **Matriz de Confusión:** Permitirá visualizar de forma clara los aciertos y errores de clasificación, identificando imágenes correctamente detectadas y posibles errores del sistema.
+
+Además de la detección de fisuras, se evaluará el desempeño del **Índice de Prioridad de Inspección Visual (IPIV)** propuesto en este proyecto. Este índice clasificará las imágenes según la severidad estimada de la fisura (leve, moderada, severa o crítica), utilizando como referencia el espesor detectado. De esta manera, el sistema no solo identificará la presencia de una fisura, sino que también ayudará a priorizar las inspecciones y actividades de mantenimiento.
+
+Se espera obtener un modelo con una alta capacidad de detección de fisuras y un bajo porcentaje de errores de clasificación. Asimismo, se espera que el IPIV permita ordenar adecuadamente las imágenes según su nivel de prioridad, facilitando la toma de decisiones durante las inspecciones estructurales.
+
+Como resultado final, se busca demostrar que las técnicas de Inteligencia Artificial y Visión Artificial pueden convertirse en una herramienta eficiente para apoyar los procesos de evaluación y mantenimiento de estructuras de concreto, reduciendo tiempos de inspección y mejorando la objetividad en la identificación de daños.
+
+Quedará bien en GitHub porque mantiene los encabezados ##, listas con - y texto simple compatible con
 
 
