@@ -68,19 +68,14 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
 ---
-# ============================================================
-# TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
-# ============================================================
 
-from pathlib import Path
-from PIL import Image, UnidentifiedImageError
-import pandas as pd
-import matplotlib.pyplot as plt
-import random
-import shutil
+## 🐍 4. Código Fuente de la Implementación (Python)
 
-# [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnico.
+<details>
+<summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
 # ==============================================================
+
+  
 # 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
 
 ## 📌 Descripción del proyecto
