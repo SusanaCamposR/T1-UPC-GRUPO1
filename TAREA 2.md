@@ -8,18 +8,17 @@
 * 👤 **Renzo Salleres Untiveros**
 
 ---
----
-
----
 
 # 📊 TAREA 2: ANÁLISIS EXPLORATORIO Y PLAN ALGORÍTMICO
+
+### **I. Análisis Exploratorio de Datos (EDA)
 ### **Objetivo:** Verificar la calidad de los datos y definir los modelos de ML/IA a implementar.
 
 El desarrollo de esta etapa se centra en el **Análisis Exploratorio de Datos (EDA)**, la limpieza de las imágenes, el manejo de valores nulos y la visualización inicial de la data utilizando librerías fundamentales de Python como `Pandas`, `Matplotlib` y `PIL`.
 
 ---
 
-## 🛠️ 1. Pipeline de Limpieza y Preprocesamiento
+## 🛠️ 1.1. Limpieza y Preprocesamiento
 
 Para automatizar la auditoría de calidad del dataset **SDNET2018**, se implementó un script en Python que realiza las siguientes funciones:
 1. **Verificación de Estructura:** Comprobación de la existencia de las subcarpetas del dataset (`DECK`, `MURO`, `PAVIMENTO`).
@@ -38,22 +37,22 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 ### 📋 Cuadro de Control y Valores Nulos
 | Métrica Evaluada | Cantidad Registrada | Observación / Estado |
 | :--- | :---: | :--- |
-| **Imágenes Originales Válidas** | *[Coloca aquí el total]* | Listas para el preprocesamiento |
-| **Imágenes Corruptas Detectadas** | *[Coloca aquí el total]* | Removidas del conjunto activo |
+| **Imágenes Originales Válidas** | *[56092]* | Listas para el preprocesamiento |
+| **Imágenes Corruptas Detectadas** | *[0]* | Removidas del conjunto activo |
 | **Valores Nulos Detectados (Missing)**| `0` | Base de datos limpia sin vacíos |
 
 ### 🗂️ Distribución de Imágenes por Estado (Balance de Clases)
 | Estado de la Superficie | Código de Carpeta | N° de Imágenes | Porcentaje (%) |
 | :--- | :---: | :---: | :---: |
-| 🔴 **Con Grieta (Cracked)** | CD / CW / CP | *[Tus datos]* | *[%]* |
-| 🟢 **Sin Grieta (Uncracked)** | UD / UW / UP | *[Tus datos]* | *[%]* |
+| 🔴 **Con Grieta (Cracked)** | CD / CW / CP | *[8484]* | *[84.87%]* |
+| 🟢 **Sin Grieta (Uncracked)** | UD / UW / UP | *[47608]* | *[15.13%]* |
 
 ### 🏗️ Segmentación por Elemento Estructural
 | Elemento Estructural | Con Grieta (1) | Sin Grieta (0) | Total por Elemento |
 | :--- | :---: | :---: | :---: |
-| 🌉 **Tablero de Puente (Deck)** | *[Dato CD]* | *[Dato UD]* | *[Suma]* |
-| 🧱 **Muro (Wall)** | *[Dato CW]* | *[Dato UW]* | *[Suma]* |
-| 🛣️ **Pavimento (Pavement)** | *[Dato CP]* | *[Dato UP]* | *[Suma]* |
+| 🌉 **Tablero de Puente (Deck)** | *[2025]* | *[11595]* | *[13620]* |
+| 🧱 **Muro (Wall)** | *[2608]* | *[21726]* | *[24334]* |
+| 🛣️ **Pavimento (Pavement)** | *[3851]* | *[14287]* | *[18138]* |
 
 ---
 
