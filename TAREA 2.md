@@ -68,7 +68,11 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 ## 🖼️ 1.4. Reportes Gráficos del Dataset
 
----
+| Si prefieres... | Abre este archivo |
+| :--- | :--- |
+| **Editar variables y ejecutar el código en Python** | [t2-ia-upc-g1.ipynb](./t2-ia-upc-g1.ipynb) |
+| **Ver el script de limpieza alternativo** | [TAREA2.py](./TAREA2.py) |
+
 
   
 ## **II. 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
