@@ -118,8 +118,253 @@ El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Comput
 * 👤 **Renzo Salleres Untiveros**
 
 ---
+---
 
-## 🔍 1. Definición del Problema
+# 📊 TAREA 2: ANÁLISIS EXPLORATORIO Y PLAN ALGORÍTMICO
+### **Objetivo:** Verificar la calidad de los datos y definir los modelos de ML/IA a implementar.
+
+El desarrollo de esta etapa se centra en el **Análisis Exploratorio de Datos (EDA)**, la limpieza de las imágenes, el manejo de valores nulos y la visualización inicial de la data utilizando librerías fundamentales de Python como `Pandas`, `Matplotlib` y `PIL`.
+
+---
+
+## 🛠️ 1. Pipeline de Limpieza y Preprocesamiento
+
+Para automatizar la auditoría de calidad del dataset **SDNET2018**, se implementó un script en Python que realiza las siguientes funciones:
+1. **Verificación de Estructura:** Comprobación de la existencia de las subcarpetas del dataset (`DECK`, `MURO`, `PAVIMENTO`).
+2. **Validación de Integridad:** Apertura de cada imagen mediante `PIL` para detectar y descartar archivos corruptos (`UnidentifiedImageError`).
+3. **Mapeo de Etiquetas:** Clasificación binaria (0: Sin grieta, 1: Con grieta) y segmentación por elemento estructural.
+4. **Normalización Visual:** Conversión forzada a tres canales **RGB** y reescalado uniforme a una resolución de **256 x 256 píxeles**.
+
+> ⚠️ **Nota de Infraestructura:** El script genera un nuevo directorio optimizado llamado `SDNET2018_LIMPIO`, aislando los datos corruptos y guardando un inventario consolidado en un archivo `.csv` para asegurar la **Computabilidad** del modelo.
+
+---
+
+## 🐍 2. Código Fuente de la Implementación (Python)
+
+A continuación, se presenta el script completo utilizado para la limpieza, análisis estadístico y generación de gráficos descriptivos del dataset:
+
+```python
+# ============================================================
+# TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
+# ============================================================
+
+from pathlib import Path
+from PIL import Image, UnidentifiedImageError
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import shutil
+
+# ============================================================
+# 1. CONFIGURACIÓN
+# ============================================================
+RUTA_DATASET = Path(r"D:\SDNET2018")
+RUTA_LIMPIA = RUTA_DATASET.parent / "SDNET2018_LIMPIO"
+
+ANCHO_OBJETIVO = 256
+ALTO_OBJETIVO = 256
+EXTENSIONES_VALIDAS = {".jpg", ".jpeg", ".png"}
+
+# Mapeo de subcarpetas y etiquetas estructurales
+CLASES = {
+    "CD": ("Deck", "Con grieta", 1),
+    "UD": ("Deck", "Sin grieta", 0),
+    "CW": ("Muro", "Con grieta", 1),
+    "UW": ("Muro", "Sin grieta", 0),
+    "CP": ("Pavimento", "Con grieta", 1),
+    "UP": ("Pavimento", "Sin grieta", 0)
+}
+
+CARPETAS = {
+    "CD": RUTA_DATASET / "DECK" / "CD",
+    "UD": RUTA_DATASET / "DECK" / "UD",
+    "CW": RUTA_DATASET / "MURO" / "CW",
+    "UW": RUTA_DATASET / "MURO" / "UW",
+    "CP": RUTA_DATASET / "PAVIMENTO" / "CP",
+    "UP": RUTA_DATASET / "PAVIMENTO" / "UP"
+}
+
+# ============================================================
+# 2. VERIFICACIÓN DE LA ESTRUCTURA DE CARPETAS
+# ============================================================
+print("=" * 60)
+print("VERIFICACIÓN DE CARPETAS")
+print("=" * 60)
+
+carpetas_faltantes = []
+for codigo, ruta in CARPETAS.items():
+    if ruta.exists():
+        print(f"Correcto: {codigo} -> {ruta}")
+    else:
+        print(f"NO SE ENCONTRÓ: {codigo} -> {ruta}")
+        carpetas_faltantes.append(ruta)
+
+if carpetas_faltantes:
+    print("\nRevisa la ruta del dataset o los nombres de las carpetas.")
+    raise SystemExit
+
+print("\nTodas las carpetas fueron encontradas correctamente.")
+
+# ============================================================
+# 3. LECTURA Y VERIFICACIÓN DE LAS IMÁGENES
+# ============================================================
+registros = []
+imagenes_corruptas = []
+
+print("\n" + "=" * 60)
+print("LEYENDO Y VERIFICANDO IMÁGENES")
+print("=" * 60)
+
+for codigo_clase, carpeta in CARPETAS.items():
+    elemento, estado, etiqueta = CLASES[codigo_clase]
+    archivos = [
+        archivo for archivo in carpeta.iterdir()
+        if archivo.is_file() and archivo.suffix.lower() in EXTENSIONES_VALIDAS
+    ]
+    
+    print(f"\nProcesando {codigo_clase}: {len(archivos)} archivos")
+    
+    for numero, ruta_imagen in enumerate(archivos, start=1):
+        try:
+            with Image.open(ruta_imagen) as imagen:
+                imagen.verify()
+            
+            with Image.open(ruta_imagen) as imagen:
+                ancho, alto = imagen.size
+                formato = imagen.format
+                modo_color = imagen.mode
+                
+            tamaño_bytes = ruta_imagen.stat().st_size
+            
+            registros.append({
+                "archivo": ruta_imagen.name,
+                "ruta": str(ruta_imagen),
+                "carpeta": codigo_clase,
+                "elemento": elemento,
+                "estado": estado,
+                "etiqueta": etiqueta,
+                "ancho_px": ancho,
+                "alto_px": alto,
+                "formato": formato,
+                "modo_color": modo_color,
+                "tamaño_bytes": tamaño_bytes,
+                "imagen_valida": True
+            })
+        except (UnidentifiedImageError, OSError, ValueError) as error:
+            print(f"Imagen corrupta: {ruta_imagen.name}")
+            imagenes_corruptas.append({
+                "archivo": ruta_imagen.name,
+                "ruta": str(ruta_imagen),
+                "carpeta": codigo_clase,
+                "error": str(error)
+            })
+            
+        if numero % 1000 == 0:
+            print(f"  {numero} imágenes revisadas...")
+
+# ============================================================
+# 4. ANÁLISIS EXPLORATORIO DE DATOS (EDA)
+# ============================================================
+df = pd.DataFrame(registros)
+if df.empty:
+    print("No se encontraron imágenes válidas.")
+    raise SystemExit
+
+print("\n" + "=" * 60)
+print("RESUMEN GENERAL DEL DATASET")
+print("=" * 60)
+print(f"Total de imágenes válidas: {len(df)}")
+print(f"Total de imágenes corruptas: {len(imagenes_corruptas)}")
+
+# Verificación de Nulos
+valores_nulos = df.isnull().sum()
+print("\nValores nulos por columna:\n", valores_nulos)
+
+# Distribuciones Estadísticas
+conteo_carpetas = df["carpeta"].value_counts().sort_index()
+conteo_estado = df["estado"].value_counts()
+tabla_elementos = pd.crosstab(df["elemento"], df["estado"])
+resoluciones = df.groupby(["ancho_px", "alto_px"]).size().reset_index(name="cantidad")
+
+df["tamaño_kb"] = df["tamaño_bytes"] / 1024
+print("\nEstadísticas del tamaño de archivos en KB:\n", df["tamaño_kb"].describe())
+
+# ============================================================
+# 5. GENERACIÓN DE REPORTES VISUALES
+# ============================================================
+# Gráfico 1: Imágenes por Carpeta
+plt.figure(figsize=(9, 5))
+conteo_carpetas.plot(kind="bar")
+plt.title("Cantidad de imágenes por carpeta")
+plt.xlabel("Carpeta")
+plt.ylabel("Número de imágenes")
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig(RUTA_DATASET / "grafico_imagenes_por_carpeta.png", dpi=300)
+plt.close()
+
+# Gráfico 2: Distribución por Estado
+plt.figure(figsize=(7, 5))
+conteo_estado.plot(kind="bar")
+plt.title("Distribución de imágenes por estado")
+plt.xlabel("Estado")
+plt.ylabel("Número de imágenes")
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig(RUTA_DATASET / "grafico_estado_grieta.png", dpi=300)
+plt.close()
+
+# Gráfico 3: Elemento vs Estado
+tabla_elementos.plot(kind="bar", figsize=(9, 5))
+plt.title("Distribución por elemento estructural")
+plt.xlabel("Elemento estructural")
+plt.ylabel("Número de imágenes")
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig(RUTA_DATASET / "grafico_elemento_estado.png", dpi=300)
+plt.close()
+
+# ============================================================
+# 6. EXPORTACIÓN DE INVENTARIOS
+# ============================================================
+df.to_csv(RUTA_DATASET / "inventario_sdnet2018.csv", index=False, encoding="utf-8-sig")
+
+if imagenes_corruptas:
+    pd.DataFrame(imagenes_corruptas).to_csv(
+        RUTA_DATASET / "imagenes_corruptas.csv", index=False, encoding="utf-8-sig"
+    )
+
+# ============================================================
+# 7. PROCESO DE LIMPIEZA Y HOMOGENEIZACIÓN
+# ============================================================
+print("\n" + "=" * 60)
+print("CREANDO DATASET LIMPIO")
+print("=" * 60)
+
+if RUTA_LIMPIA.exists():
+    shutil.rmtree(RUTA_LIMPIA)
+RUTA_LIMPIA.mkdir(parents=True, exist_ok=True)
+
+imagenes_limpiadas = 0
+errores_limpieza = []
+
+for indice, fila in df.iterrows():
+    ruta_original = Path(fila["ruta"])
+    ruta_relativa = ruta_original.relative_to(RUTA_DATASET)
+    ruta_destino = RUTA_LIMPIA / ruta_relativa
+    
+    ruta_destino.parent.mkdir(parents=True, exist_ok=True)
+    
+    try:
+        with Image.open(ruta_original) as imagen:
+            imagen = imagen.convert("RGB")
+            imagen = imagen.resize((ANCHO_OBJETIVO, ALTO_OBJETIVO))
+            imagen.save(ruta_destino, format="JPEG", quality=95)
+        imagenes_limpiadas += 1
+    except Exception as error:
+        errores_limpieza.append({"archivo": ruta_original.name, "error": str(error)})
+
+print("\nProceso terminado correctamente.")
 
 
 
