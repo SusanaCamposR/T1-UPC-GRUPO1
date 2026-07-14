@@ -44,8 +44,8 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 ### 🗂️ Distribución de Imágenes por Estado (Balance de Clases)
 | Estado de la Superficie | Código de Carpeta | N° de Imágenes | Porcentaje (%) |
 | :--- | :---: | :---: | :---: |
-| 🔴 **Con Grieta (Cracked)** | CD / CW / CP | *[8484]* | *[84.87%]* |
-| 🟢 **Sin Grieta (Uncracked)** | UD / UW / UP | *[47608]* | *[15.13%]* |
+| 🔴 **Con Grieta (Cracked)** | CD / CW / CP | *[8484]* | *[15.13%]* |
+| 🟢 **Sin Grieta (Uncracked)** | UD / UW / UP | *[47608]* | *[84.87%]* |
 
 ### 🏗️ Segmentación por Elemento Estructural
 | Elemento Estructural | Con Grieta (1) | Sin Grieta (0) | Total por Elemento |
