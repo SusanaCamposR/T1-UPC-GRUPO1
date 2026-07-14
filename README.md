@@ -74,23 +74,6 @@ Son las características visuales y numéricas que la red neuronal extraerá aut
 
 ---
 
-## 🚀 4. Enfoque Original: Índice de Prioridad (IPIV)
-
-Para diferenciar esta propuesta de otros grupos, el proyecto no se limitará a entregar un clasificador binario estándar. 
-
-El aporte particular será el diseño de un **Índice de Prioridad de Inspección Visual (IPIV)** basado en el espesor estimado de la fisura. Este índice ordenará las imágenes según el nivel de urgencia, sirviendo como herramienta de toma de decisiones para los equipos técnicos en campo.
-
-### 📐 Clasificación Propuesta según Espesor
-
-| Categoría | Espesor Estimado de Fisura | Nivel de Prioridad |
-| :--- | :--- | :--- |
-| 🟢 **Fisura leve** | 0.06 mm – 1 mm | Baja |
-| 🟡 **Fisura moderada** | >1 mm – 5 mm | Media |
-| 🟠 **Fisura severa** | >5 mm – 15 mm | Alta |
-| 🔴 **Fisura crítica** | >15 mm – 25 mm | Muy alta |
-
----
-
 ## ⚖️ 5. Marco VDS (Veridical Data Science) - Principios PCS
 
 El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Computability, Stability*) propuesto por Yu & Barter (2024) para garantizar la confianza de la solución:
