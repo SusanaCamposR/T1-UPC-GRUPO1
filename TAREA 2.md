@@ -66,12 +66,11 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
-## 🖼️ 1.4. Reportes Gráficos del Dataset
-
-| Si prefieres... | Abre este archivo |
+## 🐍 4. Código Fuente de la Implementación (Python)
+| Descripción... | Enlace |
 | :--- | :--- |
-| **Editar variables y ejecutar el código en Python** | [t2-ia-upc-g1.ipynb](./t2-ia-upc-g1.ipynb) |
-| **Ver el script de limpieza alternativo** | [TAREA2.py](./TAREA2.py) |
+| **Ver o ejecutar el script de limpieza completo (Python)** | [TAREA2.PY](./TAREA2.PY) |
+| **Revisar el reporte y la documentación del análisis** | [TAREA 2.md](./TAREA%202.md) |
 
 
   
