@@ -154,27 +154,6 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 * Residuos de fondo.
 * Variaciones de iluminación.
 
-METRICAS.
-
-## Métricas para Evaluar el Modelo
-
-El desempeño del modelo se evaluará mediante las siguientes métricas:
-
-### Accuracy (Exactitud)
-
-Mide el porcentaje total de imágenes clasificadas correctamente.
-
-### Precision (Precisión)
-
-Mide el porcentaje de imágenes clasificadas como "Fisura" que realmente contienen una fisura.
-
-### Recall (Sensibilidad)
-
-Mide la capacidad del modelo para detectar correctamente las imágenes que contienen fisuras.
-
-### F1-Score
-
-Es una métrica que combina Precision y Recall, proporcionando una evaluación equilibrada del desempeño del modelo.
 
 ---
 
