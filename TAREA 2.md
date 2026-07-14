@@ -75,6 +75,8 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 <summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
 # ==============================================================
 
+
+
   
 # 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
 
