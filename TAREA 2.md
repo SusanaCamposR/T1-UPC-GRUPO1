@@ -154,7 +154,7 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 * Residuos de fondo.
 * Variaciones de iluminación.
 
-Por ello, se requiere un modelo capaz de aprender automáticamente características relevantes directamente a partir de las imágenes y generalizar ante diferentes condiciones visuales.
+METRICAS.
 
 | Métrica                   | ¿Qué mide?                                                                                  | Objetivo                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------ |
