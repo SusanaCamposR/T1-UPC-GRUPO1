@@ -11,7 +11,7 @@
 
 # 📊 TAREA 2: ANÁLISIS EXPLORATORIO Y PLAN ALGORÍTMICO
 
-### **I. Análisis Exploratorio de Datos (EDA)
+## **I. Análisis Exploratorio de Datos (EDA)
 ### **Objetivo:** Verificar la calidad de los datos y definir los modelos de ML/IA a implementar.
 
 El desarrollo de esta etapa se centra en el **Análisis Exploratorio de Datos (EDA)**, la limpieza de las imágenes, el manejo de valores nulos y la visualización inicial de la data utilizando librerías fundamentales de Python como `Pandas`, `Matplotlib` y `PIL`.
@@ -30,7 +30,7 @@ Para automatizar la auditoría de calidad del dataset **SDNET2018**, se implemen
 
 ---
 
-## 📈 2. Resultados del Análisis Exploratorio (EDA)
+## 📈 1.2. Resultados del Análisis Exploratorio (EDA)
 
 Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuvieron las siguientes métricas de control de calidad:
 
@@ -56,7 +56,7 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 ---
 
-## 🖼️ 3. Reportes Gráficos del Dataset
+## 🖼️ 1.3. Reportes Gráficos del Dataset
 
 *Los siguientes diagramas estadísticos fueron generados automáticamente mediante `Matplotlib` y reflejan las proporciones estructurales del dataset:*
 
@@ -66,10 +66,12 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
+## 🖼️ 1.4. Reportes Gráficos del Dataset
+
 ---
 
   
-# 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
+## **II. 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
 
 ## 📌 Descripción del proyecto
 
