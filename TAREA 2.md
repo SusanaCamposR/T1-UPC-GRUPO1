@@ -182,23 +182,22 @@ Antes de ingresar las imágenes a la **CNN**, se realizará una etapa de preproc
 | **🔹 Normalización** | Escalar los valores de los píxeles. | Facilitar y optimizar el proceso de entrenamiento del modelo. |
 | **🔹 Aumento de datos**<br>*(Data Augmentation)* | Aplicación de transformaciones controladas en el conjunto de entrenamiento:<br>• Rotaciones<br>• Desplazamientos<br>• Volteo horizontal<br>• Variaciones de escala | Aumentar la diversidad de los datos y mejorar la capacidad de generalización de la red. |
 
----
-
 Estas técnicas permitirán aumentar la diversidad de los datos de entrenamiento y mejorar la capacidad de generalización del modelo.
 
 ---
 
-## 📊 Métricas que se utilizarán para evaluar el éxito del modelo
+## 📊 Métricas para evaluar el éxito del modelo
 
-Para evaluar el desempeño de la **Red Neuronal Convolucional**, se utilizarán diferentes métricas de clasificación.
+Para evaluar el desempeño de la **Red Neuronal Convolucional (CNN)**, se utilizarán diferentes métricas de clasificación estándar en visión artificial:
 
 ### 🎯 Accuracy — Exactitud
 
-Mide el porcentaje total de imágenes clasificadas correctamente.
+Mide el porcentaje total de imágenes que el modelo logró clasificar de manera correcta (tanto con fisura como sin fisura) sobre el total del dataset.
 
 ```text
-Accuracy = Predicciones correctas / Total de predicciones
-```
+            Predicciones Correctas (True Positives + True Negatives)
+Accuracy = ──────────────────────────────────────────────────────────
+                       Total de Predicciones Evaluadas
 
 ---
 
