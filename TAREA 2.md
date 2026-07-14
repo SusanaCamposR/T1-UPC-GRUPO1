@@ -338,13 +338,6 @@ El proyecto contempla el uso de las siguientes tecnologías:
 
 ---
 
-## 🏗️ 10. Área de aplicación
-
-El proyecto se encuentra relacionado con las siguientes áreas:
-
-**Ingeniería Civil | Ingeniería Estructural | Inteligencia Artificial | Deep Learning | Visión por Computadora | Inspección de Estructuras**
-
----
 
 ## 📌 Resultado esperado
 
