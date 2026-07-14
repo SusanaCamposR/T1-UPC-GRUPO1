@@ -105,3 +105,21 @@ El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Comput
 
 * 📖 **Yu, B., & Barter, R. (2024).** *Veridical Data Science: The PCS Framework.* MIT Press. https://vdsbook.com/
 * 📊 **Maguire, M., Dorafshan, S., & Thomas, R. J. (2018).** *SDNET2018: A concrete crack image dataset for machine learning applications.* Utah State University. https://doi.org/10.15142/T3TD19
+
+
+
+# 📑 INFORME DE TRABAJO N° 2
+### **Tema:** Análisis Exploratorio y Plan Algorítmico
+
+**Presentado por:**
+* 👤 **Susana Abigail Campos Rodríguez**
+* 👤 **Carlos Teodoro Barreda Guzmán**
+* 👤 **Jaime Jesus Ramírez Elera**
+* 👤 **Renzo Salleres Untiveros**
+
+---
+
+## 🔍 1. Definición del Problema
+
+
+
