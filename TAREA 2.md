@@ -74,11 +74,10 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 ## 📌 Descripción del proyecto
 
-Para el desarrollo del proyecto se propone utilizar una **Red Neuronal Convolucional (CNN)** como algoritmo principal y **K-means** como algoritmo complementario de agrupamiento.
+Para el desarrollo del proyecto se propone utilizar una **Red Neuronal Convolucional (CNN)** como algoritmo principal.
+La selección de este métodosresponde a las características del problema planteado y al tipo de datos disponibles en el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
 
-La selección de ambos métodos responde a las características del problema planteado y al tipo de datos disponibles en el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
-
-El objetivo del proyecto es detectar automáticamente la presencia de fisuras y, posteriormente, establecer una agrupación basada en características cuantitativas asociadas a su espesor, con la finalidad de contribuir a la priorización de la inspección visual de las zonas identificadas.
+El objetivo del proyecto es detectar automáticamente la presencia de fisuras, con la finalidad de contribuir a la priorización de la inspección visual de las zonas identificadas.
 
 ---
 
