@@ -123,36 +123,6 @@ Por ello, se requiere un modelo capaz de aprender características relevantes di
 
 ---
 
-## 📊 2. Algoritmo K-means
-
-Como algoritmo complementario se propone utilizar **K-means**, correspondiente a una técnica de **aprendizaje no supervisado**.
-
-Su función será explorar el agrupamiento de las fisuras detectadas a partir de características cuantitativas previamente extraídas, principalmente aquellas asociadas al **espesor estimado de la fisura**.
-
-### 🚦 Niveles de prioridad
-
-Debido a que el proyecto plantea cuatro niveles de prioridad, se evaluará inicialmente una configuración de:
-
-> ### `K = 4 clústeres`
-
-| Clúster | Nivel de prioridad |
-| :-----: | :----------------- |
-|    1    | 🟢 Leve            |
-|    2    | 🟡 Moderada        |
-|    3    | 🟠 Severa          |
-|    4    | 🔴 Crítica         |
-
-Posteriormente, los grupos obtenidos podrán compararse con los rangos de espesor definidos en el proyecto para analizar la correspondencia entre los patrones identificados por el algoritmo y las categorías propuestas de prioridad de inspección.
-
-> [!IMPORTANT]
-> **K-means no detecta ni mide directamente el espesor de una fisura.**
-
-Antes de aplicar el algoritmo será necesaria una etapa de procesamiento y extracción de características que permita obtener una representación cuantitativa de cada fisura.
-
-De esta manera, **K-means** se utilizará para agrupar las observaciones según su similitud y no como un clasificador supervisado con etiquetas predefinidas.
-
----
-
 ## 🔄 3. Flujo general propuesto
 
 ```text
@@ -172,30 +142,15 @@ De esta manera, **K-means** se utilizará para agrupar las observaciones según 
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│        CLASIFICACIÓN DE LA IMAGEN       │
-│          FISURA / SIN FISURA            │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
 │      EXTRACCIÓN DE CARACTERÍSTICAS      │
 │              DE LA FISURA               │
 └────────────────────┬────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│                 K-MEANS                 │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
 │     AGRUPAMIENTO POR CARACTERÍSTICAS    │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
-│     NIVEL DE PRIORIDAD DE INSPECCIÓN    │
-└─────────────────────────────────────────┘
+└────────────────────-────────────────────┘
+
 ```
 
 ---
@@ -208,25 +163,17 @@ La combinación de ambos algoritmos permite abordar dos etapas diferentes y comp
 
 La **CNN** resuelve la tarea principal de detección automática de fisuras mediante técnicas de visión artificial.
 
-### 🔹 Algoritmo K-means
-
-**K-means** permite explorar agrupaciones naturales de las fisuras a partir de características cuantitativas asociadas a su espesor.
-
 En conjunto, la metodología propuesta busca superar una clasificación limitada a:
 
 > **Fisura / No fisura**
 
 y proporcionar información adicional que contribuya a establecer un:
 
-> ### Índice de Prioridad de Inspección Visual (IPIV)
-
-El **IPIV** estará orientado a dirigir al equipo técnico hacia las zonas que requieren una revisión prioritaria.
-
 ---
 
 ## 🎯 5. Objetivo propuesto
 
-> **Desarrollar una propuesta de modelo de visión artificial para detectar fisuras visibles en superficies de concreto utilizando el dataset SDNET2018, mediante una Red Neuronal Convolucional (CNN), y agrupar las fisuras detectadas según características cuantitativas asociadas a su espesor mediante el algoritmo K-means, con la finalidad de establecer niveles de prioridad para la preinspección y el mantenimiento estructural.**
+> **Desarrollar una propuesta de modelo de visión artificial para detectar fisuras visibles en superficies de concreto utilizando el dataset SDNET2018, mediante una Red Neuronal Convolucional (CNN).**
 
 ---
 
@@ -234,7 +181,6 @@ El **IPIV** estará orientado a dirigir al equipo técnico hacia las zonas que r
 
 * **Python**
 * **Redes Neuronales Convolucionales (CNN)**
-* **K-means**
 * **Visión artificial**
 * **Machine Learning**
 * **Dataset SDNET2018**
