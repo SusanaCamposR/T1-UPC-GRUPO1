@@ -1,0 +1,49 @@
+Resultados Previstos
+
+El presente proyecto tiene como finalidad desarrollar un modelo de Inteligencia Artificial capaz de identificar automáticamente la presencia de fisuras en superficies de concreto mediante el análisis de imágenes del dataset SDNET2018. Se espera que el modelo aprenda a reconocer patrones visuales asociados a la presencia de grietas y pueda diferenciar de manera confiable entre superficies dañadas y superficies en buen estado.
+
+Uno de los principales resultados esperados es demostrar que el uso de técnicas de Visión Artificial puede apoyar los procesos de inspección estructural, permitiendo analizar una gran cantidad de imágenes en menor tiempo que una revisión completamente manual. Esto podría contribuir a optimizar recursos y servir como una herramienta de apoyo para los profesionales encargados de la evaluación y mantenimiento de estructuras.
+
+Para determinar el nivel de desempeño alcanzado por el modelo se emplearán diferentes métricas de evaluación. Estas métricas permitirán medir la calidad de las predicciones realizadas y verificar si el sistema cumple adecuadamente con el objetivo planteado.
+
+### Métricas de Evaluación
+
+- **Accuracy (Exactitud):**
+  
+  Representa el porcentaje total de imágenes que fueron clasificadas correctamente por el modelo. Esta métrica permitirá obtener una visión general del rendimiento alcanzado durante la etapa de pruebas.
+
+- **Precision (Precisión):**
+  
+  Indica qué tan confiables son las detecciones realizadas por el sistema. En otras palabras, mide cuántas de las imágenes identificadas como fisuradas realmente contienen una fisura.
+
+- **Recall (Sensibilidad):**
+  
+  Evalúa la capacidad del modelo para detectar la mayor cantidad posible de fisuras existentes. Esta métrica es especialmente importante debido a que una fisura no detectada podría representar una condición que requiera inspección o mantenimiento.
+
+- **F1-Score:**
+  
+  Combina la precisión y la sensibilidad en un único indicador, permitiendo obtener una evaluación más equilibrada del desempeño general del modelo.
+
+- **Matriz de Confusión:**
+  
+  Permitirá visualizar de forma sencilla los aciertos y errores de clasificación, identificando cuántas imágenes fueron clasificadas correctamente y cuántas presentaron errores de predicción.
+
+### Resultados Esperados del Modelo
+
+Se espera que el modelo alcance un nivel de precisión suficientemente alto para identificar correctamente la mayoría de las imágenes que contienen fisuras. Asimismo, se busca minimizar la cantidad de errores de clasificación, especialmente aquellos casos en los que una fisura real sea identificada como una superficie sin daño.
+
+Otro resultado esperado es comprobar que el comportamiento del modelo sea estable al trabajar con imágenes provenientes de diferentes tipos de elementos estructurales, como puentes, muros y pavimentos. Esto permitiría verificar que la solución propuesta puede adaptarse a distintas condiciones presentes en infraestructuras reales.
+
+### Evaluación del Índice de Prioridad de Inspección Visual (IPIV)
+
+Además de detectar la presencia de fisuras, el proyecto incorpora el desarrollo del Índice de Prioridad de Inspección Visual (IPIV), el cual constituye el principal aporte diferenciador de la propuesta.
+
+Este índice permitirá clasificar las imágenes de acuerdo con el espesor estimado de la fisura detectada, agrupándolas en categorías de severidad tales como leve, moderada, severa y crítica. Como consecuencia, cada imagen recibirá un nivel de prioridad para inspección o mantenimiento.
+
+Se espera que esta clasificación facilite la toma de decisiones por parte de los responsables de la gestión de infraestructura, permitiendo identificar con mayor rapidez aquellas zonas que requieren una revisión más detallada o una intervención prioritaria.
+
+### Impacto Esperado del Proyecto
+
+Finalmente, se espera demostrar que la aplicación de técnicas de aprendizaje supervisado y visión artificial puede convertirse en una herramienta complementaria para los procesos tradicionales de inspección estructural. Aunque la evaluación final siempre deberá ser realizada por un especialista, el sistema propuesto puede contribuir a reducir tiempos de inspección, mejorar la organización de la información recopilada y proporcionar una primera evaluación objetiva de las condiciones observadas en las superficies de concreto.
+
+De esta manera, el proyecto busca evidenciar el potencial de la Inteligencia Artificial como apoyo en la gestión y mantenimiento de infraestructuras, favoreciendo procesos más eficientes, consistentes y orientados a la detección temprana de daños.
