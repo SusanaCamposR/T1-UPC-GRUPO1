@@ -68,14 +68,6 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
 ---
-
-## 🐍 4. Código Fuente de la Implementación (Python)
-
-<details>
-<summary>👁️ Clic aquí para desplegar el script completo de limpieza</summary>
---
-
-
 # ============================================================
 # TAREA 2: ANÁLISIS EXPLORATORIO Y LIMPIEZA DE SDNET2018
 # ============================================================
