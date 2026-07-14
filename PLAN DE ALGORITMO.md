@@ -1,206 +1,89 @@
-# ==============================================================
-# PROYECTO: DETECCIÓN DE FISURAS EN SUPERFICIES DE CONCRETO
-# PLAN DE ALGORITMOS: CNN + K-MEANS
-# DATASET: SDNET2018
-# ==============================================================
+# 🏗️ Plan de Algoritmos para la Detección de Fisuras en Concreto
 
-# Códigos ANSI para dar formato y color al texto en la terminal
-AZUL = "\033[94m"
-VERDE = "\033[92m"
-AMARILLO = "\033[93m"
-CIAN = "\033[96m"
-BLANCO = "\033[97m"
-NEGRITA = "\033[1m"
-RESET = "\033[0m"
+## 📌 Descripción del proyecto
 
+Para el desarrollo del proyecto se propone utilizar una **Red Neuronal Convolucional (CNN)** como algoritmo principal y **K-means** como algoritmo complementario de agrupamiento.
 
-# ==============================================================
-# FUNCIONES DE PRESENTACIÓN
-# ==============================================================
+La selección de ambos métodos responde a las características del problema planteado y al tipo de datos disponibles en el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
 
-def mostrar_titulo(titulo):
-    """Muestra el título principal del proyecto."""
-    print("\n" + AZUL + NEGRITA + "═" * 72)
-    print(titulo.center(72))
-    print("═" * 72 + RESET)
+El objetivo del proyecto es detectar automáticamente la presencia de fisuras y, posteriormente, establecer una agrupación basada en características cuantitativas asociadas a su espesor, con la finalidad de contribuir a la priorización de la inspección visual de las zonas identificadas.
 
+---
 
-def mostrar_seccion(numero, titulo, contenido):
-    """Muestra cada sección del plan de algoritmos."""
-    print(
-        f"\n{CIAN}{NEGRITA}"
-        f"{'─' * 72}\n"
-        f"{numero}. {titulo}\n"
-        f"{'─' * 72}"
-        f"{RESET}"
-    )
-    print(contenido.strip())
+## 🧠 1. Red Neuronal Convolucional (CNN)
 
+La **Red Neuronal Convolucional (CNN)** será utilizada como modelo principal de **aprendizaje supervisado** para la clasificación binaria de las imágenes en dos categorías:
 
-def mostrar_lista(titulo, elementos):
-    """Muestra una lista de elementos."""
-    print(f"\n{AMARILLO}{NEGRITA}{titulo}:{RESET}")
+* 🔴 **Con fisura (`Cracked`)**
+* 🟢 **Sin fisura (`Uncracked`)**
 
-    for elemento in elementos:
-        print(f"  • {elemento}")
+Este algoritmo resulta adecuado debido a su capacidad para procesar imágenes y aprender automáticamente características visuales relevantes, tales como:
 
+* Bordes.
+* Texturas.
+* Contornos.
+* Formas.
+* Patrones asociados con la presencia de fisuras.
 
-# ==============================================================
-# TÍTULO DEL PROYECTO
-# ==============================================================
+### 📥 Variables de entrada
 
-mostrar_titulo(
-    "PLAN DE ALGORITMOS: CNN + K-MEANS"
-)
+Las variables de entrada estarán constituidas por la información visual contenida en las imágenes, incluyendo:
 
-print(f"""
-{BLANCO}
-Para el desarrollo del proyecto se propone utilizar una Red Neuronal
-Convolucional (CNN) como algoritmo principal y K-means como algoritmo
-complementario de agrupamiento.
+* Valores de intensidad de los píxeles RGB.
+* Textura superficial.
+* Bordes y contornos.
+* Forma y orientación de las fisuras.
+* Contraste.
+* Iluminación.
+* Ruido visual.
 
-La selección de ambos métodos responde a las características del problema
-planteado y al tipo de datos disponibles en el dataset SDNET2018, compuesto
-por imágenes de superficies de concreto con y sin presencia de fisuras.
+### 📤 Variable de salida
 
-El objetivo del proyecto es detectar automáticamente la presencia de fisuras
-y, posteriormente, establecer una agrupación basada en características
-cuantitativas asociadas a su espesor, con la finalidad de contribuir a la
-priorización de la inspección visual de las zonas identificadas.
-{RESET}
-""")
+> **Presencia o ausencia de fisura.**
 
+### 🔍 Justificación del uso de CNN
 
-# ==============================================================
-# 1. RED NEURONAL CONVOLUCIONAL (CNN)
-# ==============================================================
+La elección de una **CNN** se justifica porque las fisuras presentan patrones espaciales y geométricos que pueden variar en forma, orientación y apariencia.
 
-mostrar_seccion(
-    1,
-    "RED NEURONAL CONVOLUCIONAL (CNN)",
-    """
-La Red Neuronal Convolucional (CNN) será utilizada como modelo principal
-de aprendizaje supervisado para la clasificación binaria de las imágenes
-en dos categorías:
+Asimismo, las imágenes del dataset **SDNET2018** contienen condiciones visuales complejas, como sombras, rugosidad superficial, bordes, agujeros y residuos de fondo.
 
-    ✓ Con fisura (Cracked)
-    ✓ Sin fisura (Uncracked)
+Por ello, se requiere un modelo capaz de aprender características relevantes directamente a partir de las imágenes y generalizar ante diferentes condiciones de inspección.
 
-Este algoritmo resulta adecuado debido a su capacidad para procesar imágenes
-y aprender automáticamente características visuales relevantes.
-"""
-)
+---
 
-mostrar_lista(
-    "Características visuales consideradas",
-    [
-        "Bordes",
-        "Texturas",
-        "Contornos",
-        "Formas",
-        "Patrones asociados con la presencia de fisuras"
-    ]
-)
+## 📊 2. Algoritmo K-means
 
-mostrar_lista(
-    "Variables de entrada",
-    [
-        "Valores de intensidad de los píxeles RGB",
-        "Textura superficial",
-        "Bordes y contornos",
-        "Forma y orientación de las fisuras",
-        "Contraste",
-        "Iluminación",
-        "Ruido visual"
-    ]
-)
+Como algoritmo complementario se propone utilizar **K-means**, correspondiente a una técnica de **aprendizaje no supervisado**.
 
-print(
-    f"\n{VERDE}{NEGRITA}"
-    "VARIABLE DE SALIDA:"
-    f"{RESET} Presencia o ausencia de fisura."
-)
+Su función será explorar el agrupamiento de las fisuras detectadas a partir de características cuantitativas previamente extraídas, principalmente aquellas asociadas al **espesor estimado de la fisura**.
 
-print("""
-La elección de una CNN se justifica porque las fisuras presentan patrones
-espaciales y geométricos que pueden variar en forma, orientación y apariencia.
+### 🚦 Niveles de prioridad
 
-Asimismo, las imágenes del dataset SDNET2018 contienen condiciones visuales
-complejas, como sombras, rugosidad superficial, bordes, agujeros y residuos
-de fondo.
+Debido a que el proyecto plantea cuatro niveles de prioridad, se evaluará inicialmente una configuración de:
 
-Por ello, se requiere un modelo capaz de aprender características relevantes
-directamente a partir de las imágenes y generalizar ante diferentes
-condiciones de inspección.
-""")
+> ### `K = 4 clústeres`
 
+| Clúster | Nivel de prioridad |
+| :-----: | :----------------- |
+|    1    | 🟢 Leve            |
+|    2    | 🟡 Moderada        |
+|    3    | 🟠 Severa          |
+|    4    | 🔴 Crítica         |
 
-# ==============================================================
-# 2. ALGORITMO K-MEANS
-# ==============================================================
+Posteriormente, los grupos obtenidos podrán compararse con los rangos de espesor definidos en el proyecto para analizar la correspondencia entre los patrones identificados por el algoritmo y las categorías propuestas de prioridad de inspección.
 
-mostrar_seccion(
-    2,
-    "ALGORITMO K-MEANS",
-    """
-Como algoritmo complementario se propone utilizar K-means, correspondiente
-a una técnica de aprendizaje no supervisado.
+> [!IMPORTANT]
+> **K-means no detecta ni mide directamente el espesor de una fisura.**
 
-Su función será explorar el agrupamiento de las fisuras detectadas a partir
-de características cuantitativas previamente extraídas, principalmente
-aquellas asociadas al espesor estimado de la fisura.
-"""
-)
+Antes de aplicar el algoritmo será necesaria una etapa de procesamiento y extracción de características que permita obtener una representación cuantitativa de cada fisura.
 
-mostrar_lista(
-    "Niveles de prioridad propuestos",
-    [
-        "Nivel 1 → LEVE",
-        "Nivel 2 → MODERADA",
-        "Nivel 3 → SEVERA",
-        "Nivel 4 → CRÍTICA"
-    ]
-)
+De esta manera, **K-means** se utilizará para agrupar las observaciones según su similitud y no como un clasificador supervisado con etiquetas predefinidas.
 
-print(
-    f"\n{VERDE}{NEGRITA}"
-    "CONFIGURACIÓN INICIAL:"
-    f"{RESET} K = 4 clústeres"
-)
+---
 
-print("""
-Posteriormente, los grupos obtenidos podrán compararse con los rangos de
-espesor definidos en el proyecto para analizar la correspondencia entre
-los patrones identificados por el algoritmo y las categorías propuestas
-de prioridad de inspección.
-""")
+## 🔄 3. Flujo general propuesto
 
-print(
-    f"{AMARILLO}{NEGRITA}"
-    "IMPORTANTE:"
-    f"{RESET}"
-)
-
-print("""
-K-means no detecta ni mide directamente el espesor de una fisura.
-
-Antes de aplicar el algoritmo será necesaria una etapa de procesamiento
-y extracción de características que permita obtener una representación
-cuantitativa de cada fisura.
-
-De esta manera, K-means se utilizará para agrupar las observaciones según
-su similitud y no como un clasificador supervisado con etiquetas predefinidas.
-""")
-
-
-# ==============================================================
-# 3. FLUJO GENERAL PROPUESTO
-# ==============================================================
-
-mostrar_seccion(
-    3,
-    "FLUJO GENERAL PROPUESTO",
-    """
+```text
 ┌─────────────────────────────────────────┐
 │          IMAGEN DE CONCRETO             │
 └────────────────────┬────────────────────┘
@@ -217,58 +100,81 @@ mostrar_seccion(
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│   CLASIFICACIÓN DE LA IMAGEN            │
-│      CON FISURA / SIN FISURA            │
+│        CLASIFICACIÓN DE LA IMAGEN       │
+│          FISURA / SIN FISURA            │
 └────────────────────┬────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│  EXTRACCIÓN DE CARACTERÍSTICAS          │
-│          DE LA FISURA                   │
+│      EXTRACCIÓN DE CARACTERÍSTICAS      │
+│              DE LA FISURA               │
 └────────────────────┬────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│               K-MEANS                   │
+│                 K-MEANS                 │
 └────────────────────┬────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│   AGRUPAMIENTO POR CARACTERÍSTICAS      │
+│     AGRUPAMIENTO POR CARACTERÍSTICAS    │
 └────────────────────┬────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────┐
-│ NIVEL DE PRIORIDAD DE INSPECCIÓN        │
+│     NIVEL DE PRIORIDAD DE INSPECCIÓN    │
 └─────────────────────────────────────────┘
-"""
-)
+```
 
+---
 
-# ==============================================================
-# 4. JUSTIFICACIÓN DE LA SELECCIÓN
-# ==============================================================
+## 🧩 4. Justificación de la selección
 
-mostrar_seccion(
-    4,
-    "JUSTIFICACIÓN DE LA SELECCIÓN",
-    """
-La combinación de ambos algoritmos permite abordar dos etapas diferentes
-y complementarias del problema.
+La combinación de ambos algoritmos permite abordar dos etapas diferentes y complementarias del problema.
 
-CNN:
-Resuelve la tarea principal de detección automática de fisuras mediante
-visión artificial.
+### 🔹 Red Neuronal Convolucional (CNN)
 
-K-MEANS:
-Permite explorar agrupaciones naturales de las fisuras a partir de
-características cuantitativas asociadas a su espesor.
+La **CNN** resuelve la tarea principal de detección automática de fisuras mediante técnicas de visión artificial.
 
-En conjunto, la metodología propuesta busca superar una clasificación
-limitada a "fisura/no fisura" y proporcionar información adicional que
-contribuya a establecer un Índice de Prioridad de Inspección Visual (IPIV).
+### 🔹 Algoritmo K-means
 
-El IPIV permitirá orientar al equipo técnico hacia las zonas que requieren
-una revisión prioritaria.
-"""
-)
+**K-means** permite explorar agrupaciones naturales de las fisuras a partir de características cuantitativas asociadas a su espesor.
+
+En conjunto, la metodología propuesta busca superar una clasificación limitada a:
+
+> **Fisura / No fisura**
+
+y proporcionar información adicional que contribuya a establecer un:
+
+> ### Índice de Prioridad de Inspección Visual (IPIV)
+
+El **IPIV** estará orientado a dirigir al equipo técnico hacia las zonas que requieren una revisión prioritaria.
+
+---
+
+## 🎯 5. Objetivo propuesto
+
+> **Desarrollar una propuesta de modelo de visión artificial para detectar fisuras visibles en superficies de concreto utilizando el dataset SDNET2018, mediante una Red Neuronal Convolucional (CNN), y agrupar las fisuras detectadas según características cuantitativas asociadas a su espesor mediante el algoritmo K-means, con la finalidad de establecer niveles de prioridad para la preinspección y el mantenimiento estructural.**
+
+---
+
+## 🛠️ Tecnologías y algoritmos propuestos
+
+* **Python**
+* **Redes Neuronales Convolucionales (CNN)**
+* **K-means**
+* **Visión artificial**
+* **Machine Learning**
+* **Dataset SDNET2018**
+
+---
+
+## 📚 Dataset
+
+El proyecto utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto que incluyen muestras con y sin presencia de fisuras.
+
+---
+
+## 👷 Área de aplicación
+
+**Ingeniería Civil | Ingeniería Estructural | Inteligencia Artificial | Inspección de estructuras**
