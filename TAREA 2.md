@@ -39,7 +39,7 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 | :--- | :---: | :--- |
 | **Imágenes Originales Válidas** | *[56092]* | Listas para el preprocesamiento |
 | **Imágenes Corruptas Detectadas** | *[0]* | Removidas del conjunto activo |
-| **Valores Nulos Detectados (Missing)**| `0` | Base de datos limpia sin vacíos |
+| **Valores Nulos Detectados (Missing)**| `[0]` | Base de datos limpia sin vacíos |
 
 ### 🗂️ Distribución de Imágenes por Estado (Balance de Clases)
 | Estado de la Superficie | Código de Carpeta | N° de Imágenes | Porcentaje (%) |
@@ -66,38 +66,24 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
-## 🐍 4. Código Fuente de la Implementación (Python)
+## 🐍 1.4. Código Fuente de la Implementación (Python)
 | Descripción... | Enlace |
 | :--- | :--- |
 | **Ver o ejecutar el script de limpieza completo (Python)** | [TAREA2.PY](./TAREA2.PY) |
 | **Revisar el reporte y la documentación del análisis** | [TAREA 2.md](./TAREA%202.md) |
 
 
-## 🏗️ PLAN DE ALGORITMO
-## Detección de Fisuras en Superficies de Concreto mediante una CNN
 
-## 📌 Descripción del proyecto
-
+## **II. PLAN DE ALGORITMO
+### 📌 Algoritmo propuesto
 El presente proyecto propone el desarrollo de un modelo de **visión artificial** basado en una **Red Neuronal Convolucional (CNN)** para detectar automáticamente la presencia o ausencia de fisuras visibles en superficies de concreto.
-
-Para el entrenamiento y evaluación del modelo se utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto con y sin presencia de fisuras.
 
 El problema será abordado como una tarea de **clasificación binaria**, en la cual cada imagen será clasificada en una de las siguientes categorías:
 
 * 🔴 **Con fisura (`Cracked`)**
 * 🟢 **Sin fisura (`Uncracked`)**
 
-La finalidad del proyecto es contribuir a la automatización de la inspección visual de estructuras de concreto mediante técnicas de **Deep Learning** y **visión por computadora**.
-
----
-
-## 🎯 1. Objetivo del proyecto
-
-> **Desarrollar un modelo de visión artificial basado en una Red Neuronal Convolucional (CNN) para detectar y clasificar automáticamente la presencia o ausencia de fisuras visibles en superficies de concreto, utilizando imágenes del dataset SDNET2018.**
-
----
-
-## 🧠 2. Red Neuronal Convolucional (CNN)
+### 🧠 Red Neuronal Convolucional (CNN)
 
 La **Red Neuronal Convolucional (CNN)** será utilizada como modelo principal de **aprendizaje supervisado** para realizar la clasificación binaria de las imágenes.
 
@@ -111,11 +97,10 @@ Entre las características que el modelo puede aprender se encuentran:
 * Formas.
 * Patrones espaciales.
 * Características visuales asociadas con la presencia de fisuras.
-
+### 📥 2.1.Variables 
 ### 📥 Variables de entrada
 
 Las variables de entrada estarán constituidas por la información visual contenida en las imágenes, incluyendo:
-
 * Valores de intensidad de los píxeles RGB.
 * Textura superficial.
 * Bordes y contornos.
@@ -125,9 +110,7 @@ Las variables de entrada estarán constituidas por la información visual conten
 * Ruido visual.
 
 ### 📤 Variable de salida
-
 La variable de salida será de tipo binario:
-
 |    Clase    | Descripción                                       |
 | :---------: | :------------------------------------------------ |
 |  `Cracked`  | 🔴 Superficie de concreto con presencia de fisura |
@@ -135,9 +118,8 @@ La variable de salida será de tipo binario:
 
 ---
 
-## 🔍 3. Justificación del uso de una CNN
-
-La elección de una **Red Neuronal Convolucional (CNN)** se justifica porque las fisuras presentan patrones espaciales y geométricos que pueden variar considerablemente en:
+### 🔍 2.2. Justificación del uso de una CNN
+La elección de una **Red Neuronal Convolucional (CNN)** se justifica porque las fisuras presentan patrones spaciales y geométricos que pueden variar considerablemente en:
 
 * Forma.
 * Orientación.
@@ -157,63 +139,47 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 
 ---
 
-## 🔄 4. Flujo general propuesto
+## 🔄 2.3 Flujo general propuesto
 
-```text
-┌─────────────────────────────────────────┐
-│          IMAGEN DE CONCRETO             │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
-│            PREPROCESAMIENTO             │
-│                                         │
-│  • Redimensionamiento                   │
-│  • Normalización                        │
-│  • Aumento de datos                     │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
-│     RED NEURONAL CONVOLUCIONAL (CNN)    │
-└────────────────────┬────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────┐
-│          CLASIFICACIÓN BINARIA          │
-└───────────────┬─────────────┬───────────┘
-                │             │
-                ▼             ▼
-        ┌─────────────┐ ┌─────────────┐
-        │ CON FISURA  │ │ SIN FISURA  │
-        │  (Cracked)  │ │ (Uncracked) │
-        └─────────────┘ └─────────────┘
-```
+El proceso secuencial para la detección de patologías estructurales mediante visión artificial sigue el siguiente flujo de datos desde la captura de la imagen hasta su diagnóstico final:
+
+```mermaid
+graph TD
+    A[📸 Imagen de Concreto] --> B(🛠️ Preprocesamiento)
+    
+    subgraph Operaciones de Estandarización
+        B --> B1[🔹 Redimensionamiento]
+        B --> B2[🔹 Normalización]
+        B --> B3[🔹 Aumento de Datos]
+    end
+
+    B3 --> C[🧠 Red Neuronal Convolucional CNN]
+    C --> D{📊 Clasificación Binaria}
+    
+    D -->|Clase 1| E[🔴 Con Fisura / Cracked]
+    D -->|Clase 0| F[🟢 Sin Fisura / Uncracked]
+
+    %% Estilos Visuales
+    style A fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style B fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style C fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+    style D fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style E fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 
 ---
 
-## ⚙️ 5. Preprocesamiento de las imágenes
+## ⚙️ Preprocesamiento de las imágenes
 
 Antes de ingresar las imágenes a la **CNN**, se realizará una etapa de preprocesamiento con la finalidad de preparar y estandarizar los datos.
 
-Las principales operaciones consideradas son:
+| Etapa de Preprocesamiento | Descripción y Operaciones Consideradas | Objetivo Principal |
+| :--- | :--- | :--- |
+| **🔹 Redimensionamiento** | Ajustar todas las imágenes a un tamaño uniforme compatible con la arquitectura de la red neuronal. | Estandarizar las dimensiones de entrada. |
+| **🔹 Normalización** | Escalar los valores de los píxeles. | Facilitar y optimizar el proceso de entrenamiento del modelo. |
+| **🔹 Aumento de datos**<br>*(Data Augmentation)* | Aplicación de transformaciones controladas en el conjunto de entrenamiento:<br>• Rotaciones<br>• Desplazamientos<br>• Volteo horizontal<br>• Variaciones de escala | Aumentar la diversidad de los datos y mejorar la capacidad de generalización de la red. |
 
-### 🔹 Redimensionamiento
-
-Todas las imágenes serán ajustadas a un tamaño uniforme compatible con la arquitectura de la red neuronal.
-
-### 🔹 Normalización
-
-Los valores de los píxeles serán normalizados para facilitar el proceso de entrenamiento del modelo.
-
-### 🔹 Aumento de datos (*Data Augmentation*)
-
-Se podrán aplicar transformaciones controladas a las imágenes de entrenamiento, tales como:
-
-* Rotaciones.
-* Desplazamientos.
-* Volteo horizontal.
-* Variaciones de escala.
+---
 
 Estas técnicas permitirán aumentar la diversidad de los datos de entrenamiento y mejorar la capacidad de generalización del modelo.
 
