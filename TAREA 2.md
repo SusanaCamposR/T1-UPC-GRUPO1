@@ -64,7 +64,11 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 | :---: | :---: | :---: |
 | ![Carpetas](./Cantidad%20de%20Imagenes%20por%20carpeta.jpeg) | ![Estado](./Grieta-SinGrieta.jpeg) | ![Elementos](./Distribucion_por_elemento.jpeg) |
 
-*(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
+<p align="center">
+  <br>
+  <b>Ejemplos de Visualización del Dataset (Muestras de Control):</b><br>
+  <img src="./Ejemplos_visualizacion.jpeg" width="80%">
+</p>
 
 ## 🐍 1.4. Código Fuente de la Implementación (Python)
 | Descripción... | Enlace |
