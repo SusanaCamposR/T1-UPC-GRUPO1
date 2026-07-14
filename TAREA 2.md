@@ -268,36 +268,6 @@ Como criterios iniciales de referencia, se propone evaluar:
 
 ---
 
-### 📚 Dataset
-
-El proyecto utilizará el dataset **SDNET2018**, compuesto por imágenes de superficies de concreto utilizadas para el estudio y detección de fisuras.
-
-Para este proyecto, las imágenes serán organizadas en dos categorías principales:
-
-```text
-dataset/
-│
-├── Cracked/
-│   ├── imagen_001.jpg
-│   ├── imagen_002.jpg
-│   └── ...
-│
-└── Uncracked/
-    ├── imagen_001.jpg
-    ├── imagen_002.jpg
-    └── ...
-```
-
-Posteriormente, los datos serán divididos en conjuntos de:
-
-* **Entrenamiento (`Training`)**
-* **Validación (`Validation`)**
-* **Prueba (`Test`)**
-
-El conjunto de prueba permitirá realizar la evaluación final del modelo con imágenes no utilizadas durante el proceso de entrenamiento.
-
----
-
 ### 📌 Resultado esperado
 
 Se espera obtener un modelo de clasificación capaz de recibir una imagen de una superficie de concreto y determinar automáticamente si presenta o no una fisura visible.
