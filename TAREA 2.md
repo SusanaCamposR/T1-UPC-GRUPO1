@@ -142,29 +142,38 @@ Asimismo, las imágenes del dataset **SDNET2018** pueden contener condiciones vi
 ## 🔄 2.3 Flujo general propuesto
 
 El proceso secuencial para la detección de patologías estructurales mediante visión artificial sigue el siguiente flujo de datos desde la captura de la imagen hasta su diagnóstico final:
+## 🔄 2.3 Flujo general propuesto
 
-```mermaid
-graph TD
-    A[Imagen de Concreto] --> B(Preprocesamiento)
-    
-    subgraph Operaciones de Estandarización
-        B --> B1[Redimensionamiento]
-        B --> B2[Normalización]
-        B --> B3[Aumento de Datos]
-    end
-
-    B3 --> C[Red Neuronal Convolucional CNN]
-    C --> D{Clasificación Binaria}
-    
-    D -->|Clase 1| E[🔴 Con Fisura / Cracked]
-    D -->|Clase 0| F[🟢 Sin Fisura / Uncracked]
-
-    style A fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style B fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
-    style C fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
-    style D fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
-    style E fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```text
+       ┌─────────────────────────────────────────┐
+       │           IMAGEN DE CONCRETO            │
+       └────────────────────┬────────────────────┘
+                            │
+                            ▼
+       ┌─────────────────────────────────────────┐
+       │            PREPROCESAMIENTO             │
+       │                                         │
+       │         • Redimensionamiento            │
+       │         • Normalización                 │
+       │         • Aumento de datos              │
+       └────────────────────┬────────────────────┘
+                            │
+                            ▼
+       ┌─────────────────────────────────────────┐
+       │    RED NEURONAL CONVOLUCIONAL (CNN)     │
+       └────────────────────┬────────────────────┘
+                            │
+                            ▼
+       ┌─────────────────────────────────────────┐
+       │          CLASIFICACIÓN BINARIA          │
+       └──────────────┬─────────────┬────────────┘
+                      │             │
+              ┌───────┘             └───────┐
+              ▼                             ▼
+       ┌─────────────┐               ┌─────────────┐
+       │ CON FISURA  │               │ SIN FISURA  │
+       │  (Cracked)  │               │ (Uncracked) │
+       └─────────────┘               └─────────────┘
 ---
 
 ## ⚙️ Preprocesamiento de las imágenes
