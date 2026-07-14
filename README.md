@@ -196,7 +196,7 @@ import matplotlib.pyplot as plt
 import random
 import shutil
 
-# [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnico]
+# [Aquí va el código python completo que ya tienes para que el profesor vea tu sustento técnic
 
 
 
