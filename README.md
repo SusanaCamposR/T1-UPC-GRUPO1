@@ -74,7 +74,7 @@ Son las características visuales y numéricas que la red neuronal extraerá aut
 
 ---
 
-## ⚖️ 5. Marco VDS (Veridical Data Science) - Principios PCS
+## ⚖️ 4. Marco VDS (Veridical Data Science) - Principios PCS
 
 El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Computability, Stability*) propuesto por Yu & Barter (2024) para garantizar la confianza de la solución:
 
@@ -84,7 +84,7 @@ El proyecto se alinea bajo el marco regulatorio **VDS** (*Predictability, Comput
 | **Computability** (Computabilidad) | Usar modelos entrenables y ejecutables en equipos con recursos moderados. | El modelo debe ser viable para estudiantes o instituciones sin infraestructura computacional avanzada (computación en la nube accesible). |
 | **Stability** (Estabilidad) | Comparar resultados por tipo de superficie (puente, muro y pavimento), además de probar distintas semillas y particiones. | Un modelo confiable no debe funcionar solo en un subconjunto "fácil" ni depender de una única división de datos. |
 
-## 📚 6. Referencias Bibliográficas
+## 📚 5. Referencias Bibliográficas
 
 * 📖 **Yu, B., & Barter, R. (2024).** *Veridical Data Science: The PCS Framework.* MIT Press. https://vdsbook.com/
 * 📊 **Maguire, M., Dorafshan, S., & Thomas, R. J. (2018).** *SDNET2018: A concrete crack image dataset for machine learning applications.* Utah State University. https://doi.org/10.15142/T3TD19
