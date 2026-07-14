@@ -62,7 +62,7 @@ Luego de ejecutar nuestro pipeline sobre el volumen total de datos, se obtuviero
 
 | Distribución por Carpetas | Balance de Clases (Estado) | Análisis por Elemento |
 | :---: | :---: | :---: |
-| ![Carpetas](./grafico_imagenes_por_carpeta.png) | ![Estado](./grafico_estado_grieta.png) | ![Elementos](./grafico_elemento_estado.png) |
+| ![Carpetas](./Cantidad%20de%20Imagenes%20por%20carpeta.jpeg) | ![Estado](./Grieta-SinGrieta.jpeg) | ![Elementos](./Distribucion_por_elemento.jpeg) |
 
 *(Nota: Asegúrate de arrastrar y soltar los archivos `.png` de tus gráficos dentro de la carpeta de GitHub para que las imágenes de arriba carguen correctamente).*
 
