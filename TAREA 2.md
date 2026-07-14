@@ -161,8 +161,8 @@ METRICAS.
 | **Accuracy (Exactitud)**  | Porcentaje total de imágenes clasificadas correctamente.                                    | Lo más cercano posible al 100%.                  |
 | **Precision (Precisión)** | De todas las imágenes que el modelo predijo como "Fisura", cuántas realmente tenían fisura. | Evitar falsos positivos.                         |
 | **Recall (Sensibilidad)** | De todas las imágenes que realmente tenían fisura, cuántas fueron detectadas.               | Evitar falsos negativos.                         |
-| **F1-Score**              | Promedio armónico entre Precisión y Recall.                                                 | Evaluación equilibrada del modelo.               |
-| **Matriz de Confusión**   | Muestra los aciertos y errores por cada clase.                                              | Analizar el tipo de errores del modelo.          |
+             |
+         |
 | **Loss (Pérdida)**        | Error calculado durante el entrenamiento.                                                   | Debe disminuir conforme avanza el entrenamiento. |
 
 ---
