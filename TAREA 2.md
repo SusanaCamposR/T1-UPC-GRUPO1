@@ -156,17 +156,16 @@ Por ello, se requiere un modelo capaz de aprender características relevantes di
 
 ## 🧩 4. Justificación de la selección
 
-La combinación de ambos algoritmos permite abordar dos etapas diferentes y complementarias del problema.
+Este algoritmo permite abordar todo el problema.
 
 ### 🔹 Red Neuronal Convolucional (CNN)
 
 La **CNN** resuelve la tarea principal de detección automática de fisuras mediante técnicas de visión artificial.
 
-En conjunto, la metodología propuesta busca superar una clasificación limitada a:
+La metodología propuesta busca superar una clasificación limitada a:
 
 > **Fisura / No fisura**
 
-y proporcionar información adicional que contribuya a establecer un:
 
 ---
 
