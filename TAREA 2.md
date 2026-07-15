@@ -288,5 +288,9 @@ Se espera obtener un modelo de clasificación capaz de recibir una imagen de una
 
 El modelo será evaluado mediante **Accuracy, Precision, Recall, F1-Score y Matriz de Confusión**, permitiendo determinar cuantitativamente su capacidad para identificar fisuras visibles en superficies de concreto.
 
+## 📚 Referencias Bibliográficas
 
+* 📊 **Maguire, M., Dorafshan, S., & Thomas, R. J. (2018).** *SDNET2018: A concrete crack image dataset for machine learning applications*. Utah State University. https://doi.org/10.15142/T3TD19
+* 🤖 **Google. (2026).** *Gemini* (Versión de julio de 2026). Asistencia técnica en la estructuración de algoritmos y revisión de ecuaciones de control. https://gemini.google.com/
+* 🤖 **OpenAI. (2026).** *ChatGPT* (Versión GPT-4o) . Soporte en la optimización del plan algorítmico y depuración de código en Python. https://chatgpt.com/
   
