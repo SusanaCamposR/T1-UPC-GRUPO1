@@ -321,10 +321,10 @@ El modelo produce:
 ---
 
 # Autores
-Susana Campos Rodriguez.
-Carlos .
-Renzo.
-Jaime Jesús Ramírez Elera.
+- Susana Campos Rodriguez.
+- Carlos .
+- Renzo.
+- Jaime Jesús Ramírez Elera.
 
 Ingeniero Civil
 
