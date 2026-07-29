@@ -154,8 +154,8 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
 El análisis de los resultados se estructura a partir de la evaluación cuantitativa del clasificador sobre el conjunto de prueba y la posterior interpretación geométrica de las fisuras detectadas mediante segmentación, esqueletización y mapa local de espesor en píxeles.
 </p>
 
-<!-- SECCIÓN 1: DESEMPEÑO GLOBAL A ANCHO COMPLETO -->
-<h3 align="left" style="color: #24292f;">1. Desempeño Global del Modelo</h3>
+<!-- SECCIÓN 3.1: DESEMPEÑO GLOBAL A ANCHO COMPLETO -->
+<h3 align="left" style="color: #24292f;"> 3.1. Desempeño Global del Modelo</h3>
 <p align="justify" style="color: #57606a;">
 El modelo obtuvo una exactitud global de <strong>84.83 %</strong>. La métrica ROC-AUC alcanzó <strong>89.85 %</strong>, lo que indica una adecuada capacidad de discriminación entre imágenes con y sin fisura. La sensibilidad para la clase “Con fisura” fue de <strong>76.42 %</strong>, valor relevante para tareas de inspección preventiva.
 </p>
@@ -199,8 +199,8 @@ El modelo obtuvo una exactitud global de <strong>84.83 %</strong>. La métrica R
 
 <br />
 
-<!-- SECCIÓN 2: RESULTADOS POR CLASE -->
-<h3 align="left" style="color: #24292f;">2. Resultados por Clase</h3>
+<!-- SECCIÓN 3.2: RESULTADOS POR CLASE -->
+<h3 align="left" style="color: #24292f;"> 3.2. Resultados por Clase</h3>
 <p align="justify" style="color: #57606a;">
 La clase “Sin fisura” presenta una precisión elevada (95.36 %), mientras que la clase “Con fisura” alcanza una sensibilidad de 76.42 %. Esto sugiere que el modelo identifica una proporción importante de fisuras reales, existiendo margen para reducir falsos positivos.
 </p>
@@ -242,8 +242,8 @@ La clase “Sin fisura” presenta una precisión elevada (95.36 %), mientras qu
 
 <br />
 
-<!-- SECCIÓN 3: MATRIZ DE CONFUSIÓN (CONTROL DE TAMAÑO) -->
-<h3 align="left" style="color: #24292f;">3. Matriz de Confusión</h3>
+<!-- SECCIÓN 3.3: MATRIZ DE CONFUSIÓN (CONTROL DE TAMAÑO) -->
+<h3 align="left" style="color: #24292f;"> 3.3. Matriz de Confusión</h3>
 <p align="justify" style="color: #57606a;">
 La matriz evidencia 6,166 verdaderos negativos y 972 verdaderos positivos. Se registran 976 falsos positivos y 300 falsos negativos. En inspección estructural, reducir los falsos negativos es prioritario para evitar omitir daños reales.
 </p>
@@ -256,8 +256,8 @@ La matriz evidencia 6,166 verdaderos negativos y 972 verdaderos positivos. Se re
 
 <br />
 
-<!-- SECCIÓN 4: COMPORTAMIENTO DEL ENTRENAMIENTO EN MATRIZ 2X2 -->
-<h3 align="left" style="color: #24292f;">4. Comportamiento durante el Entrenamiento</h3>
+<!-- SECCIÓN 3.4: COMPORTAMIENTO DEL ENTRENAMIENTO EN MATRIZ 2X2 -->
+<h3 align="left" style="color: #24292f;"> 3.4. Comportamiento durante el Entrenamiento</h3>
 <p align="justify" style="color: #57606a;">
 Las curvas de entrenamiento muestran una estabilización progresiva de las métricas. Durante las primeras épocas se observan fluctuaciones en validación, asociadas al ajuste inicial ante la clase positiva menos frecuente, logrando la convergencia en las épocas finales.
 </p>
@@ -287,14 +287,14 @@ Las curvas de entrenamiento muestran una estabilización progresiva de las métr
 
 <br />
 
-<!-- SECCIÓN IV: CASOS DE ESTUDIO -->
-<h2 align="left" style="color: #24292f;">IV. ANÁLISIS DE FISURAS Y MEDICIÓN DE ESPESOR</h2>
+<!-- SECCIÓN 3.5: CASOS DE ESTUDIO -->
+<h3 align="left" style="color: #24292f;">3.5. ANÁLISIS DE FISURAS Y MEDICIÓN DE ESPESOR</h3>
 
 <p align="justify" style="color: #57606a;">
 Los casos de estudio muestran el flujo de análisis completo: imagen original, segmentación, esqueleto, mapa de espesor y resultados cuantitativos. Este procedimiento permite transformar una predicción visual en indicadores geométricos objetivos.
 </p>
 
-<h3 align="left" style="color: #24292f;">Caso de Estudio 1: Muestra 7069-195.jpg</h3>
+<h4 align="left" style="color: #24292f;">Caso de Estudio 1: Muestra 7069-195.jpg</h4>
 <p align="justify" style="color: #57606a;">
 Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo reportado es de <strong>7.26 px</strong>, con un espesor promedio de <strong>4.45 px</strong> y una longitud total de <strong>184.3 px</strong>. La probabilidad asignada por el modelo fue de 99.41 %.
 </p>
@@ -307,7 +307,7 @@ Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo
 
 <br />
 
-<h3 align="left" style="color: #24292f;">Caso de Estudio 2: Muestra 7019-82.jpg</h3>
+<h4 align="left" style="color: #24292f;">Caso de Estudio 2: Muestra 7019-82.jpg</h4>
 <p align="justify" style="color: #57606a;">
 Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px</strong>, con un promedio de <strong>4.67 px</strong> y una longitud de <strong>213.7 px</strong>. La probabilidad del modelo alcanzó el 98.37 %, reflejando un daño más extendido.
 </p>
@@ -320,8 +320,8 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 <br />
 
-<!-- SECCIÓN V: DISCUSIÓN TÉCNICA -->
-<h2 align="left" style="color: #24292f;">V. DISCUSIÓN TÉCNICA Y REFERENCIA COMPARATIVA</h2>
+<!-- SECCIÓN 3.6: DISCUSIÓN TÉCNICA -->
+<h2 align="left" style="color: #24292f;">3.6. DISCUSIÓN TÉCNICA Y REFERENCIA COMPARATIVA</h2>
 
 <p align="justify" style="color: #57606a;">
 Siguiendo los criterios de Yang et al. (2018), las características espaciales de las fisuras son esenciales para evaluar la infraestructura. Los mapas de espesor y esqueletos permiten cuantificar el daño en píxeles para priorizar inspecciones.
@@ -366,44 +366,6 @@ Siguiendo los criterios de Yang et al. (2018), las características espaciales d
 
 <br />
 
-<!-- SECCIÓN VI: CONCLUSIONES Y RECOMENDACIONES -->
-<h2 align="left" style="color: #24292f;">VI. CONCLUSIONES Y RECOMENDACIONES</h2>
-
-<table style="width: 100%; border-collapse: collapse; border: none;">
-<tr>
-<td width="50%" valign="top" style="padding-right: 12px; border: none; color: #57606a;">
-
-<h3 align="left" style="color: #24292f;">Conclusiones</h3>
-<ul style="color: #57606a;">
-  <li>El modelo alcanza un desempeño global adecuado con <strong>84.83 % de exactitud</strong> y <strong>89.85 % de ROC-AUC</strong>.</li>
-  <li>La sensibilidad de <strong>76.42 %</strong> para la clase positiva es relevante para detectar la mayoría de los daños reales en inspección preventiva.</li>
-  <li>La precisión de <strong>49.90 %</strong> indica la presencia de falsos positivos, por lo que actúa como una herramienta de apoyo al especialista.</li>
-  <li>Los mapas de espesor y la esqueletización convierten las detecciones en indicadores cuantitativos objetivos.</li>
-</ul>
-
-</td>
-<td width="50%" valign="top" style="padding-left: 12px; border: none; color: #57606a;">
-
-<h3 align="left" style="color: #24292f;">Recomendaciones</h3>
-<ul style="color: #57606a;">
-  <li>Calibrar la escala píxel–unidad física para expresar las dimensiones en milímetros o centímetros.</li>
-  <li>Ajustar el umbral de clasificación para equilibrar falsos positivos y falsos negativos según el objetivo operativo.</li>
-  <li>Incorporar mayor variabilidad de fisuras delgadas y complejas en el conjunto de entrenamiento.</li>
-  <li>Refinar los filtros morfológicos para evitar desconexiones en las ramas de la fisura.</li>
-</ul>
-
-</td>
-</tr>
-</table>
-
-<br />
-
-<h2 align="left" style="color: #24292f;">REFERENCIAS</h2>
-<p style="color: #57606a;">
-Yang, X., Li, H., Yu, Y., Luo, X., Huang, T., & Yang, X. (2018). Automatic Pixel-Level Crack Detection and Measurement Using Fully Convolutional Network. <em>Computer-Aided Civil and Infrastructure Engineering</em>, 33, 1090–1109.
-</p>
-
-
 
 
 
@@ -442,6 +404,10 @@ Yang, X., Li, H., Yu, Y., Luo, X., Huang, T., & Yang, X. (2018). Automatic Pixel
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
     Watt, D. (2007). <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing.
   </p>
+  <p style="color: #57606a;">
+Yang, X., Li, H., Yu, Y., Luo, X., Huang, T., & Yang, X. (2018). Automatic Pixel-Level Crack Detection and Measurement Using Fully Convolutional Network. <em>Computer-Aided Civil and Infrastructure Engineering</em>, 33, 1090–1109.
+</p>
+
 </div>
 
 
