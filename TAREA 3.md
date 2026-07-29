@@ -155,6 +155,22 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2 align="left">IV. CONCLUSIONES </h2>
 
 
