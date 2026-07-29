@@ -325,8 +325,6 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 <h2 align="left">IV. CONCLUSIONES </h2>
 # IV. CONCLUSIONES
 
-# IV. CONCLUSIONES
-
 1. El presente estudio demostró la viabilidad de emplear Redes Neuronales Convolucionales (CNN) como herramienta para la detección automática de fisuras en superficies de concreto, evidenciando que los modelos de aprendizaje profundo constituyen una alternativa eficiente para complementar las inspecciones visuales tradicionales. La capacidad del modelo para discriminar entre superficies fisuradas y no fisuradas confirma el potencial de la inteligencia artificial para apoyar la evaluación preliminar del estado estructural de infraestructuras civiles de manera objetiva y reproducible.
 
 2. La metodología de entrenamiento implementada, basada en el conjunto de datos SDNET2018 e integrada con técnicas de aumento de datos, regularización y ponderación de clases, permitió desarrollar un modelo con adecuada capacidad de generalización frente a imágenes obtenidas bajo condiciones reales de iluminación, textura y ruido superficial. Este comportamiento resulta especialmente relevante en aplicaciones de ingeniería civil, donde la confiabilidad del sistema depende de su desempeño en escenarios distintos a los observados durante el entrenamiento.
@@ -338,9 +336,6 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 5. La principal limitación identificada corresponde a la ausencia de un proceso de calibración geométrica durante la adquisición de las imágenes, lo que restringe la estimación del espesor de las fisuras a unidades de píxeles. En consecuencia, futuras aplicaciones orientadas al diagnóstico cuantitativo deberán incorporar patrones físicos de referencia o procedimientos de calibración que permitan expresar las mediciones en unidades métricas compatibles con los criterios de evaluación empleados en la práctica de la ingeniería estructural.
 
 6. Finalmente, el trabajo desarrollado confirma que la aplicación conjunta de inteligencia artificial y procesamiento digital de imágenes representa una línea de investigación con amplio potencial para la Ingeniería Civil. La incorporación futura de arquitecturas de segmentación semántica más avanzadas, modelos basados en Transformers, técnicas de aprendizaje por transferencia e integración con tecnologías como BIM, drones y sistemas de monitoreo estructural permitirá incrementar la precisión del diagnóstico, automatizar los procesos de inspección y fortalecer la implementación de estrategias de mantenimiento predictivo y gestión inteligente de activos de infraestructura.
-
-
-
 
 <br />
 
