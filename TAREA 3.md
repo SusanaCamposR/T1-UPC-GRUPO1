@@ -339,7 +339,7 @@ En esta sección se adjuntan los recursos principales correspondientes a la <str
     <tr>
       <td style="padding: 10px;">
         <strong>Script Principal de Python (Tarea 3)</strong><br />
-        <small>Contiene la arquitectura de la red convolucional, el algoritmo de segmentación, esqueletización y cálculo del mapa local de espesor de fisuras.</small>
+        <small>Contiene la arquitectura de la red convolucional, el algoritmo de segmentación, esqueletización y cálculo del espesor de fisuras.</small>
       </td>
       <td style="padding: 10px; text-align: center;">
         <a href="./T3_G1_UPC.py" style="font-weight: bold; color: #0969da;">T3_G1_UPC.py</a>
@@ -348,7 +348,7 @@ En esta sección se adjuntan los recursos principales correspondientes a la <str
     <tr>
       <td style="padding: 10px;">
         <strong>Diapositivas de la Presentación</strong><br />
-        <small>Presentación ejecutiva del Grupo 1 con la exposición de metodología, pipeline de procesamiento, resultados visuales y discusión del modelo.</small>
+        <small>Presentación del Grupo 1 con la exposición de metodología, resultados y conclusiones.</small>
       </td>
       <td style="padding: 10px; text-align: center;">
         <a href="./Grupo%201-IA-UPC.pptx" style="font-weight: bold; color: #0969da;">Grupo 1-IA-UPC.pptx</a>
