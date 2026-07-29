@@ -148,7 +148,7 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
 
 </div>
 
-
+---
 
 
 
