@@ -9,9 +9,9 @@
 | **Integrantes del Grupo** | **Afiliación y Contacto** |
 | :--- | :--- |
 | **Susana Abigail Campos Rodríguez** | *e202524364@upc.edu.pe*|
-| **Carlos Teodoro Barreda Guzmán** | * * |
-| **Jaime Jesus Ramírez Elera** | * * |
-| **Renzo Salleres Untiveros** | * * |
+| **Carlos Teodoro Barreda Guzmán** | *e202524364@upc.edu.pe* |
+| **Jaime Jesus Ramírez Elera** | *e202524364@upc.edu.pe* |
+| **Renzo Salleres Untiveros** | *e202524364@upc.edu.pe* |
 
 </div>
 
