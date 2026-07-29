@@ -27,15 +27,14 @@
 
 ## 1. Introducción
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Importancia y Contexto General</h3>
+<table border="0" style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td width="48%" valign="top" style="border: none; padding: 0 15px 0 0;">
       <p>La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, durabilidad y funcionalidad de las edificaciones e infraestructuras civiles.</p>
       <p>Entre las patologías más frecuentes se encuentran las fisuras, cuya aparición puede estar asociada a fenómenos de retracción, cargas excesivas, acciones sísmicas, procesos de corrosión del acero de refuerzo o deterioro por agentes ambientales agresivos.</p>
     </td>
-    <td width="50%" valign="top">
-      <h3>Objetivos y Alcance Diagnóstico</h3>
+    <td width="4%" style="border: none;"></td>
+    <td width="48%" valign="top" style="border: none; padding: 0 0 0 15px;">
       <p>El propósito del diagnóstico estructural es identificar de manera precisa el origen y severidad de los daños presentes, evaluando la capacidad resistente remanente de los elementos de concreto reforzado.</p>
       <p>Una oportuna caracterización permite tomar decisiones informadas sobre las técnicas de reparación, rehabilitación o reforzamiento requeridas, previniendo fallas catastróficas y maximizando la vida útil de la edificación.</p>
     </td>
@@ -71,9 +70,6 @@ Ejecución de pruebas *in situ* para caracterizar la calidad del concreto y la d
 
 ### Fase 3: Modelación y Evaluación de Resultados
 Integración de las propiedades reales obtenidas en campo y laboratorio dentro del modelo analítico para determinar el nivel de seguridad estructural frente a la normativa vigente.
-
-
-
 ---
 
 
