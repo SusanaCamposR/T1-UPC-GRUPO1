@@ -1,5 +1,54 @@
 <div align="center">
 
+<!-- Encabezado Estilo Revista / Journal -->
+<p align="left" style="font-family: sans-serif; font-size: 14px; margin-bottom: 5px;">
+  <strong>APLICACIONES DE IA EN ESTRUCTURAS</strong> &nbsp;|&nbsp; <em>UPC - TAREA 3</em>
+</p>
+<hr size="2" color="#000000" style="margin-top: 0; margin-bottom: 25px;" />
+
+<!-- Título Principal (Grande y Centrado) -->
+<h1 align="center" style="border: none; font-size: 28px; font-weight: normal; margin-bottom: 20px;">
+  Detección de Fisuras en Concreto mediante Redes Neuronales Convolucionales (CNN) y Estimación de Espesor
+</h1>
+
+<br />
+
+<!-- Integrantes y Afiliación -->
+<p align="center">
+  <strong>Susana Abigail Campos Rodríguez &nbsp;|&nbsp; Carlos Teodoro Barreda Guzmán</strong><br />
+  <em>Universidad Peruana de Ciencias Aplicadas (UPC)</em><br />
+  <small><code>e202524364@upc.edu.pe</code></small>
+</p>
+
+<p align="center" style="margin-top: 10px;">&amp;</p>
+
+<p align="center">
+  <strong>Jaime Jesus Ramírez Elera &nbsp;|&nbsp; Renzo Salleres Untiveros</strong><br />
+  <em>Universidad Peruana de Ciencias Aplicadas (UPC)</em><br />
+  <small><code>e202524364@upc.edu.pe</code></small>
+</p>
+
+</div>
+
+<br />
+<hr />
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
 # Detección de Fisuras en Concreto mediante Redes Neuronales Convolucionales (CNN) y Estimación de Espesor
 
 **APLICACIONES DE IA EN ESTRUCTURAS**
