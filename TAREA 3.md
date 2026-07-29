@@ -28,7 +28,6 @@
   <small><code>u202510003@upc.edu.pe</code> &nbsp;|&nbsp; <code>u202510004@upc.edu.pe</code></small>
 </p>
 
-</div>
 <hr />
 
 ---
