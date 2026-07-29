@@ -294,7 +294,7 @@ Las curvas de entrenamiento muestran una estabilización progresiva de las métr
 Los casos de estudio muestran el flujo de análisis completo: imagen original, segmentación, esqueleto, mapa de espesor y resultados cuantitativos. Este procedimiento permite transformar una predicción visual en indicadores geométricos objetivos.
 </p>
 
-<h4 align="left" style="color: #24292f;">Caso de Estudio 1: Muestra 7069-195.jpg</h4>
+<h4 align="left" style="color: #24292f;">Caso de Estudio 1: Muestra 7069-195</h4>
 <p align="justify" style="color: #57606a;">
 Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo reportado es de <strong>7.26 px</strong>, con un espesor promedio de <strong>4.45 px</strong> y una longitud total de <strong>184.3 px</strong>. La probabilidad asignada por el modelo fue de 99.41 %.
 </p>
@@ -302,12 +302,12 @@ Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo
 <p align="center">
   <img src="RESULTADO1.png" alt="Caso de Estudio 1" width="90%" />
   <br />
-  <small style="color: #57606a;"><strong>Figura 10.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7069-195.jpg.</small>
+  <small style="color: #57606a;"><strong>Figura 10.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7069-195.</small>
 </p>
 
 <br />
 
-<h4 align="left" style="color: #24292f;">Caso de Estudio 2: Muestra 7019-82.jpg</h4>
+<h4 align="left" style="color: #24292f;">Caso de Estudio 2: Muestra 7019-82</h4>
 <p align="justify" style="color: #57606a;">
 Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px</strong>, con un promedio de <strong>4.67 px</strong> y una longitud de <strong>213.7 px</strong>. La probabilidad del modelo alcanzó el 98.37 %, reflejando un daño más extendido.
 </p>
@@ -315,14 +315,14 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 <p align="center">
   <img src="RESULTADO2.png" alt="Caso de Estudio 2" width="90%" />
   <br />
-  <small style="color: #57606a;"><strong>Figura 11.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7019-82.jpg.</small>
+  <small style="color: #57606a;"><strong>Figura 11.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7019-82.</small>
 </p>
 
 <br />
 
 <br />
 
-<h3 align="left" style="color: #24292f;">🐍 Código Fuente y Presentación de la Implementación (Tarea 3)</h3>
+<h3 align="left" style="color: #24292f;"> Código Fuente y Presentación de la Implementación</h3>
 
 <p align="justify" style="color: #57606a;">
 En esta sección se adjuntan los recursos principales correspondientes a la <strong>Tarea 3</strong>, los cuales contienen el script completo de procesamiento/medición en Python y las diapositivas de presentación del proyecto.
@@ -356,8 +356,6 @@ En esta sección se adjuntan los recursos principales correspondientes a la <str
     </tr>
   </tbody>
 </table>
-
-
 
 
 <h2 align="left">IV. CONCLUSIONES </h2>
