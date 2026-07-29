@@ -17,7 +17,7 @@
 <p align="center">
   <strong>Susana Abigail Campos Rodríguez</strong> &nbsp;|&nbsp; <strong>Carlos Teodoro Barreda Guzmán</strong><br />
   <em>Universidad Peruana de Ciencias Aplicadas (UPC)</em><br />
-  <small><code>u202510001@upc.edu.pe</code> &nbsp;|&nbsp; <code>u202510002@upc.edu.pe</code></small>
+  <small><code>e202524364@upc.edu.pe</code> &nbsp;|&nbsp; <code>E202524396@upc.edu.pe</code></small>
 </p>
 
 <p align="center" style="margin-top: 10px;">&amp;</p>
@@ -25,12 +25,13 @@
 <p align="center">
   <strong>Jaime Jesus Ramírez Elera</strong> &nbsp;|&nbsp; <strong>Renzo Salleres Untiveros</strong><br />
   <em>Universidad Peruana de Ciencias Aplicadas (UPC)</em><br />
-  <small><code>u202510003@upc.edu.pe</code> &nbsp;|&nbsp; <code>u202510004@upc.edu.pe</code></small>
+  <small><code>E202526653@upc.edu.pe</code> &nbsp;|&nbsp; <code>E202523955@upc.edu.pe</code></small>
 </p>
 </div>
 <hr />
 
 ---
+<h2 align="left">Resumen (Abstract)</h2>
 > ### **Resumen (Abstract)**
 > <p align="justify">
 > La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras. En este trabajo se desarrolla un modelo utilizando el conjunto de datos <strong>SDNET2018</strong>, <strong>TensorFlow/Keras</strong> y una <strong>CNN</strong> para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em>. Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas.
@@ -48,15 +49,15 @@
         La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras (Watt, 2007).
       </p>
       <p align="justify" style="text-align: justify; margin-bottom: 0;">
-        Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector, requiere una considerable inversión de tiempo y puede verse afectado por la subjetividad inherente al proceso de observación. En respuesta a estas limitaciones, los avances en inteligencia artificial y visión por computadora han impulsado el desarrollo de métodos automatizados capaces de analizar imágenes digitales e identificar patrones asociados al deterioro estructural, incrementando la rapidez y objetividad de las inspecciones (Gonzalez & Woods, 2018)[cite: 7].
+        Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector, requiere una considerable inversión de tiempo y puede verse afectado por la subjetividad inherente al proceso de observación. En respuesta a estas limitaciones, los avances en inteligencia artificial y visión por computadora han impulsado el desarrollo de métodos automatizados capaces de analizar imágenes digitales e identificar patrones asociados al deterioro estructural, incrementando la rapidez y objetividad de las inspecciones (Gonzalez & Woods, 2018).
       </p>
     </td>
     <td width="50%" valign="top" style="border: 1px solid #e1e4e8; padding: 12px 16px;">
       <p align="justify" style="text-align: justify; margin-top: 0;">
-        Dentro de las técnicas de aprendizaje profundo, las Redes Neuronales Convolucionales (CNN) han demostrado un desempeño sobresaliente en tareas de clasificación de imágenes gracias a su capacidad para aprender automáticamente características relevantes. En este trabajo se desarrolla un modelo utilizando el conjunto de datos SDNET2018, TensorFlow/Keras y una CNN para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em> (LeCun et al., 2015; Goodfellow et al., 2016; Dorafshan et al., 2018; Abadi et al., 2016)[cite: 7].
+        Dentro de las técnicas de aprendizaje profundo, las Redes Neuronales Convolucionales (CNN) han demostrado un desempeño sobresaliente en tareas de clasificación de imágenes gracias a su capacidad para aprender automáticamente características relevantes. En este trabajo se desarrolla un modelo utilizando el conjunto de datos SDNET2018, TensorFlow/Keras y una CNN para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em> (LeCun et al., 2015; Goodfellow et al., 2016; Dorafshan et al., 2018; Abadi et al., 2016).
       </p>
       <p align="justify" style="text-align: justify; margin-bottom: 0;">
-        Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas. Finalmente, se busca demostrar la viabilidad del empleo de herramientas de inteligencia artificial como apoyo a las inspecciones estructurales, contribuyendo al desarrollo de metodologías más objetivas, rápidas y reproducibles para la evaluación del estado de estructuras de concreto[cite: 7].
+        Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas. Finalmente, se busca demostrar la viabilidad del empleo de herramientas de inteligencia artificial como apoyo a las inspecciones estructurales, contribuyendo al desarrollo de metodologías más objetivas, rápidas y reproducibles para la evaluación del estado de estructuras de concreto.
       </p>
     </td>
   </tr>
@@ -68,22 +69,22 @@
 
 <div style="font-size: 0.95em; line-height: 1.5;">
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    Abadi, M., et al. (2016). <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems</em>. <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a>[cite: 7]
+    Abadi, M., et al. (2016). <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems</em>. <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a>
   </p>
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    Dorafshan, S., Thomas, R. J., & Maguire, M. (2018). SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks. <em>Data in Brief</em>, 21, 1664–1668[cite: 7].
+    Dorafshan, S., Thomas, R. J., & Maguire, M. (2018). SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks. <em>Data in Brief</em>, 21, 1664–1668.
   </p>
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    Gonzalez, R. C., & Woods, R. E. (2018). <em>Digital Image Processing</em> (4th ed.). Pearson[cite: 7].
+    Gonzalez, R. C., & Woods, R. E. (2018). <em>Digital Image Processing</em> (4th ed.). Pearson.
   </p>
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    Goodfellow, I., Bengio, Y., & Courville, A. (2016). <em>Deep Learning</em>. MIT Press[cite: 7].
+    Goodfellow, I., Bengio, Y., & Courville, A. (2016). <em>Deep Learning</em>. MIT Press.
   </p>
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436–444[cite: 7].
+    LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436–444.
   </p>
   <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
-    Watt, D. (2007). <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing[cite: 7].
+    Watt, D. (2007). <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing.
   </p>
 </div>
 ---
@@ -100,66 +101,8 @@
 
 
 
-<h2 align="center">1. INTRODUCCIÓN</h2>
-
-<table border="0" style="width: 100%; border: none !important; border-collapse: collapse !important; background: transparent !important;">
-  <tr style="border: none !important; background: transparent !important;">
-    <!-- COLUMNA IZQUIERDA -->
-    <td width="48%" valign="top" style="border: none !important; padding-right: 20px; background: transparent !important;">
-      <p align="justify">
-        La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras (Watt, 2007).
-      </p>
-      <p align="justify">
-        Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector, requiere una considerable inversión de tiempo y puede verse afectado por la subjetividad inherente al proceso de observación. En respuesta a estas limitaciones, los avances en inteligencia artificial y visión por computadora han impulsado el desarrollo de métodos automatizados capaces de analizar imágenes digitales e identificar patrones asociados al deterioro estructural, incrementando la rapidez y objetividad de las inspecciones (Gonzalez & Woods, 2018).
-      </p>
-    </td>
-    <!-- ESPACIO CENTRAL -->
-    <td width="4%" style="border: none !important; background: transparent !important;"></td>
-    <!-- COLUMNA DERECHA -->
-    <td width="48%" valign="top" style="border: none !important; padding-left: 20px; background: transparent !important;">
-      <p align="justify">
-        Dentro de las técnicas de aprendizaje profundo, las Redes Neuronales Convolucionales (CNN) han demostrado un desempeño sobresaliente en tareas de clasificación de imágenes gracias a su capacidad para aprender automáticamente características relevantes. En este trabajo se desarrolla un modelo utilizando el conjunto de datos SDNET2018, TensorFlow/Keras y una CNN para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em> (LeCun et al., 2015; Goodfellow et al., 2016; Dorafshan et al., 2018; Abadi et al., 2016).
-      </p>
-      <p align="justify">
-        Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas. Finalmente, se busca demostrar la viabilidad del empleo de herramientas de inteligencia artificial como apoyo a las inspecciones estructurales, contribuyendo al desarrollo de metodologías más objetivas, rápidas y reproducibles para la evaluación del estado de estructuras de concreto.
-      </p>
-    </td>
-  </tr>
-</table>
-
-<br />
-
-<h3 align="left">REFERENCIAS</h3>
-
-<ul>
-  <li><p align="justify"><strong>Abadi, M., et al. (2016).</strong> <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems.</em> <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></p></li>
-  <li><p align="justify"><strong>Dorafshan, S., Thomas, R. J., & Maguire, M. (2018).</strong> <em>SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks.</em> Data in Brief, 21, 1664–1668.</p></li>
-  <li><p align="justify"><strong>Gonzalez, R. C., & Woods, R. E. (2018).</strong> <em>Digital Image Processing</em> (4th ed.). Pearson.</p></li>
-  <li><p align="justify"><strong>Goodfellow, I., Bengio, Y., & Courville, A. (2016).</strong> <em>Deep Learning.</em> MIT Press.</p></li>
-  <li><p align="justify"><strong>LeCun, Y., Bengio, Y., & Hinton, G. (2015).</strong> <em>Deep learning.</em> Nature, 521(7553), 436–444.</p></li>
-  <li><p align="justify"><strong>Watt, D. (2007).</strong> <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing.</p></li>
-</ul>
 
 
-
-
-
-## I. Introducción
-
-<div style="display: flex; gap: 40px;">
-  <div style="flex: 1;">
-    <h3>Importancia y Contexto General</h3>
-    <p>La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, durabilidad y funcionalidad de las edificaciones e infraestructuras civiles.</p>
-    <p>Entre las patologías más frecuentes se encuentran las fisuras, cuya aparición puede estar asociada a fenómenos de retracción, cargas excesivas, acciones sísmicas, procesos de corrosión del acero de refuerzo o deterioro por agentes ambientales agresivos.</p>
-  </div>
-  <div style="flex: 1;">
-    <h3>Objetivos y Alcance Diagnóstico</h3>
-    <p>El propósito del diagnóstico estructural es identificar de manera precisa el origen y severidad de los daños presentes, evaluando la capacidad resistente remanente de los elementos de concreto reforzado.</p>
-    <p>Una oportuna caracterización permite tomar decisiones informadas sobre las técnicas de reparación, rehabilitación o reforzamiento requeridas, previniendo fallas catastróficas y maximizando la vida útil de la edificación.</p>
-  </div>
-</div>
-
----
 
 ## 2. Metodología
 
