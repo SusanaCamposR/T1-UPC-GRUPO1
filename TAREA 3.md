@@ -75,7 +75,7 @@ La metodología desarrollada comprende una secuencia de etapas orientadas al des
 <tr>
 <td width="50%" valign="top">
 
-<h3 align="left">1. Selección del Conjunto de Datos</h3>
+<h3 align="left"> 2.1. Selección del Conjunto de Datos</h3>
 <p align="justify">
 Se utilizó el dataset público SDNET2018, conformado por aproximadamente 56 000 imágenes de muros, pavimentos y losas de puente clasificadas en imágenes con fisura y sin fisura. Este repositorio destaca por su alta variabilidad en condiciones de iluminación, textura superficial y presencia de ruido en condiciones reales de obra.
 </p>
@@ -86,12 +86,12 @@ Se utilizó el dataset público SDNET2018, conformado por aproximadamente 56 000
 <small><strong>Figura 1.</strong> Selección y características del conjunto de datos SDNET2018.</small>
 </p>
 
-<h3 align="left">2. Preprocesamiento de Imágenes</h3>
+<h3 align="left"> 2.2. Preprocesamiento de Imágenes</h3>
 <p align="justify">
 Se verificó la integridad de las imágenes eliminando archivos corruptos o defectuosos. Se normalizó la resolución espacial a 256×256 píxeles y se estandarizó el espacio de color en formato RGB, garantizando un dataset limpio y homogéneo para la fase de entrenamiento.
 </p>
 
-<h3 align="left">3. División del Conjunto de Datos</h3>
+<h3 align="left"> 2.3. División del Conjunto de Datos</h3>
 <p align="justify">
 Se realizó una partición estratificada conservando la distribución original de clases en tres subconjuntos: 70 % para entrenamiento (39 200 imágenes), 15 % para validación (8 400 imágenes) y 15 % para prueba (8 400 imágenes).
 </p>
@@ -111,7 +111,7 @@ Se realizó una partición estratificada conservando la distribución original d
 </td>
 <td width="50%" valign="top">
 
-<h3 align="left">4. Arquitectura de la Red Neuronal (CNN)</h3>
+<h3 align="left"> 2.4. Arquitectura de la Red Neuronal (CNN)</h3>
 <p align="justify">
 La red propuesta incorporates cuatro bloques convolucionales secuenciales equipados con Batch Normalization, funciones de activación ReLU y submuestreo MaxPooling2D. Posteriormente, se integra una capa de agregación Global Average Pooling, regularización mediante Dropout (0.5) y una capa densa final con activación Sigmoide para la clasificación binaria (0 ≤ p ≤ 1).
 </p>
@@ -122,17 +122,17 @@ La red propuesta incorporates cuatro bloques convolucionales secuenciales equipa
 <small><strong>Figura 4.</strong> Arquitectura de la Red Neuronal Convolucional (CNN).</small>
 </p>
 
-<h3 align="left">5. Entrenamiento del Modelo</h3>
+<h3 align="left"> 2.5. Entrenamiento del Modelo</h3>
 <p align="justify">
 El entrenamiento se ejecutó sobre la plataforma TensorFlow/Keras haciendo uso del optimizador Adam y un tamaño de lote (batch size) de 32 imágenes. Se aplicaron técnicas de aumento de datos (data augmentation), ponderación de clases (class_weight) para mitigar el desbalance, así como las retrollamadas EarlyStopping, ModelCheckpoint y ReduceLROnPlateau para optimizar la convergencia.
 </p>
 
-<h3 align="left">6. Evaluación del Desempeño</h3>
+<h3 align="left"> 2.6. Evaluación del Desempeño</h3>
 <p align="justify">
 La capacidad predictiva del modelo fue evaluada en el conjunto de prueba independiente mediante la matriz de confusión y métricas estándar de clasificación: Accuracy, Precision, Recall, F1-Score y área bajo la curva (AUC).
 </p>
 
-<h3 align="left">7. Estimación del Espesor de Fisuras</h3>
+<h3 align="left"> 2.7. Estimación del Espesor de Fisuras</h3>
 <p align="justify">
 Las imágenes clasificadas como "con fisura" son sometidas a un pipeline de procesamiento digital de imágenes: conversión a escala de grises, ecualización adaptativa de histograma (CLAHE), filtro Top-Hat/Black-Hat, umbralización de Otsu, operaciones morfológicas, esqueletización y transformada de distancia.
 </p>
@@ -151,7 +151,15 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
 
 
 
+
+
+
+
 <h2 align="left">IV. CONCLUSIONES </h2>
+
+
+
+
 
 <br />
 
@@ -177,64 +185,6 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
     Watt, D. (2007). <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing.
   </p>
 </div>
-
-
-
-
-
-
-
-
-
-
-## III. RESULTADOS Y DISCUSIÓN
-
-A continuación se resumen las métricas de rendimiento obtenidas por el modelo en el conjunto de prueba:
-
-<div align="center">
-
-**TABLA I**  
-*Métricas de Evaluación del Modelo CNN en el Conjunto de Prueba*
-
-| Métrica | Valor Obtenido | Estado / Meta |
-| :--- | :---: | :---: |
-| **Accuracy** | **0.93** | Satisfactorio |
-| **Precision** | **0.91** | Elevada Precisión |
-| **Recall** | **0.88** | Alta Detección |
-| **F1-Score** | **0.89** | Balance Óptimo |
-| **AUC** | **0.98** | Excelente Separabilidad |
-
-</div>
-
-<br>
-
-### Evolución de Métricas durante el Entrenamiento
-
-<div align="center">
-  <img src="RESULTADOS_TAREA3/historial_auc.png" alt="Historial AUC" width="45%"/>
-  <img src="RESULTADOS_TAREA3/historial_recall.png" alt="Historial Recall" width="45%"/>
-  <p><i>Fig. 1. Curvas de evolución de la métrica AUC (izquierda) y Recall (derecha) en los conjuntos de entrenamiento y validación.</i></p>
-</div>
-
----
-
-## IV. CONCLUSIONES
-
-El modelo convolucional propuesto demostró una alta efectividad en la detección automática de fisuras sobre superficies de concreto. La integración de técnicas de procesamiento digital de imágenes permitió estimar el grosor de las discontinuidades detectadas, proporcionando un marco integral para la evaluación no destructiva y automatizada de infraestructuras civiles.
-
----
-
-## REFERENCIAS
-
-<a id="referencias"></a>
-
-1. D. Watt, *Building Pathology: Principles and Practice*, 2nd ed. Blackwell Publishing, 2007.
-2. R. C. Gonzalez y R. E. Woods, *Digital Image Processing*, 4th ed. Pearson, 2018.
-3. Y. LeCun, Y. Bengio, y G. Hinton, "Deep learning," *Nature*, vol. 521, no. 7553, pp. 436–444, 2015.
-4. I. Goodfellow, Y. Bengio, y A. Courville, *Deep Learning*. MIT Press, 2016.
-5. S. Dorafshan, R. J. Thomas, y M. Maguire, "SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks," *Data in Brief*, vol. 21, pp. 1664–1668, 2018.
-6. M. Abadi *et al.*, "TensorFlow: Large-scale machine learning on heterogeneous systems," 2016. [En línea]. Disponible: https://www.tensorflow.org/
-
 
 
 
