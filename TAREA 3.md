@@ -2,13 +2,13 @@
 
 # Detección de Fisuras en Concreto mediante Redes Neuronales Convolucionales (CNN) y Estimación de Espesor
 
-**IEEE TRANSACTIONS ON CIVIL & STRUCTURAL ARTIFICIAL INTELLIGENCE**
+**Aplicaciones de IA en Estructuras**
 
 <br>
 
 | **Integrantes del Grupo** | **Afiliación y Contacto** |
 | :--- | :--- |
-| 👤 **Susana Abigail Campos Rodríguez** | Escuela Profesional de Ingeniería Civil / Sistemas |
+| 👤 **Susana Abigail Campos Rodríguez** | e202524364@upc.edu.pe|
 | 👤 **Carlos Teodoro Barreda Guzmán** | Universidad Nacional del Santa |
 | 👤 **Jaime Jesus Ramírez Elera** | Nuevo Chimbote, Ancash, Perú |
 | 👤 **Renzo Salleres Untiveros** | *Proyecto de Inspección Estructural Inteligente* |
