@@ -320,6 +320,44 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 <br />
 
+<br />
+
+<h3 align="left" style="color: #24292f;">🐍 Código Fuente y Presentación de la Implementación (Tarea 3)</h3>
+
+<p align="justify" style="color: #57606a;">
+En esta sección se adjuntan los recursos principales correspondientes a la <strong>Tarea 3</strong>, los cuales contienen el script completo de procesamiento/medición en Python y las diapositivas de presentación del proyecto.
+</p>
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left; color: #57606a;">
+  <thead>
+    <tr style="background-color: #f6f8fa; color: #24292f;">
+      <th style="padding: 10px; width: 70%;">Descripción del Recurso</th>
+      <th style="padding: 10px; width: 30%; text-align: center;">Enlace / Archivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px;">
+        <strong>Script Principal de Python (Tarea 3)</strong><br />
+        <small>Contiene la arquitectura de la red convolucional, el algoritmo de segmentación, esqueletización y cálculo del mapa local de espesor de fisuras.</small>
+      </td>
+      <td style="padding: 10px; text-align: center;">
+        <a href="./T3_G1_UPC.py" style="font-weight: bold; color: #0969da;">T3_G1_UPC.py</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;">
+        <strong>Diapositivas de la Presentación</strong><br />
+        <small>Presentación ejecutiva del Grupo 1 con la exposición de metodología, pipeline de procesamiento, resultados visuales y discusión del modelo.</small>
+      </td>
+      <td style="padding: 10px; text-align: center;">
+        <a href="./Grupo%201-IA-UPC.pptx" style="font-weight: bold; color: #0969da;">Grupo 1-IA-UPC.pptx</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 <h2 align="left">IV. CONCLUSIONES </h2>
