@@ -359,38 +359,49 @@ En esta sección se adjuntan los recursos principales correspondientes a la <str
 
 <h2 align="left" style="color: #24292f;">IV. CONCLUSIONES</h2>
 
-<ul style="color: #57606a; line-height: 1.6; padding-left: 20px;">
-  <li style="margin-bottom: 12px; text-align: justify;">
-    Se desarrolló y validó exitosamente un modelo basado en <strong>Redes Neuronales Convolucionales (CNN)</strong> capaz de realizar la clasificación binaria de imágenes de pavimento en las categorías <em>“con fisura”</em> y <em>“sin fisura”</em>, alcanzando una exactitud de <strong>84.83 %</strong> y un valor de <strong>ROC-AUC de 89.85 %</strong>, lo que demuestra una adecuada capacidad de discriminación entre ambas clases.
+<div align="justify">
+<ul style="color: #57606a;">
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      Se desarrolló y validó exitosamente un modelo basado en <strong>Redes Neuronales Convolucionales (CNN)</strong> capaz de realizar la clasificación binaria de imágenes de pavimento en las categorías <em>“con fisura”</em> y <em>“sin fisura”</em>, alcanzando una exactitud de <strong>84.83 %</strong> y un valor de <strong>ROC-AUC de 89.85 %</strong>, lo que demuestra una adecuada capacidad de discriminación entre ambas clases.
+    </p>
   </li>
 
-  <li style="margin-bottom: 12px; text-align: justify;">
-    El modelo mostró una alta sensibilidad para la detección de fisuras, obteniendo un <strong>Recall de 76.42 %</strong>, lo que evidencia su capacidad para identificar una proporción importante de daños reales. Sin embargo, la precisión de <strong>49.90 %</strong> indica la presencia de falsos positivos, constituyendo una oportunidad de mejora mediante la optimización del umbral de clasificación, la incorporación de más datos de entrenamiento y el ajuste de la arquitectura del modelo.
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      El modelo mostró una alta sensibilidad para la detección de fisuras, obteniendo un <strong>Recall de 76.42 %</strong>, lo que evidencia su capacidad para identificar una proporción importante de daños reales. Sin embargo, la precisión de <strong>49.90 %</strong> indica la presencia de falsos positivos, constituyendo una oportunidad de mejora mediante la optimización del umbral de clasificación, la incorporación de más datos de entrenamiento y el ajuste de la arquitectura del modelo.
+    </p>
   </li>
 
-  <li style="margin-bottom: 12px; text-align: justify;">
-    Además de la clasificación binaria, la metodología desarrollada permitió realizar el análisis cuantitativo de las fisuras, estimando parámetros geométricos como longitud y espesor mediante técnicas de segmentación, esqueletización y generación de mapas de espesor. Esto demuestra que el sistema no solo detecta la presencia de daño, sino que también proporciona información útil para apoyar procesos de evaluación y monitoreo estructural.
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      Además de la clasificación binaria, la metodología desarrollada permitió realizar el análisis cuantitativo de las fisuras, estimando parámetros geométricos como longitud y espesor mediante técnicas de segmentación, esqueletización y generación de mapas de espesor. Esto demuestra que el sistema no solo detecta la presencia de daño, sino que también proporciona información útil para apoyar procesos de evaluación y monitoreo estructural.
+    </p>
   </li>
 
-  <li style="margin-bottom: 12px; text-align: justify;">
-    El presente estudio demostró la viabilidad de emplear Redes Neuronales Convolucionales (CNN) como herramienta para la detección automática de fisuras en superficies de concreto, evidenciando que los modelos de aprendizaje profundo constituyen una alternativa eficiente para complementar las inspecciones visuales tradicionales. La capacidad del modelo para discriminar entre superficies fisuradas y no fisuradas confirma el potencial de la inteligencia artificial para apoyar la evaluación preliminar del estado estructural de infraestructuras civiles de manera objetiva y reproducible.
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      El presente estudio demostró la viabilidad de emplear Redes Neuronales Convolucionales (CNN) como herramienta para la detección automática de fisuras en superficies de concreto, evidenciando que los modelos de aprendizaje profundo constituyen una alternativa eficiente para complementar las inspecciones visuales tradicionales. La capacidad del modelo para discriminar entre superficies fisuradas y no fisuradas confirma el potencial de la inteligencia artificial para apoyar la evaluación preliminar del estado estructural de infraestructuras civiles de manera objetiva y reproducible.
+    </p>
   </li>
 
-  <li style="margin-bottom: 12px; text-align: justify;">
-    La principal limitación identificada corresponde a la ausencia de un proceso de calibración geométrica durante la adquisición de las imágenes, lo que restringe la estimación del espesor de las fisuras a unidades de píxeles. En consecuencia, futuras aplicaciones orientadas al diagnóstico cuantitativo deberán incorporar patrones físicos de referencia o procedimientos de calibración que permitan expresar las mediciones en unidades métricas compatibles con los criterios de evaluación empleados en la práctica de la ingeniería estructural.
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      La principal limitación identificada corresponde a la ausencia de un proceso de calibración geométrica durante la adquisición de las imágenes, lo que restringe la estimación del espesor de las fisuras a unidades de píxeles. En consecuencia, futuras aplicaciones orientadas al diagnóstico cuantitativo deberán incorporar patrones físicos de referencia o procedimientos de calibración que permitan expresar las mediciones en unidades métricas compatibles con los criterios de evaluación empleados en la práctica de la ingeniería estructural.
+    </p>
   </li>
 
-  <li style="margin-bottom: 12px; text-align: justify;">
-    Finalmente, el trabajo desarrollado confirma que la aplicación conjunta de inteligencia artificial y procesamiento digital de imágenes representa una línea de investigación con amplio potencial para la Ingeniería Civil. La incorporación futura de arquitecturas de segmentación semántica más avanzadas, modelos basados en Transformers, técnicas de aprendizaje por transferencia e integración con tecnologías como BIM, drones y sistemas de monitoreo estructural permitirá incrementar la precisión del diagnóstico, automatizar los procesos de inspección y fortalecer la implementación de estrategias de mantenimiento predictivo y gestión inteligente de activos de infraestructura.
+  <li style="margin-bottom: 12px;">
+    <p align="justify">
+      Finalmente, el trabajo desarrollado confirma que la aplicación conjunta de inteligencia artificial y procesamiento digital de imágenes representa una línea de investigación con amplio potencial para la Ingeniería Civil. La incorporación futura de arquitecturas de segmentación semántica más avanzadas, modelos basados en Transformers, técnicas de aprendizaje por transferencia e integración con tecnologías como BIM, drones y sistemas de monitoreo estructural permitirá incrementar la precisión del diagnóstico, automatizar los procesos de inspección y fortalecer la implementación de estrategias de mantenimiento predictivo y gestión inteligente de activos de infraestructura.
+    </p>
   </li>
 </ul>
+</div>
 
 <br />
 
 <h3 align="left" style="color: #24292f;">REFERENCIAS</h3>
-
-
-
 
 
 <h2 align="left" style="color: #24292f;">IV. CONCLUSIONES</h2>
