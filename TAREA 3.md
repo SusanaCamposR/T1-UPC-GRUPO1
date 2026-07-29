@@ -323,7 +323,19 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 
 <h2 align="left">IV. CONCLUSIONES </h2>
+# IV. CONCLUSIONES
 
+1. **El modelo basado en Redes Neuronales Convolucionales (CNN) demostró ser una herramienta eficaz para la detección automática de fisuras en superficies de concreto**, alcanzando un desempeño adecuado para aplicaciones de inspección visual asistida. La capacidad de discriminación obtenida evidencia que los algoritmos de aprendizaje profundo pueden identificar patrones de deterioro que tradicionalmente dependen de la experiencia del inspector, contribuyendo a incrementar la objetividad, rapidez y reproducibilidad de las evaluaciones estructurales.
+
+2. **La estrategia de entrenamiento implementada permitió obtener un modelo con adecuada capacidad de generalización frente a imágenes adquiridas en condiciones reales de operación.** El empleo del conjunto de datos SDNET2018, junto con técnicas de aumento de datos, regularización y ponderación de clases, favoreció un proceso de aprendizaje estable y redujo el riesgo de sobreajuste. Asimismo, la elevada sensibilidad alcanzada resulta especialmente relevante en ingeniería estructural, ya que prioriza la identificación de daños potenciales y disminuye la probabilidad de omitir fisuras que puedan comprometer la seguridad de una estructura.
+
+3. **La integración de técnicas de visión por computadora con métodos clásicos de procesamiento digital de imágenes permitió ampliar el alcance del sistema más allá de una simple clasificación binaria.** El procedimiento de segmentación, esqueletización y transformada de distancia hizo posible estimar parámetros geométricos como longitud y espesor de las fisuras, proporcionando información cuantitativa que puede emplearse como indicador del nivel de deterioro y como apoyo para la toma de decisiones en programas de inspección, mantenimiento y rehabilitación estructural.
+
+4. **Los resultados obtenidos evidencian que la combinación entre aprendizaje profundo y procesamiento digital de imágenes constituye una metodología técnicamente robusta para aplicaciones de evaluación no destructiva en estructuras de concreto.** Este enfoque reduce la subjetividad inherente a las inspecciones visuales convencionales y establece una base tecnológica para el desarrollo de sistemas inteligentes capaces de realizar evaluaciones preliminares de manera automatizada, mejorando la eficiencia en la gestión de infraestructura civil.
+
+5. **La principal limitación del estudio radica en la ausencia de una calibración geométrica durante la adquisición de las imágenes**, lo que restringe la estimación del espesor de las fisuras a unidades de píxeles. Aunque esta representación es suficiente para efectuar comparaciones relativas entre muestras y validar el funcionamiento del algoritmo, su aplicación en inspecciones técnicas de campo requerirá incorporar patrones físicos de referencia o procedimientos de calibración fotogramétrica que permitan expresar las mediciones en unidades métricas conforme a los criterios establecidos en la ingeniería estructural.
+
+6. **Como perspectiva de desarrollo, el sistema presenta un importante potencial de evolución hacia plataformas inteligentes de monitoreo estructural.** La incorporación de arquitecturas de segmentación semántica de última generación, modelos basados en Transformers, técnicas de aprendizaje por transferencia, calibración geométrica y su integración con drones, tecnologías BIM y sistemas de monitoreo continuo permitirán incrementar la precisión del diagnóstico y automatizar procesos de inspección de infraestructura civil. Estas mejoras contribuirán al desarrollo de estrategias de mantenimiento predictivo y gestión de activos sustentadas en inteligencia artificial, alineadas con las tendencias actuales de la Ingeniería Civil 4.0.
 
 
 
