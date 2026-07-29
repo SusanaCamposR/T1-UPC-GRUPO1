@@ -10,10 +10,18 @@
 | :--- | :--- |
 | **Susana Abigail Campos Rodríguez** | *e202524364@upc.edu.pe*|
 | **Carlos Teodoro Barreda Guzmán** | *e202524364@upc.edu.pe* |
-| **Jaime Jesus Ramírez Elera** | *e202524364@upc.edu.pe* |
+| **Jaime Jesus Ramírez Elera** | *E202526653@upc.edu.pe* |
 | **Renzo Salleres Untiveros** | *e202524364@upc.edu.pe* |
 
 </div>
+
+---
+> ### **Resumen (Abstract)**
+> <p align="justify">
+> La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras. En este trabajo se desarrolla un modelo utilizando el conjunto de datos <strong>SDNET2018</strong>, <strong>TensorFlow/Keras</strong> y una <strong>CNN</strong> para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em>. Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas.
+> </p>
+> 
+> **Palabras Clave (Keywords)** — *Concreto armado, Detección de fisuras, Redes Neuronales Convolucionales (CNN), Procesamiento Digital de Imágenes, SDNET2018.*
 
 ---
 
