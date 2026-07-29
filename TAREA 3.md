@@ -157,7 +157,7 @@ El análisis de los resultados se estructura a partir de la evaluación cuantita
 <!-- SECCIÓN 1: DESEMPEÑO GLOBAL A ANCHO COMPLETO -->
 <h3 align="left" style="color: #24292f;">1. Desempeño Global del Modelo</h3>
 <p align="justify" style="color: #57606a;">
-El modelo obtuvo una exactitud global de <strong>84.83 %</strong> en el conjunto de prueba (8,414 imágenes). La métrica ROC-AUC alcanzó <strong>89.85 %</strong>, lo que indica una adecuada capacidad de discriminación entre imágenes con y sin fisura. La sensibilidad para la clase “Con fisura” fue de <strong>76.42 %</strong>, valor relevante para tareas de inspección preventiva.
+El modelo obtuvo una exactitud global de <strong>84.83 %</strong>. La métrica ROC-AUC alcanzó <strong>89.85 %</strong>, lo que indica una adecuada capacidad de discriminación entre imágenes con y sin fisura. La sensibilidad para la clase “Con fisura” fue de <strong>76.42 %</strong>, valor relevante para tareas de inspección preventiva.
 </p>
 
 <table border="1" style="width: 100%; border-collapse: collapse; text-align: left; color: #57606a;">
