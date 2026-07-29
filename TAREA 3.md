@@ -87,88 +87,81 @@
   </p>
 </div>
 
+<br />
+
 <h2 align="left">II. METODOLOGÍA</h2>
 
 <p align="justify" style="text-align: justify;">
   La metodología desarrollada comprende una secuencia de etapas orientadas al desarrollo de un sistema automatizado para la detección de fisuras en concreto mediante Redes Neuronales Convolucionales (CNN) utilizando el conjunto de datos SDNET2018 obtenido de la Utah State University. El procedimiento incluye la preparación del conjunto de datos, el preprocesamiento de imágenes, el entrenamiento del modelo, la evaluación mediante métricas de clasificación y la estimación del espesor de fisuras mediante procesamiento digital de imágenes.
 </p>
 
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #e1e4e8;">
-  <tr>
-    <td width="50%" valign="top" style="border: 1px solid #e1e4e8; padding: 14px 16px;">
-      
-      <h3 align="left" style="margin-top: 0;">1. Selección del Conjunto de Datos</h3>
-      <p align="justify" style="text-align: justify;">
-        Se utilizó el dataset público SDNET2018, conformado por aproximadamente 56 000 imágenes de muros, pavimentos y losas de puente clasificadas en imágenes con fisura y sin fisura. Este repositorio destaca por su alta variabilidad en condiciones de iluminación, textura superficial y presencia de ruido en condiciones reales de obra.
-      </p>
+<div style="display: flex; gap: 20px;">
+  <div style="flex: 1; border: 1px solid #e1e4e8; padding: 14px 16px;">
+    <h3 align="left" style="margin-top: 0;">1. Selección del Conjunto de Datos</h3>
+    <p align="justify" style="text-align: justify;">
+      Se utilizó el dataset público SDNET2018, conformado por aproximadamente 56 000 imágenes de muros, pavimentos y losas de puente clasificadas en imágenes con fisura y sin fisura. Este repositorio destaca por su alta variabilidad en condiciones de iluminación, textura superficial y presencia de ruido en condiciones reales de obra.
+    </p>
 
-      <p align="center" style="text-align: center; margin: 15px 0;">
-        <img src="Figura_1_Flujo_General.png" alt="Figura 1. Selección del conjunto de datos" width="100%" />
-        <br />
-        <small><strong>Figura 1.</strong> Selección y características del conjunto de datos SDNET2018.</small>
-      </p>
+    <p align="center" style="text-align: center; margin: 15px 0;">
+      <img src="Figura_1_Flujo_General.png" alt="Figura 1" width="100%" />
+      <br />
+      <small><strong>Figura 1.</strong> Selección y características del conjunto de datos SDNET2018.</small>
+    </p>
 
-      <h3 align="left">2. Preprocesamiento de Imágenes</h3>
-      <p align="justify" style="text-align: justify;">
-        Se verificó la integridad de las imágenes eliminando archivos corruptos o defectuosos. Se normalizó la resolución espacial a 256×256 píxeles y se estandarizó el espacio de color en formato RGB, garantizando un dataset limpio y homogéneo para la fase de entrenamiento.
-      </p>
+    <h3 align="left">2. Preprocesamiento de Imágenes</h3>
+    <p align="justify" style="text-align: justify;">
+      Se verificó la integridad de las imágenes eliminando archivos corruptos o defectuosos. Se normalizó la resolución espacial a 256×256 píxeles y se estandarizó el espacio de color en formato RGB, garantizando un dataset limpio y homogéneo para la fase de entrenamiento.
+    </p>
 
-      <h3 align="left">3. División del Conjunto de Datos</h3>
-      <p align="justify" style="text-align: justify;">
-        Se realizó una partición estratificada conservando la distribución original de clases en tres subconjuntos: 70 % para entrenamiento (39 200 imágenes), 15 % para validación (8 400 imágenes) y 15 % para prueba (8 400 imágenes).
-      </p>
+    <h3 align="left">3. División del Conjunto de Datos</h3>
+    <p align="justify" style="text-align: justify;">
+      Se realizó una partición estratificada conservando la distribución original de clases en tres subconjuntos: 70 % para entrenamiento (39 200 imágenes), 15 % para validación (8 400 imágenes) y 15 % para prueba (8 400 imágenes).
+    </p>
 
-      <p align="center" style="text-align: center; margin: 15px 0;">
-        <img src="Figura_2_Division.png" alt="Figura 2. División del conjunto de datos" width="100%" />
-        <br />
-        <small><strong>Figura 2.</strong> Proporciones de división del conjunto de datos.</small>
-      </p>
+    <p align="center" style="text-align: center; margin: 15px 0;">
+      <img src="Figura_2_Division.png" alt="Figura 2" width="100%" />
+      <br />
+      <small><strong>Figura 2.</strong> Proporciones de división del conjunto de datos.</small>
+    </p>
 
-      <p align="center" style="text-align: center; margin: 15px 0;">
-        <img src="Figura 3_Figura_3_CNN.png" alt="Figura 3. Flujo de partición" width="100%" />
-        <br />
-        <small><strong>Figura 3.</strong> Flujo detallado de la partición estratificada.</small>
-      </p>
+    <p align="center" style="text-align: center; margin: 15px 0;">
+      <img src="Figura 3_Figura_3_CNN.png" alt="Figura 3" width="100%" />
+      <br />
+      <small><strong>Figura 3.</strong> Flujo detallado de la partición estratificada.</small>
+    </p>
+  </div>
 
-    </td>
-    <td width="50%" valign="top" style="border: 1px solid #e1e4e8; padding: 14px 16px;">
+  <div style="flex: 1; border: 1px solid #e1e4e8; padding: 14px 16px;">
+    <h3 align="left" style="margin-top: 0;">4. Arquitectura de la Red Neuronal (CNN)</h3>
+    <p align="justify" style="text-align: justify;">
+      La red propuesta incorpora cuatro bloques convolucionales secuenciales equipados con Batch Normalization, funciones de activación ReLU y submuestreo MaxPooling2D. Posteriormente, se integra una capa de agregación Global Average Pooling, regularización mediante Dropout (0.5) y una capa densa final con activación Sigmoide para la clasificación binaria (0 ≤ p ≤ 1).
+    </p>
 
-      <h3 align="left" style="margin-top: 0;">4. Arquitectura de la Red Neuronal (CNN)</h3>
-      <p align="justify" style="text-align: justify;">
-        La red propuesta incorpora cuatro bloques convolucionales secuenciales equipados con Batch Normalization, funciones de activación ReLU y submuestreo MaxPooling2D. Posteriormente, se integra una capa de agregación Global Average Pooling, regularización mediante Dropout (0.5) y una capa densa final con activación Sigmoide para la clasificación binaria (0 ≤ p ≤ 1).
-      </p>
+    <p align="center" style="text-align: center; margin: 15px 0;">
+      <img src="Figura_4_Espesor.png" alt="Figura 4" width="100%" />
+      <br />
+      <small><strong>Figura 4.</strong> Arquitectura de la Red Neuronal Convolucional (CNN).</small>
+    </p>
 
-      <p align="center" style="text-align: center; margin: 15px 0;">
-        <img src="Figura_4_Espesor.png" alt="Figura 4. Arquitectura CNN" width="100%" />
-        <br />
-        <small><strong>Figura 4.</strong> Arquitectura de la Red Neuronal Convolucional (CNN).</small>
-      </p>
+    <h3 align="left">5. Entrenamiento del Modelo</h3>
+    <p align="justify" style="text-align: justify;">
+      El entrenamiento se ejecutó sobre la plataforma TensorFlow/Keras haciendo uso del optimizador Adam y un tamaño de lote (<em>batch size</em>) de 32 imágenes. Se aplicaron técnicas de aumento de datos (<em>data augmentation</em>), ponderación de clases (<code>class_weight</code>) para mitigar el desbalance, así como las retrollamadas <code>EarlyStopping</code>, <code>ModelCheckpoint</code> y <code>ReduceLROnPlateau</code> para optimizar la convergencia.
+    </p>
 
-      <h3 align="left">5. Entrenamiento del Modelo</h3>
-      <p align="justify" style="text-align: justify;">
-        El entrenamiento se ejecutó sobre la plataforma TensorFlow/Keras haciendo uso del optimizador Adam y un tamaño de lote (<em>batch size</em>) de 32 imágenes. Se aplicaron técnicas de aumento de datos (<em>data augmentation</em>), ponderación de clases (<code>class_weight</code>) para mitigar el desbalance, así como las retrollamadas <code>EarlyStopping</code>, <code>ModelCheckpoint</code> y <code>ReduceLROnPlateau</code> para optimizar la convergencia.
-      </p>
+    <h3 align="left">6. Evaluación del Desempeño</h3>
+    <p align="justify" style="text-align: justify;">
+      La capacidad predictiva del modelo fue evaluada en el conjunto de prueba independiente mediante la matriz de confusión y métricas estándar de clasificación: <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y área bajo la curva (<em>AUC</em>).
+    </p>
 
-      <h3 align="left">6. Evaluación del Desempeño</h3>
-      <p align="justify" style="text-align: justify;">
-        La capacidad predictiva del modelo fue evaluada en el conjunto de prueba independiente mediante la matriz de confusión y métricas estándar de clasificación: <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y área bajo la curva (<em>AUC</em>).
-      </p>
-
-      <h3 align="left">7. Estimación del Espesor de Fisuras</h3>
-      <p align="justify" style="text-align: justify;">
-        Las imágenes clasificadas como "con fisura" son sometidas a un pipeline de procesamiento digital de imágenes: conversión a escala de grises, ecualización adaptativa de histograma (CLAHE), filtro Top-Hat/Black-Hat, umbralización de Otsu, operaciones morfológicas, esqueletización y transformada de distancia.
-      </p>
-      <p align="justify" style="text-align: justify; margin-bottom: 0;">
-        El sistema genera un archivo final que reporta el espesor de las fisuras en píxeles. Se destaca que la salida se presenta en píxeles debido a la ausencia de un patrón físico de escala dentro de las tomas. Aunque estudios similares sobre este dataset estiman una distancia de captura aproximada de 60 cm, la conversión a dimensiones métricas exactas requeriría una confirmación formal de los parámetros ópticos de adquisición.
-      </p>
-
-    </td>
-  </tr>
-</table>
-
----
-
-
+    <h3 align="left">7. Estimación del Espesor de Fisuras</h3>
+    <p align="justify" style="text-align: justify;">
+      Las imágenes clasificadas como "con fisura" son sometidas a un pipeline de procesamiento digital de imágenes: conversión a escala de grises, ecualización adaptativa de histograma (CLAHE), filtro Top-Hat/Black-Hat, umbralización de Otsu, operaciones morfológicas, esqueletización y transformada de distancia.
+    </p>
+    <p align="justify" style="text-align: justify; margin-bottom: 0;">
+      El sistema genera un archivo final que reporta el espesor de las fisuras en píxeles. Se destaca que la salida se presenta en píxeles debido a la ausencia de un patrón físico de escala dentro de las tomas. Aunque estudios similares sobre este dataset estiman una distancia de captura aproximada de 60 cm, la conversión a dimensiones métricas exactas requeriría una confirmación formal de los parámetros ópticos de adquisición.
+    </p>
+  </div>
+</div>
 
 
 
