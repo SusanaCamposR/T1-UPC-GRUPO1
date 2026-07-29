@@ -2,7 +2,7 @@
 
 # Detección de Fisuras en Concreto mediante Redes Neuronales Convolucionales (CNN) y Estimación de Espesor
 
-**Aplicaciones de IA en Estructuras**
+**APLICACIONES DE IA EN ESTRUCTURAS**
 
 <br>
 
