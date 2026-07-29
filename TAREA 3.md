@@ -39,6 +39,127 @@
 > **Palabras Clave (Keywords)** — *Concreto armado, Detección de fisuras, Redes Neuronales Convolucionales (CNN), Procesamiento Digital de Imágenes, SDNET2018.*
 
 ---
+<div style="color: #57606a;">
+
+<h2 align="left" style="color: #24292f;">I. INTRODUCCIÓN</h2>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr>
+    <td width="50%" valign="top" style="padding-right: 12px; border: none;">
+      <p align="justify" style="margin-top: 0;">
+        La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras.
+      </p>
+      <p align="justify">
+        Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector...
+      </p>
+    </td>
+    <td width="50%" valign="top" style="padding-left: 12px; border: none;">
+      <p align="justify" style="margin-top: 0;">
+        Dentro de las técnicas de aprendizaje profundo, las Redes Neuronales Convolucionales (CNN) han demostrado un desempeño sobresaliente en tareas de clasificación de imágenes gracias a su capacidad para aprender automáticamente características relevantes. En este trabajo se desarrolla un modelo utilizando el conjunto de datos SDNET2018, TensorFlow/Keras y una CNN para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em>.
+      </p>
+      <p align="justify">
+        Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas. Finalmente, se busca demostrar la viabilidad del empleo de herramientas de inteligencia artificial...
+      </p>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<h2 align="left" style="color: #24292f;">II. METODOLOGÍA</h2>
+
+<p align="justify">
+La metodología desarrollada comprende una secuencia de etapas orientadas al desarrollo de un sistema automatizado para la detección de fisuras en concreto mediante Redes Neuronales Convolucionales (CNN) utilizando el conjunto de datos SDNET2018 obtenido de la Utah State University[cite: 2]. El procedimiento incluye la preparación del conjunto de datos, el preprocesamiento de imágenes, el entrenamiento del modelo, la evaluación mediante métricas de clasificación y la estimación del espesor de fisuras mediante procesamiento digital de imágenes[cite: 2].
+</p>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3 align="left" style="color: #24292f;">1. Selección del Conjunto de Datos</h3>
+<p align="justify">
+Se utilizó el dataset público SDNET2018, conformado por aproximadamente 56 000 imágenes de muros, pavimentos y losas de puente clasificadas en imágenes con fisura y sin fisura[cite: 2]. Este repositorio destaca por su alta variabilidad en condiciones de iluminación, textura superficial y presencia de ruido en condiciones reales de obra[cite: 2].
+</p>
+
+<p align="center">
+<img src="Figura_1_Flujo_General.png" alt="Figura 1" width="100%" />
+<br />
+<small><strong>Figura 1.</strong> Selección y características del conjunto de datos SDNET2018[cite: 2].</small>
+</p>
+
+<h3 align="left" style="color: #24292f;">2. Preprocesamiento de Imágenes</h3>
+<p align="justify">
+Se verificó la integridad de las imágenes eliminando archivos corruptos o defectuosos[cite: 2]. Se normalizó la resolución espacial a 256×256 píxeles y se estandarizó el espacio de color en formato RGB, garantizando un dataset limpio y homogéneo para la fase de entrenamiento[cite: 2].
+</p>
+
+<h3 align="left" style="color: #24292f;">3. División del Conjunto de Datos</h3>
+<p align="justify">
+Se realizó una partición estratificada conservando la distribución original de clases en tres subconjuntos[cite: 2]: 70 % para entrenamiento (39 200 imágenes), 15 % para validación (8 400 imágenes) y 15 % para prueba (8 400 imágenes)[cite: 2].
+</p>
+
+<p align="center">
+<img src="Figura_2_Division.png" alt="Figura 2" width="100%" />
+<br />
+<small><strong>Figura 2.</strong> Proporciones de división del conjunto de datos[cite: 2].</small>
+</p>
+
+<p align="center">
+<img src="Figura 3_Figura_3_CNN.png" alt="Figura 3" width="100%" />
+<br />
+<small><strong>Figura 3.</strong> Flujo detallado de la partición estratificada[cite: 2].</small>
+</p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3 align="left" style="color: #24292f;">4. Arquitectura de la Red Neuronal (CNN)</h3>
+<p align="justify">
+La red propuesta incorpora cuatro bloques convolucionales secuenciales equipados con Batch Normalization, funciones de activación ReLU y submuestreo MaxPooling2D[cite: 2]. Posteriormente, se integra una capa de agregación Global Average Pooling, regularización mediante Dropout (0.5) y una capa densa final con activación Sigmoide para la clasificación binaria (0 ≤ p ≤ 1)[cite: 2].
+</p>
+
+<p align="center">
+<img src="Figura_4_Espesor.png" alt="Figura 4" width="100%" />
+<br />
+<small><strong>Figura 4.</strong> Arquitectura de la Red Neuronal Convolucional (CNN)[cite: 2].</small>
+</p>
+
+<h3 align="left" style="color: #24292f;">5. Entrenamiento del Modelo</h3>
+<p align="justify">
+El entrenamiento se ejecutó sobre la plataforma TensorFlow/Keras haciendo uso del optimizador Adam y un tamaño de lote (batch size) de 32 imágenes[cite: 2]. Se aplicaron técnicas de aumento de datos (data augmentation), ponderación de clases (class_weight) para mitigar el desbalance, así como las retrollamadas EarlyStopping, ModelCheckpoint y ReduceLROnPlateau para optimizar la convergencia[cite: 2].
+</p>
+
+<h3 align="left" style="color: #24292f;">6. Evaluación del Desempeño</h3>
+<p align="justify">
+La capacidad predictiva del modelo fue evaluada en el conjunto de prueba independiente mediante la matriz de confusión y métricas estándar de clasificación: Accuracy, Precision, Recall, F1-Score y área bajo la curva (AUC)[cite: 2].
+</p>
+
+<h3 align="left" style="color: #24292f;">7. Estimación del Espesor de Fisuras</h3>
+<p align="justify">
+Las imágenes clasificadas como "con fisura" son sometidas a un pipeline de procesamiento digital de imágenes: conversión a escala de grises, ecualización adaptativa de histograma (CLAHE), filtro Top-Hat/Black-Hat, umbralización de Otsu, operaciones morfológicas, esqueletización y transformada de distancia[cite: 2].
+</p>
+
+<p align="justify">
+El sistema genera un archivo final que reporta el espesor de las fisuras en píxeles[cite: 2]. Se destaca que la salida se presenta en píxeles debido a la ausencia de un patrón físico de escala dentro de las tomas[cite: 2]. Aunque estudios similares sobre este dataset estiman una distancia de captura aproximada de 60 cm, la conversión a dimensiones métricas exactas requeriría una confirmación formal de los parámetros ópticos de adquisición[cite: 2].
+</p>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2 align="left">I. INTRODUCCIÓN</h2>
 
 <table style="width: 100%; border-collapse: collapse; border: 1px solid #e1e4e8;">
