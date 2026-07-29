@@ -320,59 +320,6 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 <br />
 
-<!-- SECCIÓN 3.6: DISCUSIÓN TÉCNICA -->
-<h2 align="left" style="color: #24292f;">3.6. DISCUSIÓN TÉCNICA Y REFERENCIA COMPARATIVA</h2>
-
-<p align="justify" style="color: #57606a;">
-Siguiendo los criterios de Yang et al. (2018), las características espaciales de las fisuras son esenciales para evaluar la infraestructura. Los mapas de espesor y esqueletos permiten cuantificar el daño en píxeles para priorizar inspecciones.
-</p>
-
-<table border="1" style="width: 100%; border-collapse: collapse; text-align: left; color: #57606a;">
-  <thead>
-    <tr style="background-color: #f6f8fa; color: #24292f;">
-      <th style="padding: 8px;">Aspecto</th>
-      <th style="padding: 8px;">Yang et al. (2018)</th>
-      <th style="padding: 8px;">Presente Modelo</th>
-      <th style="padding: 8px;">Lectura Técnica</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 8px;"><strong>Enfoque</strong></td>
-      <td style="padding: 8px;">FCN para segmentación píxel a píxel y medición morfológica.</td>
-      <td style="padding: 8px;">Clasificación de fisuras con análisis visual de segmentación y espesor.</td>
-      <td style="padding: 8px;">Ambos buscan pasar de la detección visual a la cuantificación del daño.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;"><strong>Métricas Principales</strong></td>
-      <td style="padding: 8px;">Accuracy: 97.96%<br />Precision: 81.73%<br />Recall: 78.97%<br />F1: 79.95%</td>
-      <td style="padding: 8px;">Accuracy: 84.83%<br />Precision: 49.90%<br />Recall: 76.42%<br />F1: 60.37%<br />ROC-AUC: 89.85%</td>
-      <td style="padding: 8px;">La sensibilidad obtenida es cercana a la referencia, aunque la precisión requiere ajuste.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;"><strong>Medición de Fisuras</strong></td>
-      <td style="padding: 8px;">Longitud, ancho máximo y ancho medio derivado del esqueleto.</td>
-      <td style="padding: 8px;">Longitud, espesor máximo, promedio, mínimo, desviación estándar y área (px).</td>
-      <td style="padding: 8px;">Salida cuantitativa consistente para inspección automatizada basada en indicadores.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;"><strong>Limitaciones</strong></td>
-      <td style="padding: 8px;">Errores en fisuras delgadas, intersecciones y bordes.</td>
-      <td style="padding: 8px;">Presencia de falsos positivos y falsos negativos en la matriz de confusión.</td>
-      <td style="padding: 8px;">Se sugiere calibrar umbrales, enriquecer datos y ajustar el postprocesamiento.</td>
-    </tr>
-  </tbody>
-</table>
-
-<br />
-
-
-
-
-
-
-
-
 
 
 <h2 align="left">IV. CONCLUSIONES </h2>
