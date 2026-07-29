@@ -17,7 +17,7 @@
 <p align="center">
   <strong>Susana Abigail Campos Rodríguez</strong> &nbsp;|&nbsp; <strong>Carlos Teodoro Barreda Guzmán</strong><br />
   <em>Universidad Peruana de Ciencias Aplicadas (UPC)</em><br />
-  <small><code>e202524364@upc.edu.pe</code> &nbsp;|&nbsp; <code>E202524396@upc.edu.pe</code></small>
+  <small><code>E202524364@upc.edu.pe</code> &nbsp;|&nbsp; <code>E202524396@upc.edu.pe</code></small>
 </p>
 
 <p align="center" style="margin-top: 10px;">&amp;</p>
