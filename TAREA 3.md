@@ -43,6 +43,49 @@
 
 ---
 
+<h2 align="center">1. INTRODUCCIÓN</h2>
+
+<table border="0" style="width: 100%; border: none !important; border-collapse: collapse !important; background: transparent !important;">
+  <tr style="border: none !important; background: transparent !important;">
+    <!-- COLUMNA IZQUIERDA -->
+    <td width="48%" valign="top" style="border: none !important; padding-right: 20px; background: transparent !important;">
+      <p align="justify">
+        La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras (Watt, 2007).
+      </p>
+      <p align="justify">
+        Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector, requiere una considerable inversión de tiempo y puede verse afectado por la subjetividad inherente al proceso de observación. En respuesta a estas limitaciones, los avances en inteligencia artificial y visión por computadora han impulsado el desarrollo de métodos automatizados capaces de analizar imágenes digitales e identificar patrones asociados al deterioro estructural, incrementando la rapidez y objetividad de las inspecciones (Gonzalez & Woods, 2018).
+      </p>
+    </td>
+    <!-- ESPACIO CENTRAL -->
+    <td width="4%" style="border: none !important; background: transparent !important;"></td>
+    <!-- COLUMNA DERECHA -->
+    <td width="48%" valign="top" style="border: none !important; padding-left: 20px; background: transparent !important;">
+      <p align="justify">
+        Dentro de las técnicas de aprendizaje profundo, las Redes Neuronales Convolucionales (CNN) han demostrado un desempeño sobresaliente en tareas de clasificación de imágenes gracias a su capacidad para aprender automáticamente características relevantes. En este trabajo se desarrolla un modelo utilizando el conjunto de datos SDNET2018, TensorFlow/Keras y una CNN para la clasificación binaria de imágenes con y sin fisuras, evaluando su desempeño mediante <em>Accuracy</em>, <em>Precision</em>, <em>Recall</em>, <em>F1-Score</em> y <em>AUC</em> (LeCun et al., 2015; Goodfellow et al., 2016; Dorafshan et al., 2018; Abadi et al., 2016).
+      </p>
+      <p align="justify">
+        Adicionalmente, se implementa un procedimiento heurístico basado en procesamiento digital de imágenes para estimar el espesor de las fisuras detectadas. Finalmente, se busca demostrar la viabilidad del empleo de herramientas de inteligencia artificial como apoyo a las inspecciones estructurales, contribuyendo al desarrollo de metodologías más objetivas, rápidas y reproducibles para la evaluación del estado de estructuras de concreto.
+      </p>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<h3 align="left">REFERENCIAS</h3>
+
+<ul>
+  <li><p align="justify"><strong>Abadi, M., et al. (2016).</strong> <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems.</em> <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></p></li>
+  <li><p align="justify"><strong>Dorafshan, S., Thomas, R. J., & Maguire, M. (2018).</strong> <em>SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks.</em> Data in Brief, 21, 1664–1668.</p></li>
+  <li><p align="justify"><strong>Gonzalez, R. C., & Woods, R. E. (2018).</strong> <em>Digital Image Processing</em> (4th ed.). Pearson.</p></li>
+  <li><p align="justify"><strong>Goodfellow, I., Bengio, Y., & Courville, A. (2016).</strong> <em>Deep Learning.</em> MIT Press.</p></li>
+  <li><p align="justify"><strong>LeCun, Y., Bengio, Y., & Hinton, G. (2015).</strong> <em>Deep learning.</em> Nature, 521(7553), 436–444.</p></li>
+  <li><p align="justify"><strong>Watt, D. (2007).</strong> <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing.</p></li>
+</ul>
+
+
+
+
 
 ## I. Introducción
 
