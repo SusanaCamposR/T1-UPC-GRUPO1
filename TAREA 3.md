@@ -149,7 +149,273 @@ El sistema genera un archivo final que reporta el espesor de las fisuras en píx
 
 <h2 align="left">III. RESULTADOS </h2>
 
+<br />
 
+<h2 align="left" style="color: #24292f;">III. RESULTADOS Y DISCUSIÓN</h2>
+
+<p align="justify" style="color: #57606a;">
+El análisis de los resultados se estructura a partir de la evaluación cuantitativa del clasificador sobre el conjunto de prueba y la posterior interpretación geométrica de las fisuras detectadas mediante segmentación, esqueletización y mapa local de espesor en píxeles.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+<tr>
+<td width="50%" valign="top" style="padding-right: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">1. Desempeño Global del Modelo</h3>
+<p align="justify" style="color: #57606a;">
+El modelo obtuvo una exactitud global de <strong>84.83 %</strong> en el conjunto de prueba (8,414 imágenes). La métrica ROC-AUC alcanzó <strong>89.85 %</strong>, lo que indica una adecuada capacidad de discriminación entre imágenes con y sin fisura. La sensibilidad para la clase “Con fisura” fue de <strong>76.42 %</strong>, valor relevante para tareas de inspección preventiva.
+</p>
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+  <thead>
+    <tr style="background-color: #f6f8fa; color: #24292f;">
+      <th>Métrica</th>
+      <th>Resultado</th>
+      <th>Interpretación técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Accuracy</strong></td>
+      <td>84.83 %</td>
+      <td>Proporción total de aciertos en el conjunto de prueba.</td>
+    </tr>
+    <tr>
+      <td><strong>Precisión</strong></td>
+      <td>49.90 %</td>
+      <td>Proporción de detecciones positivas correspondientes a fisuras reales.</td>
+    </tr>
+    <tr>
+      <td><strong>Recall / Sensibilidad</strong></td>
+      <td>76.42 %</td>
+      <td>Capacidad para recuperar fisuras reales; clave en inspección.</td>
+    </tr>
+    <tr>
+      <td><strong>F1-Score</strong></td>
+      <td>60.37 %</td>
+      <td>Equilibrio entre precisión y sensibilidad para la clase positiva.</td>
+    </tr>
+    <tr>
+      <td><strong>ROC-AUC</strong></td>
+      <td>89.85 %</td>
+      <td>Capacidad global de separación entre clases del modelo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<h3 align="left" style="color: #24292f;">2. Resultados por Clase</h3>
+<p align="justify" style="color: #57606a;">
+La clase “Sin fisura” presenta una precisión elevada (95.36 %), mientras que la clase “Con fisura” alcanza una sensibilidad de 76.42 %. Esto sugiere que el modelo identifica una proporción importante de fisuras reales, existiendo margen para reducir falsos positivos.
+</p>
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
+  <thead>
+    <tr style="background-color: #f6f8fa; color: #24292f;">
+      <th>Clase</th>
+      <th>Precisión</th>
+      <th>Recall</th>
+      <th>F1-score</th>
+      <th>Soporte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sin fisura</strong></td>
+      <td>95.36 %</td>
+      <td>86.33 %</td>
+      <td>90.62 %</td>
+      <td>7,142</td>
+    </tr>
+    <tr>
+      <td><strong>Con fisura</strong></td>
+      <td>49.90 %</td>
+      <td>76.42 %</td>
+      <td>60.37 %</td>
+      <td>1,272</td>
+    </tr>
+    <tr style="font-weight: bold; background-color: #f6f8fa;">
+      <td>Promedio ponderado</td>
+      <td>88.49 %</td>
+      <td>84.83 %</td>
+      <td>86.05 %</td>
+      <td>8,414</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<h3 align="left" style="color: #24292f;">3. Matriz de Confusión</h3>
+<p align="justify" style="color: #57606a;">
+La matriz evidencia 6,166 verdaderos negativos y 972 verdaderos positivos. Se registran 976 falsos positivos y 300 falsos negativos. En inspección estructural, reducir los falsos negativos es prioritario para evitar omitir daños reales.
+</p>
+
+<p align="center">
+<img src="matriz_confusion.png" alt="Matriz de Confusión" width="90%" />
+<br />
+<small style="color: #57606a;"><strong>Figura 5.</strong> Matriz de confusión en el conjunto de prueba.</small>
+</p>
+
+</td>
+<td width="50%" valign="top" style="padding-left: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">4. Comportamiento durante el Entrenamiento</h3>
+<p align="justify" style="color: #57606a;">
+Las curvas de entrenamiento muestran una estabilización progresiva de las métricas. Durante las primeras épocas se observan fluctuaciones en validación, asociadas al ajuste inicial ante la clase positiva menos frecuente, logrando la convergencia en las épocas finales.
+</p>
+
+<table style="width: 100%; border: none;">
+  <tr>
+    <td style="border: none; text-align: center;">
+      <img src="historial_accuracy.png" alt="Exactitud" width="100%" />
+      <br /><small style="color: #57606a;"><strong>Figura 6.</strong> Evolución de la exactitud.</small>
+    </td>
+    <td style="border: none; text-align: center;">
+      <img src="historial_auc.png" alt="AUC" width="100%" />
+      <br /><small style="color: #57606a;"><strong>Figura 7.</strong> Evolución del AUC.</small>
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; text-align: center;">
+      <img src="historial_loss.png" alt="Pérdida" width="100%" />
+      <br /><small style="color: #57606a;"><strong>Figura 8.</strong> Evolución de la pérdida.</small>
+    </td>
+    <td style="border: none; text-align: center;">
+      <img src="historial_recall.png" alt="Sensibilidad" width="100%" />
+      <br /><small style="color: #57606a;"><strong>Figura 9.</strong> Evolución del Recall.</small>
+    </td>
+  </tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<br />
+
+<h2 align="left" style="color: #24292f;">IV. ANÁLISIS DE FISURAS Y MEDICIÓN DE ESPESOR</h2>
+
+<p align="justify" style="color: #57606a;">
+Los casos de estudio muestran el flujo de análisis completo: imagen original, segmentación, esqueleto, mapa de espesor y resultados cuantitativos. Este procedimiento permite transformar una predicción visual en indicadores geométricos objetivos.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+<tr>
+<td width="50%" valign="top" style="padding-right: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">Caso de Estudio 1: Muestra 7069-195.jpg</h3>
+<p align="justify" style="color: #57606a;">
+Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo reportado es de <strong>7.26 px</strong>, con un espesor promedio de <strong>4.45 px</strong> y una longitud total de <strong>184.3 px</strong>. La probabilidad asignada por el modelo fue de 99.41 %.
+</p>
+
+<p align="center">
+<img src="RESULTADO1.jpeg" alt="Caso de Estudio 1" width="100%" />
+<br />
+<small style="color: #57606a;"><strong>Figura 10.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7069-195.jpg.</small>
+</p>
+
+</td>
+<td width="50%" valign="top" style="padding-left: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">Caso de Estudio 2: Muestra 7019-82.jpg</h3>
+<p align="justify" style="color: #57606a;">
+Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px</strong>, con un promedio de <strong>4.67 px</strong> y una longitud de <strong>213.7 px</strong>. La probabilidad del modelo alcanzó el 98.37 %, reflejando un daño más extendido.
+</p>
+
+<p align="center">
+<img src="RESULTADO2.jpeg" alt="Caso de Estudio 2" width="100%" />
+<br />
+<small style="color: #57606a;"><strong>Figura 11.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7019-82.jpg.</small>
+</p>
+
+</td>
+</tr>
+</table>
+
+<br />
+
+<h2 align="left" style="color: #24292f;">V. DISCUSIÓN TÉCNICA Y REFERENCIA COMPARATIVA</h2>
+
+<p align="justify" style="color: #57606a;">
+Siguiendo los criterios de Yang et al. (2018), las características espaciales de las fisuras son esenciales para evaluar la infraestructura. Los mapas de espesor y esqueletos permiten cuantificar el daño en píxeles para priorizar inspecciones.
+</p>
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left; color: #57606a;">
+  <thead>
+    <tr style="background-color: #f6f8fa; color: #24292f;">
+      <th>Aspecto</th>
+      <th>Yang et al. (2018)</th>
+      <th>Presente Modelo</th>
+      <th>Lectura Técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Enfoque</strong></td>
+      <td>FCN para segmentación píxel a píxel y medición morfológica.</td>
+      <td>Clasificación de fisuras con análisis visual de segmentación y espesor.</td>
+      <td>Ambos buscan pasar de la detección visual a la cuantificación del daño.</td>
+    </tr>
+    <tr>
+      <td><strong>Métricas Principales</strong></td>
+      <td>Accuracy: 97.96%<br />Precision: 81.73%<br />Recall: 78.97%<br />F1: 79.95%</td>
+      <td>Accuracy: 84.83%<br />Precision: 49.90%<br />Recall: 76.42%<br />F1: 60.37%<br />ROC-AUC: 89.85%</td>
+      <td>La sensibilidad obtenida es cercana a la referencia, aunque la precisión requiere ajuste.</td>
+    </tr>
+    <tr>
+      <td><strong>Medición de Fisuras</strong></td>
+      <td>Longitud, ancho máximo y ancho medio derivado del esqueleto.</td>
+      <td>Longitud, espesor máximo, promedio, mínimo, desviación estándar y área (px).</td>
+      <td>Salida cuantitativa consistente para inspección automatizada basada en indicadores.</td>
+    </tr>
+    <tr>
+      <td><strong>Limitaciones</strong></td>
+      <td>Errores en fisuras delgadas, intersecciones y bordes.</td>
+      <td>Presencia de falsos positivos y falsos negativos en la matriz de confusión.</td>
+      <td>Se sugiere calibrar umbrales, enriquecer datos y ajustar el postprocesamiento.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<h2 align="left" style="color: #24292f;">VI. CONCLUSIONES Y RECOMENDACIONES</h2>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+<tr>
+<td width="50%" valign="top" style="padding-right: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">Conclusiones</h3>
+<ul style="color: #57606a;">
+  <li>El modelo alcanza un desempeño global adecuado con <strong>84.83 % de exactitud</strong> y <strong>89.85 % de ROC-AUC</strong>.</li>
+  <li>La sensibilidad de <strong>76.42 %</strong> para la clase positiva es relevante para detectar la mayoría de los daños reales en inspección preventiva.</li>
+  <li>La precisión de <strong>49.90 %</strong> indica la presencia de falsos positivos, por lo que actúa como una herramienta de apoyo al especialista.</li>
+  <li>Los mapas de espesor y la esqueletización convierten las detecciones en indicadores cuantitativos objetivos.</li>
+</ul>
+
+</td>
+<td width="50%" valign="top" style="padding-left: 12px; border: none; color: #57606a;">
+
+<h3 align="left" style="color: #24292f;">Recomendaciones</h3>
+<ul style="color: #57606a;">
+  <li>Calibrar la escala píxel–unidad física para expresar las dimensiones en milímetros o centímetros.</li>
+  <li>Ajustar el umbral de clasificación para equilibrar falsos positivos y falsos negativos según el objetivo operativo.</li>
+  <li>Incorporar mayor variabilidad de fisuras delgadas y complejas en el conjunto de entrenamiento.</li>
+  <li>Refinar los filtros morfológicos para evitar desconexiones en las ramas de la fisura.</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br />
+
+<h2 align="left" style="color: #24292f;">REFERENCIAS</h2>
+<p style="color: #57606a;">
+Yang, X., Li, H., Yu, Y., Luo, X., Huang, T., & Yang, X. (2018). Automatic Pixel-Level Crack Detection and Measurement Using Fully Convolutional Network. <em>Computer-Aided Civil and Infrastructure Engineering</em>, 33, 1090–1109.
+</p>
 
 
 
