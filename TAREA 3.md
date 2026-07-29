@@ -29,10 +29,6 @@
 </p>
 
 </div>
-
-<hr />
-<br />
-
 ---
 > ### **Resumen (Abstract)**
 > <p align="justify">
