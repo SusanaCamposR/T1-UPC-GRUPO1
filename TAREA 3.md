@@ -23,6 +23,63 @@
 > **Palabras Clave (Keywords) —** *Concreto armado, Detección de fisuras, Redes Neuronales Convolucionales (CNN), Procesamiento Digital de Imágenes, SDNET2018.*
 
 ---
+# Evaluación del Estado de Estructuras de Concreto Armado
+
+## 1. Introducción
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Importancia y Contexto General</h3>
+      <p>La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, durabilidad y funcionalidad de las edificaciones e infraestructuras civiles.</p>
+      <p>Entre las patologías más frecuentes se encuentran las fisuras, cuya aparición puede estar asociada a fenómenos de retracción, cargas excesivas, acciones sísmicas, procesos de corrosión del acero de refuerzo o deterioro por agentes ambientales agresivos.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Objetivos y Alcance Diagnóstico</h3>
+      <p>El propósito del diagnóstico estructural es identificar de manera precisa el origen y severidad de los daños presentes, evaluando la capacidad resistente remanente de los elementos de concreto reforzado.</p>
+      <p>Una oportuna caracterización permite tomar decisiones informadas sobre las técnicas de reparación, rehabilitación o reforzamiento requeridas, previniendo fallas catastróficas y maximizando la vida útil de la edificación.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 2. Metodología
+
+A continuación se detalla el procedimiento técnico para la inspección y diagnóstico de la estructura:
+
+### Fase 1: Recopilación de Información e Inspección Visual
+Se realiza la revisión de planos *as-built*, memoria de cálculo y antecedentes de la obra, seguida de un levantamiento minucioso de daños visibles (fisuras, desprendimientos, eflorescencias y corrosión).
+
+> **[Imagen 1: Diagrama de Flujo del Procedimiento Metodológico]**  
+> 🔗 *[Haz clic aquí para subir o ver la Imagen 1 del archivo Word](URL_DE_TU_IMAGEN_1)*
+
+---
+
+### Fase 2: Ensayos No Destructivos y Destructivos
+Ejecución de pruebas *in situ* para caracterizar la calidad del concreto y la disposición del acero de refuerzo:
+
+* **Esclerometría (Índice de rebote):** Estimación de la uniformidad de la resistencia superficial del concreto.
+* **Ultrasonido:** Medición de la velocidad de pulso ultrasónico para detectar oquedades y evaluar compacidad.
+* **Pacometría (Scanner / Localizador de acero):** Localización del acero de refuerzo y medición del recubrimiento.
+* **Extracción de Testigos Cilíndricos:** Ensayos de compresión en laboratorio para corroborar resistencia $f'_c$.
+
+> **[Imagen 2: Esquema de Ensayos No Destructivos / Inspección de Campo]**  
+> 🔗 *[Haz clic aquí para subir o ver la Imagen 2 del archivo Word](URL_DE_TU_IMAGEN_2)*
+
+---
+
+### Fase 3: Modelación y Evaluación de Resultados
+Integración de las propiedades reales obtenidas en campo y laboratorio dentro del modelo analítico para determinar el nivel de seguridad estructural frente a la normativa vigente.
+
+
+
+---
+
+
+
+
+
 
 ## I. INTRODUCCIÓN
 
