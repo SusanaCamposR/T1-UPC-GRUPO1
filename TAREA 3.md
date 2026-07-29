@@ -320,8 +320,6 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 <br />
 
-<br />
-
 <h3 align="left" style="color: #24292f;"> Código Fuente y Presentación de la Implementación</h3>
 
 <p align="justify" style="color: #57606a;">
@@ -356,6 +354,8 @@ En esta sección se adjuntan los recursos principales correspondientes a la <str
     </tr>
   </tbody>
 </table>
+
+<br />
 
 <h2 align="left" style="color: #24292f;">IV. CONCLUSIONES</h2>
 
