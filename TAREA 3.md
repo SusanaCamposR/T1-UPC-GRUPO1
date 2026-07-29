@@ -48,7 +48,7 @@
   <tr>
     <td width="50%" valign="top" style="border: 1px solid #e1e4e8; padding: 12px 16px;">
       <p align="justify" style="text-align: justify; margin-top: 0;">
-        La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras (Watt, 2007)[cite: 7].
+        La evaluación del estado de las estructuras de concreto constituye una actividad fundamental para garantizar la seguridad, la durabilidad y la funcionalidad de las edificaciones e infraestructuras civiles. Entre las patologías más frecuentes se encuentran las fisuras, las cuales pueden originarse por fenómenos de retracción, sobrecargas, acciones sísmicas, corrosión del acero de refuerzo o deterioro ocasionado por agentes ambientales. La detección temprana de estas discontinuidades permite planificar intervenciones oportunas, optimizar los costos de mantenimiento y prolongar la vida útil de las estructuras (Watt, 2007).
       </p>
       <p align="justify" style="text-align: justify; margin-bottom: 0;">
         Tradicionalmente, la identificación de fisuras se realiza mediante inspecciones visuales efectuadas por especialistas. Aunque este procedimiento continúa siendo ampliamente utilizado, presenta limitaciones debido a que depende de la experiencia del inspector, requiere una considerable inversión de tiempo y puede verse afectado por la subjetividad inherente al proceso de observación. En respuesta a estas limitaciones, los avances en inteligencia artificial y visión por computadora han impulsado el desarrollo de métodos automatizados capaces de analizar imágenes digitales e identificar patrones asociados al deterioro estructural, incrementando la rapidez y objetividad de las inspecciones (Gonzalez & Woods, 2018)[cite: 7].
@@ -69,14 +69,26 @@
 
 <h3 align="left">REFERENCIAS</h3>
 
-<ul>
-  <li><p align="justify"><strong>Abadi, M., et al. (2016).</strong> <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems.</em> <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a>[cite: 7]</p></li>
-  <li><p align="justify"><strong>Dorafshan, S., Thomas, R. J., & Maguire, M. (2018).</strong> <em>SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks.</em> Data in Brief, 21, 1664–1668[cite: 7].</p></li>
-  <li><p align="justify"><strong>Gonzalez, R. C., & Woods, R. E. (2018).</strong> <em>Digital Image Processing</em> (4th ed.). Pearson[cite: 7].</p></li>
-  <li><p align="justify"><strong>Goodfellow, I., Bengio, Y., & Courville, A. (2016).</strong> <em>Deep Learning.</em> MIT Press[cite: 7].</p></li>
-  <li><p align="justify"><strong>LeCun, Y., Bengio, Y., & Hinton, G. (2015).</strong> <em>Deep learning.</em> Nature, 521(7553), 436–444[cite: 7].</p></li>
-  <li><p align="justify"><strong>Watt, D. (2007).</strong> <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing[cite: 7].</p></li>
-</ul>
+<div style="font-size: 0.95em; line-height: 1.5;">
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    Abadi, M., et al. (2016). <em>TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems</em>. <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a>[cite: 7]
+  </p>
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    Dorafshan, S., Thomas, R. J., & Maguire, M. (2018). SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks. <em>Data in Brief</em>, 21, 1664–1668[cite: 7].
+  </p>
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    Gonzalez, R. C., & Woods, R. E. (2018). <em>Digital Image Processing</em> (4th ed.). Pearson[cite: 7].
+  </p>
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    Goodfellow, I., Bengio, Y., & Courville, A. (2016). <em>Deep Learning</em>. MIT Press[cite: 7].
+  </p>
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436–444[cite: 7].
+  </p>
+  <p align="justify" style="text-align: justify; padding-left: 2em; text-indent: -2em; margin-bottom: 12px;">
+    Watt, D. (2007). <em>Building Pathology: Principles and Practice</em> (2nd ed.). Blackwell Publishing[cite: 7].
+  </p>
+</div>
 ---
 
 
