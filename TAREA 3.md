@@ -30,7 +30,6 @@
 
 </div>
 <hr />
-<br />
 
 ---
 > ### **Resumen (Abstract)**
