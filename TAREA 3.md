@@ -300,7 +300,7 @@ Se observa una fisura longitudinal con trayectoria irregular. El espesor máximo
 </p>
 
 <p align="center">
-  <img src="RESULTADO1.jpeg" alt="Caso de Estudio 1" width="90%" />
+  <img src="RESULTADO1.png" alt="Caso de Estudio 1" width="90%" />
   <br />
   <small style="color: #57606a;"><strong>Figura 10.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7069-195.jpg.</small>
 </p>
@@ -313,7 +313,7 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 </p>
 
 <p align="center">
-  <img src="RESULTADO2.jpeg" alt="Caso de Estudio 2" width="90%" />
+  <img src="RESULTADO2.png" alt="Caso de Estudio 2" width="90%" />
   <br />
   <small style="color: #57606a;"><strong>Figura 11.</strong> Segmentación, esqueleto y mapa de espesor para la muestra 7019-82.jpg.</small>
 </p>
