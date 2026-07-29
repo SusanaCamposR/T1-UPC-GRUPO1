@@ -323,7 +323,7 @@ Muestra una fisura continua y vertical. El espesor máximo es de <strong>7.84 px
 
 
 <h2 align="left">IV. CONCLUSIONES </h2>
-> <p align="justify">
+<p align="justify">
 
 1. El presente estudio demostró la viabilidad de emplear Redes Neuronales Convolucionales (CNN) como herramienta para la detección automática de fisuras en superficies de concreto, evidenciando que los modelos de aprendizaje profundo constituyen una alternativa eficiente para complementar las inspecciones visuales tradicionales. La capacidad del modelo para discriminar entre superficies fisuradas y no fisuradas confirma el potencial de la inteligencia artificial para apoyar la evaluación preliminar del estado estructural de infraestructuras civiles de manera objetiva y reproducible.
 
