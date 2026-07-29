@@ -8,10 +8,10 @@
 
 | **Integrantes del Grupo** | **Afiliación y Contacto** |
 | :--- | :--- |
-| 👤 **Susana Abigail Campos Rodríguez** | e202524364@upc.edu.pe|
-| 👤 **Carlos Teodoro Barreda Guzmán** | Universidad Nacional del Santa |
-| 👤 **Jaime Jesus Ramírez Elera** | Nuevo Chimbote, Ancash, Perú |
-| 👤 **Renzo Salleres Untiveros** | *Proyecto de Inspección Estructural Inteligente* |
+| **Susana Abigail Campos Rodríguez** | *e202524364@upc.edu.pe*|
+| **Carlos Teodoro Barreda Guzmán** | * * |
+| **Jaime Jesus Ramírez Elera** | * * |
+| **Renzo Salleres Untiveros** | * * |
 
 </div>
 
