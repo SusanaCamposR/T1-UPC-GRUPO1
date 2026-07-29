@@ -1,0 +1,8 @@
+{
+    "accuracy": 0.8483479914428333,
+    "precision": 0.4989733059548255,
+    "recall_sensibilidad": 0.7641509433962265,
+    "f1_score": 0.6037267080745342,
+    "roc_auc": 0.8985476448997779,
+    "umbral_clasificacion": 0.5
+}

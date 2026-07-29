@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+  Sin fisura     0.9536    0.8633    0.9062      7142
+  Con fisura     0.4990    0.7642    0.6037      1272
+
+    accuracy                         0.8483      8414
+   macro avg     0.7263    0.8137    0.7550      8414
+weighted avg     0.8849    0.8483    0.8605      8414
